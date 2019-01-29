@@ -1,0 +1,22 @@
+.container {
+  background: black;
+  border: red solid 1px; 
+  height: 100vh; 
+  width: 100vw;
+  color: white;
+}
+
+.storyTable {
+  padding: 15%; 
+  border: green solid 1px;
+}
+
+.option1, .option2, .option3, .option4 {
+  padding: 10px;
+  border: white solid 1px;
+  margin: 10px 20% 0 20%;
+}
+
+.option1 {
+  margin-top: 20px;
+}
