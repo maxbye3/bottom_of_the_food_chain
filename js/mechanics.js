@@ -9,6 +9,11 @@ function addAddition(arr){
 }
 
 
+function checkGender(){
+  return localStorage.getItem("gender");
+}
+
+
 function tellStory(arr, id){
 
   // store in local storage
@@ -19,6 +24,16 @@ function tellStory(arr, id){
   // push character additions
   addAddition(arr[id]['char_addition1']);
   addAddition(arr[id]['char_addition2']);
+
+
+    // add gender
+    if(arr[id].gender){
+      localStorage.setItem('gender', arr[id].gender);
+    }
+
+    if(arr[id].function){
+      eval(arr[id].function)
+    }
   
   // remove character reductions
   if(charStatus && arr[id].char_reduction){
