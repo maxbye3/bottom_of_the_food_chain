@@ -8,6 +8,14 @@ function addAddition(arr){
   }
 }
 
+function getName(){
+  $('.gender').text(localStorage.getItem('gender'));
+  if(localStorage.getItem('gender') === 'man'){
+    return 'John';
+  }
+  return 'Mary';
+}
+
 
 function checkGender(){
   return localStorage.getItem("gender");
