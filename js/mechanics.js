@@ -8,6 +8,18 @@ function addAddition(arr){
   }
 }
 
+
+function hasFriends(){
+  getName();
+  var hasFriends = charStatus.indexOf('no_friend');
+  if(hasFriends > -1){
+    $('.solo').hide();
+  }
+  else{
+    $('.friend').hide();
+  }
+}
+
 function getName(){
   $('.gender').text(localStorage.getItem('gender'));
   if(localStorage.getItem('gender') === 'man'){
