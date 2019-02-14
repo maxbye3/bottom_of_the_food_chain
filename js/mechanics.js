@@ -11,17 +11,26 @@ function addAddition(arr){
 
 function hasFriends(){
   getName();
+  console.log('hello world');
   var hasFriends = charStatus.indexOf('no_friend');
   if(hasFriends > -1){
-    $('.solo').hide();
+    $('.friend').hide();
   }
   else{
-    $('.friend').hide();
+    $('.solo').hide();
   }
 }
 
 function getName(){
   $('.gender').text(localStorage.getItem('gender'));
+
+  if(localStorage.getItem('gender') === 'null'){
+    $('.friend').hide();
+    return;    
+  } else {
+    $('.solo').hide();
+  }
+
   if(localStorage.getItem('gender') === 'man'){
     $('.name').html('John');
   } else {
