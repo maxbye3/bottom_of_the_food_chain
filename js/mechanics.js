@@ -18,14 +18,16 @@ function getName(){
 }
 
 function checkWeapon(){
-  var hammer = charStatus.indexOf('arm');
-  var smashBottle = charStatus.indexOf('smash_bottle');
-  var bottle = charStatus.indexOf('bottle');
-  if(hammer > -1 || smashBottle > -1 || bottle > -1){  
-    $('.weaponResult').html('You feel the weapon you have already is better.');
-  } else{
-    $('.weaponResult').html('At a stretch, you think, this could be used as a weapon.');
+  function checkWeapon(weapon){
+    var weaponType = charStatus.indexOf(weapon);
+    if(weaponType > -1){  
+      $('.weaponResult').html('You feel the ' + String(weapon) + ' you have already is a better weapon.');
+    } else{
+      $('.weaponResult').html('At a stretch, you think, this could be used as a weapon.');
+    }
   }
+  checkWeapon('hammer');
+  checkWeapon('wine bottle');
 }
 
 function goneWrong(){
@@ -36,16 +38,20 @@ function goneWrong(){
   } else {
     name = 'Mary';
   }
-  if (index > -1) {
+  if (index == -1) {
     $('.goneWrong').html('By the time more gauze is applied they have lost consciousness. You feel like you could have done a better job here.'); 
-    $('.option1').html('Leave ' + name); 
-    $('.option1').attr('onclick', 'tellStory(content, "MAX INSERT LEAVE")');
-    $('.option2').html('Take ' + name); 
-    $('.option1').attr('onclick', 'tellStory(content, 58)');
+    setTimeout(function (){
+      $('.option1').html('Leave ' + name); 
+      $('.option1').attr('onclick', 'tellStory(content, "MAX INSERT LEAVE")');
+      $('.option2').show().html('Take ' + name); 
+      $('.option1').attr('onclick', 'tellStory(content, 58)');
+    }, 0)
   } else{
     $('.goneWrong').html("Seeing the situation worsen. You wrap the material back across the wound and apply pressure. " + name + "'s skin is as pale as the white floor laminate, you better not make any more mistakes."); 
-    $('.option2').html('Continue'); 
-    $('.option1').attr('onclick', 'tellStory(content, 56)');
+    setTimeout(function (){
+      $('.option1').html('Continue'); 
+      $('.option1').attr('onclick', 'tellStory(content, 56)');
+    }, 0)
   }
 }
 
@@ -91,7 +97,11 @@ function tellStory(arr, id){
 
       // populate option text
       jQuery('.option' + i).html(arr[id]["option_" + i].text);
-
+      
+      // populate options 
+      $('.gender').text(localStorage.getItem('gender'));
+      getName(); 
+      
       // assign option click
       jQuery('.option' + i).attr('onclick', 'tellStory(content, ' + arr[id]["option_" + i].step + ')');
       if(arr[id]["option_" + i].disclaimer){

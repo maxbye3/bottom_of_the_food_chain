@@ -1,3 +1,6 @@
+// temp
+var MAX = 'temp'; 
+// temp
 var disclaimer = [{
   main_text: "Warning: this story contains graphic content.",
   option_1: { text: "Continue", step : 1 },
@@ -236,25 +239,25 @@ var content = [{
   id: 38,
   option_1: { text: "Drag the wounded <span class='gender'></span> into the pharmacy aisle", step: 49 },
   option_2: { text: "Ditch the stranger for the pharmacy aisle", step: 45 },
-  option_3: { text: "Ditch the stranger for the food aisle", step: 39 },
-  option_4: { text: "Ditch the stranger for the drinks aisle", step: 40 },
+  option_3: { text: "Ditch the stranger for the food aisle", step: 40 },
+  option_4: { text: "Ditch the stranger for the drinks aisle", step: 39 },
 },
 {
-  char_addition1: 'wine',
-  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with water and alcohol. You switch out vodka brands for the most premium, if the world is going to hell you might as well be picky. You spot a very large bottle of white wine. Holding it by the neck, at a stretch you think it can be used as a weapon.",
+  char_addition1: 'wine bottle',
+  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main drinks aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with water and alcohol. You switch out vodka brands for the most premium, if the world is going to hell you might as well be picky. You spot a very large bottle of white wine. Holding it by the neck, at a stretch you think it can be used as a weapon.",
   id: 39,
   option_1: { text: "Continue", step: 41 },
 },
 {
   char_addition1: 'bread',
-  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with water and alcohol. You switch out vodka brands for the most premium, if the world is going to hell you might as well be picky. At the end of the aisle, you spot a very large bottle of white wine. Holding it by the neck, at a stretch you think it can be used as a weapon.",
+  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with dry food. In the bakery section, you find an extremely large and stale baguette. At a stretch, it could be used as a weapon. The thought doesn't fill you with confidence.",
   id: 40,
   option_1: { text: "Continue", step: 41 },
 },
 {
-  main_text: "At the end of the aisle, a stranger is being viciously attacked by a crow. His clothes are ripped and his arms are covered in scratches. Its furiously razor-like claws and knife-like beak is scratching at his face. 'Please!' the man cries out 'Help me!'.",
+  main_text: "At the end of the aisle, a stranger is being viciously attacked by a crow. His clothes are ripped and his arms are covered in scratches. It furiously scratches at him with its razor-like claws and knife-like beak. 'Please!' the man cries out 'Help me!'.",
   id: 41,
-  option_1: { text: "Help the stranger", step: 43, conditional: 'wine'  }, // you attack with bread
+  option_1: { text: "Help the stranger", step: 43, conditional: 'wine bottle'  }, // you attack with bread
   option_2: { text: "Help the stranger", step: 65, conditional: 'bread'  }, // you attack with wine
   option_3: { text: "Don't help the stranger", step: 42 },
 },
@@ -277,7 +280,7 @@ var content = [{
   main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as birds continue to crash through the ceiling. Thankfully, the aisle provides a bit of cover. Going down the aisle, you find a discarded plastic shopping bag and fill it with useful medical supplies. Bottles suddenly explode out of the shelf as a pigeon dives out from an adjacent aisle. Its wing is broken so there's nothing it can do except squawk and roll around wildly.",
   id: 45,
   option_1: { text: "Kill the pigeon", step: 46 },
-  option_1: { text: "Ignore it", step: 47 },
+  option_2: { text: "Ignore it", step: 47 },
 },
 {
   main_text: "You viciously stamp on its fragile head and you feel it give way underfoot. Again, you stamp for both good measure and to try to vent the frustrations of the day. You wipe your foot on the store laminate floor while looking at the remains in morbid curiosity.",
@@ -300,7 +303,7 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. While inspecting the wound you ask, 'What's your name you ask?'. '<span class='name'></span>' they whisper weakly. 'Okay <span class='name'></span>, just hang on it there okay'.",
+  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?' you ask while inspecting the wound. '<span class='name'></span>' they whisper weakly. 'Okay <span class='name'></span>, just hang on in there, okay'.",
   id: 49,
   option_1: { text: "Continue", step: 50 },
 },
@@ -322,7 +325,7 @@ var content = [{
   main_text: "You frantically look and find ibuprofen. You place the pills in their mouth and offer a bottle of couch medicine to wash it down. However, they have passed out probably from blood loss. You feel like you could have done a better job here.",
   id: 52,
   option_1: { text: "Take <span class='name'></span>", step: 63 },
-  option_1: { text: "Leave <span class='name'></span>", step: 58 },
+  option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
   main_text: "You look around the surrounding shelf for anything to help with the bleeding and find a long roll of gauze and some antiseptic tissues. You apply both to the wound but the blood seeps through.",
@@ -347,17 +350,17 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You add material on top of the old. Confident this was talked about in that dull first aid lecture. A few minutes pass and the bleeding isn't stopping. You're running out of gauze. The birds are getting closer.",
+  main_text: "You add material on top of the old. Confident this was talked about in that dull first aid lecture. After 3 minutes of external pressure on the wound, you conclude that <span class='name'></span> is still bleeding out heavily. You're running out of gauze. The birds are getting closer.",
   id: 56,
   option_1: { text: "Move <span class='name'></span>", step: 57 },
-  option_1: { text: "Apply tourniquet", step: 59 },
+  option_2: { text: "Apply tourniquet", step: 59 },
 },
 {
   function: "getName()",
   main_text: "You move <span class='name'></span> slowly to your shoulder. Standing up carefully, <span class='name'></span> lets out a short groan.  Before you take your first step, <span class='name'></span> falls away from you. It takes all your strength to stop them from crashing back into the shelving units. Before you make another go of it, you realise <span class='name'></span> is out cold.",
   id: 57,
   option_1: { text: "Take <span class='name'></span> with you", step: 63 },
-  option_1: { text: "Leave <span class='name'></span>", step: 58 },
+  option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
   function: "getName()",
@@ -371,15 +374,15 @@ var content = [{
   function: "getName()",
   main_text: "You remove your belt. 'Okay <span class='name'></span>, we're applying a tourniquet'. Only after you've said the words does the panic of what you're about to do creep in. 'It'll be just like the movies' you say out loud re-assuring no one.",
   id: 59,
-  option_1: { text: "Apply below the wound towards the hand", step: 60 },
-  option_1: { text: "Apply below the wound towards the heart", step: 61 },
+  option_1: { text: "Apply below the wound (towards the hand)", step: 60 },
+  option_2: { text: "Apply above the wound (towards the heart)", step: 61 },
 },
 {
   function: "getName()",
   main_text: "You wrap the belt below the wound. It does absolutely nothing, if anything it increases the bleeding. By the time you've got the belt off their wrist <span class='name'></span> seems to have passed out from the loss of blood.",
   id: 60,
-  option_2: { text: "Take <span class='name'></span> with you", step: 63 },
-  option_1: { text: "Leave <span class='name'></span>", step: 58 },
+  option_1: { text: "Take <span class='name'></span> with you", step: 63 },
+  option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
   function: "getName()",
@@ -389,7 +392,7 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. She groans. Still conscious, that's good. You carry her gently towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow. Even if you wanted to put <span class='name'></span> down, he's too far to help. You have three more aisles in front of you.",
+  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. They curse softly as you move them. Still conscious, that's good. You carry them gently towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow. Even if you wanted to put <span class='name'></span> down, he's too far to help. You have three more aisles in front of you.",
   id: 62,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
@@ -404,18 +407,21 @@ var content = [{
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
-  main_text: "You can see and hear the carnage and chaos of the storefront the man is now limping towards. Drawing your thoughts back to your own set of circumstances, you decide towards the back of the store. There are three more aisles to choose from.",
+  main_text: "You can see and hear the carnage and chaos of the storefront the man is now limping towards. Drawing your thoughts back to your own set of circumstances, you decide to head towards the back of the store. There are three more aisles to choose from.",
   id: 64,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
+  char_addition1: 'smashed wine bottle',
+  char_reduction: 'wine bottle',
   main_text: "You rush over, wait for an opening and swing the the wine bottle as hard as you can. It's a perfect hit! The crow hits the floor squawking and before it recovers, you bring the bottle down hard on it. The bottle smashes and explodes into little bits of glass and the crow is killed immediately.",
   id: 65,
   option_1: { text: "Continue", step: 44 },
 },
 {
+  char_addition1: 'hammer',
   main_text: "Birds are zipping and crashing into products like bullets. Crouching low you swiftly cross over and enter the hardware aisle. The tall shelves again provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A nauseting realisation runs over you that you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
   id: 66,
   option_1: { text: "END OF AISLE", step: MAX },
@@ -427,7 +433,7 @@ var content = [{
 },
 {
   function: "checkWeapon()",
-  main_text: "You head down the second food aisle. You crouch past where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>.",
+  main_text: "You head down the second food aisle. You crouch past where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
   option_1: { text: "END OF AISLE", step: MAX },
 },
@@ -436,5 +442,5 @@ var content = [{
 
 ];
 
-tellStory(content, 37);
+tellStory(content, 38);
 localStorage.setItem('gender', 'woman');
