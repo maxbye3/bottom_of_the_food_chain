@@ -8,10 +8,61 @@ function addAddition(arr){
   }
 }
 
+function woundCheck(){
+  var birdWound = charStatus.indexOf('bird_injury');
+  var shopWound = charStatus.indexOf('shop_injury');
+  var birdWound2 = charStatus.indexOf('bird_injury2');
+  var medicalSupplies = charStatus.indexOf('medical_supplies');
+  var woundCondition = ""; 
+  var medicalCondition = ""; 
+  var gotMedicine = "";
+  
+  // injured but you didn't grab medical supplies
+  if(medicalSupplies === -1){
+    gotMedicine = " You really wish you had grabbed some bandages or other medical supplies in the store earlier. You try and swallow your fear but you cannot keep the terror from creeping in."
+  } else{
+    gotMedicine = 'To keep the terror from creeping in, you rummage through the bag of medical supplies you collected earlier and layout the supplies in front of you.';
+  }   
+  
+  
+  // bird wound only  
+  if(birdWound !== -1){
+    woundCondition += 'You roll up your sleeves they are sticky with blood from scratches on your forearms.'
+    medicalCondition += " You apply ointment and wrap bandages around each of your wrists to your elbows."
+  }  
+
+  // bird wound 
+  if(shopWound !== -1){
+    woundCondition += 'You have a pounding headache. While totalling your car, you hit your head on the steering wheel pretty hard.'
+    medicalCondition += " You dab at the cut above the eye with alcohol, the spirit burns like the sun but you persevere. Using your phone's camera, you apply a plaster over the cut. ";
+  }
+
+  // bird wound 2 
+  if(birdWound2 !== -1){
+    woundCondition += "Looking at your phone's camera, the recent cut under your eye is still bleeding.";
+    medicalCondition += " You clean the blood with cotton wool and hold it there for a short period of time and then you cover it with a plaster. "    
+  }
+
+  // uninjured
+  if(shopWound === -1 && birdWound === -1 && birdWound2 === -1){
+    woundCondition += "You roll up your sleeves. Unbelievable, despite the chaos not a scratch";
+    // check for medical supplies
+    if(medicalSupplies !== -1){
+      medicalCondition += " You still have plenty, all things considered, you're doing pretty well."
+    } else{
+      medicalCondition += " A relief considering you didn't grab any medical supplies or bandages."
+    }
+  }
+
+
+  
+  $('.woundCheck').html(woundCondition + gotMedicine + medicalCondition);
+  
+
+}
 
 function hasFriends(){
   getName();
-  console.log('hello world');
   var hasFriends = charStatus.indexOf('no_friend');
   if(hasFriends > -1){
     $('.friend').hide();
@@ -23,14 +74,6 @@ function hasFriends(){
 
 function getName(){
   $('.gender').text(localStorage.getItem('gender'));
-
-  if(localStorage.getItem('gender') === 'null'){
-    $('.friend').hide();
-    return;    
-  } else {
-    $('.solo').hide();
-  }
-
   if(localStorage.getItem('gender') === 'man'){
     $('.name').html('John');
   } else {

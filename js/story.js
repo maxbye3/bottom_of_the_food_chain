@@ -157,11 +157,12 @@ var content = [{
 {
   main_text: "'HELP!! WAIT!!!'<br><br> A few meters away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in blood. It's sprinting after him, but you reckon there's enough distance between them for the injured man to make it into the store.",
   id: 24,
-  option_1: { text: "Hold the metal shutter open", step: 29, conditional: 'dog_down' }, // you are attacked
-  option_2: { text: "Hold the metal shutter open", step: 27, conditional: 'dog_up' }, // not attacked
+  option_1: { text: "Hold the metal shutter open", step: 29, conditional: 'dog_down' }, // friend is attacked
+  option_2: { text: "Hold the metal shutter open", step: 27, conditional: 'dog_up' }, // friend is not attacked
   option_3: { text: "Close the metal shutter open", step: 25 },
 },
 {
+  char_addition1: 'no_friend',
   main_text: "The metal shutter hits the floor with a dull clunk. You can hear on the other-side a frantic banging and pleading. The dog catches up. Then the man screams a blood-curdling wail as the dog rips him apart. Then there is silence.",
   id: 25,
   option_1: { text: "Continue", step: 26 },
@@ -200,7 +201,7 @@ var content = [{
   option_1: { text: "Continue", step: 32 },
 },
 {
-  main_text: "The Retreiver jumps over the other attack and pounces on the woman. She hits the floor with a peircing scream.",
+  main_text: "The Labrador jumps over the other attack and pounces on the woman. She hits the floor with a terrible and peircing scream.",
   id: 32,
   option_1: { text: "Help woman", step: 34},
   option_2: { text: "Help man", step: 33 },
@@ -224,6 +225,7 @@ var content = [{
   option_1: { text: "Continue", step: 36 },
 },
 {
+  char_addition1: 'aisle_round1',
   main_text: "'It may be rough' he continues 'but we've got more than enough food and supplies to last until help arri...'. The security guards speech is cut short by the sound of an explosion down the bottom of the store.",
   id: 36,
   option_1: { text: "Continue", step: 37 },
@@ -389,11 +391,13 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You take off your belt and move the belt buckle on the highest notch. It's still pretty loose, so you jam a themonter between the buckle and twist making the belt tighter. The birds are getting closer, time is running out. You wrap the remaining gauze over <span class='name'></span>'s wound and you find a discarded plastic shopping bag and fill it with painkillers and bandages.",
+  main_text: "You take off your belt and move the belt buckle on the highest notch. It's still pretty loose, so you jam a thermometer between the buckle and twist making the belt tighter. The birds are getting closer, time is running out. You wrap the remaining gauze over <span class='name'></span>'s wound and you find a discarded plastic shopping bag and fill it with painkillers and bandages.",
   id: 61,
   option_1: { text: "Continue", step: 62 },
 },
 {
+  char_addition1: 'friend_conscious',
+  char_addition2: 'medical_supplies',
   function: "getName()",
   main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> curses softly. Still conscious, that's good. You carry them gently towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow. Even if you wanted to put <span class='name'></span> down, he's too far to help. You have three more aisles in front of you.",
   id: 62,
@@ -403,6 +407,7 @@ var content = [{
 },
 {
   function: "getName()",
+  char_addition2: 'medical_supplies',
   main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> is limp and the full weight of their body falls on you. That's not good. You drag <span class='name'></span> as gently as you can with their good shoulder towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help.",
   id: 63,
   option_1: { text: "Choose the hardware aisle", step: 66 },
@@ -425,24 +430,27 @@ var content = [{
 },
 {
   char_addition1: 'hammer',
-  main_text: "Birds are zipping and crashing into products like bullets. Crouching low you swiftly cross over and enter the hardware aisle. The tall shelves again provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A nauseting realisation runs over you that you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
+  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle. The tall shelves again provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over you that you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
   id: 66,
-  option_1: { text: "Continue", step: 69 },
+  option_1: { text: "Continue", step: 69, conditional: 'aisle_round2'  }, // first aisle round
+  option_1: { text: "Continue", step: 85, conditional: 'aisle_round1' }, // second aisle round
 },
 {
   main_text: "You're not quite sure why you've entered the pet aisle all things considered. Thankfully, they only stock fish and mice behind glass. You peer into one glass case, a mouse sprints into the glass and instead of shying away, it keeps ramming the glass over and over again. Your transfixed, little flecks of blood rain on its white fur. A splash of water wakes you from the trance, two tropical fish have leapt out of their tanks and flapping wildly at your feet. Mouths gaping, there beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
   id: 67,
-  option_1: { text: "Continue", step: 69 },
+  option_1: { text: "Continue", step: 69, conditional: 'aisle_round2' }, // first aisle round
+  option_1: { text: "Continue", step: 85, conditional: 'aisle_round1' }, // second aisle round
 },
 {
   function: "hasFriends()",
   main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You crouch past where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
-  option_1: { text: "Continue", step: 69 },
+  option_1: { text: "Continue", step: 69, conditional: 'aisle_round2' }, // first aisle round
+  option_1: { text: "Continue", step: 85, conditional: 'aisle_round1' }, // second aisle round
 },
 {
   function: "hasFriends()",
-  main_text: "<span class='solo'>You're at the back of the store, you are more exposed here then the aisles.</span><span class='friend'>With <span class='name'></span> over your shoulder you have made it to the back of the store.</span> To the right, is a glass door leading outside. To the left is a door to what you can only assume is a backroom or store room.",
+  main_text: "<span class='solo'>You're at the back of the store, you feel more exposed here then the aisles.</span><span class='friend'>With <span class='name'></span> over your shoulder you have made it to the back of the store.</span> To the right, is a glass door leading outside. To the left is a door to what you can only assume is a backroom or store room.",
   id: 69,
   option_1: { text: "Go left (store room)", step: 74 },
   option_2: { text: "Go right (glass door)", step: 70 },
@@ -460,26 +468,138 @@ var content = [{
   option_2: { text: "Get to storeroom", step: 73 },
 },
 {
+  char_addition1: 'bird_injury2',
+  char_addition2: 'no_friend',
   function: "hasFriends()",
-  main_text: "A bird dive-bombs and hits you square in the face. The impact is so incredible, it spins you round. You can feel blood trickle from a newly formed cut under your eye. <span class='friend'>A terrible scream brings you to your senses. Bloody rats are all over <span class='name'></span>. Pure terror takes hold and you run in the opposite direction. The backroom door is unlocked (luckily) and you slam it behind you. You can still hear <span class='name'></span>'s screams.</span><span class='solo'>A rat climbing up your shoe and up your leg, brings you to your senses. Crying out and twisting you manage to throw it off and hightail it to the other side of the shop. The door to the supply room is luckily unlocked. The feeling of the rat's claws are still on your lower leg.</span>",
+  main_text: "A bird dive-bombs and hits you square in the face. The impact is so incredible, it spins you round. You can feel blood trickle from a newly formed cut under your eye. <span class='friend'>A terrible scream brings you to your senses. Bloody rats are all over <span class='name'></span>. Pure terror takes hold and you run in the opposite direction. The backroom door is unlocked (luckily) and you slam it behind you. You can still hear <span class='name'></span>'s screams.</span><span class='solo'>A rat climbing up your shoe and then leg, brings you to your senses. Crying out and twisting you manage to throw it off and hightail it to the other side of the shop. The door to the supply room is luckily unlocked. The feeling of the rat's claws are still on your lower leg.</span>",
   id: 72,
-  option_1: { text: "IN THE BACKROOM", step: MAX },
+  option_1: { text: "Continue", step: 75 },
 },
 {
   function: "hasFriends()",
   main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. The door is very fortunately unlocked. <span class='friend'>'You quickly lower <span class='name'></span> inside and with</span><span class='solo'>With</span> the rats only a few feet behind, slam the door shut.",
   id: 73,
-  option_1: { text: "IN THE BACKROOM", step: MAX },
+  option_1: { text: "Continue", step: 75 },
 },
 {
   function: "hasFriends()",
   main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. There's a large crashing sound behind you. Something has smashed through the glass door behind. You have no idea what but you sure hope it doesn't catch up. The door is very fortunately unlocked. <span class='friend'>'You quickly lower <span class='name'></span> inside and look</span><span class='solo'>You look</span> at the carnage at the other side of the store: the Dalmatian from before seems to have died throwing itself through the glass door and rats are running over its corpse towards you.<br><br> You quickly close the door.",
   id: 74,
+  option_1: { text: "Continues", step: 75 },
+},
+{
+  function: "hasFriends()",
+  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and re-dress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>' but your assertion grants no response. </span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
+  id: 75,
+  option_1: { text: "Continue", step: 76 },
+},
+{
+  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door leads outside. You peer round, it's the car park again. This must be some sort of alternate entrance for staff and deliveries. 100 or so meters ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your escape.",
+  id: 76,
+  option_1: { text: "Continue", step: 77 },
+},
+{
+  main_text: "The question of the keys are answered when you spot the driver lying prone. Above him the golden labrador above him pulls meaty strings from his neck. This forces your gag reflex into overdrive and you close the door quickly and silently.",
+  id: 77,
+  option_1: { text: "Continue", step: 78 },
+},
+{
+  function: "hasFriends()",
+  main_text: "Returning to the door leading to the store, you take a seat against the wall <span class='friend'>by <span class='name'></span></span>. You take out your phone and try to call the police then Leslie but the line is dead.",
+  id: 78,
+  option_1: { text: "Continue", step: 79 },
+},
+{
+  main_text: "Fear creeps in. It is exhausting. You lay your head back on the cold stone wall, close your eyes and think of Leslie.",
+  id: 79,
+  option_1: { text: "Wake up", step: 81 },
+},
+{
+  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' No response.</span>",
+  id: 80,
+  option_1: { text: "Continue", step: 81 },
+},
+{
+  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' No response.</span>",
+  id: 81,
+  option_1: { text: "Continue", step: 81 },
+},
+{
+  main_text: "<span class='woundCheck'></span>",
+  id: 82,
+  option_1: { text: "Stand up", step: 82 },
+},
+{
+  main_text: "Through the window, you can see into the store. There's still birds zipping about but it looks relatively less busy. You feel like you could make it into one of the final three aisles. You move to the other door and open it as slowly as possible. The truck and truck driver are still there but the dog is gone.",
+  id: 83,
+  option_1: { text: "Run to the truck", step: MAX },
+  option_2: { text: "Go back to the store", step: MAX },
+},
+{
+  char_addition1: 'aisle_round2',
+  char_reduction: 'aisle_round1',
+  main_text: "You steal your nerves and re-enter the store. You feel a large number of eyes turn and bear down on you. 'Better make this quick' you think.", // going back into store
+  id: 84,
+  option_1: { text: "Choose the hardware aisle", step: 66 },
+  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_3: { text: "Choose another food aisle", step: 68 },
+},
+{
+  function: "hasFriends()",
+  main_text: "The race back to the backroom is a tense one. You close the door to the backroom behind you and look back through the door's window back into the store. All the bird's eyes are fixed and trained on the door. On you. <span class='friend'>Mary stirs and clutching their injured shoulder rolls onto their back.</span>",
+  id: 85,
+  option_1: { text: "Go back into the store", step: MAX },
+  option_2: { text: "Run to the truck", step: MAX },
+  option_2: { text: "Check on Mary", step: MAX },
+},
+{
+  main_text: "As soon as you hit the store something hits in the chest, the surprise makes you fall back. On all fours, you watch a seagull scream around the small room before it dives in at you for another attack.",
+  id: 86,
   option_1: { text: "IN THE BACKROOMs", step: MAX },
 },
-
-
-
+{
+  function: "hasFriends()",
+  id: 87,
+  main_text: "This time you manage to swat it away <span class='friend'>but it changes direction and begins attacking Mary. They let out cry out a long and horrible moan. You swat at the bird but </span><span class='solo'>but it doesn't take look before it mounts another attack, worse</span> you've left the door open and more birds stream into the small room. You stumble out into the car park and slam the door behind you. In the chaos, you've forgotten all your bag of items. <span class='friend'>From the backroom, you hear Mary's wailing turn to screaming.</span>",
+  option_1: { text: "IN THE BACKROOMs", step: MAX },
+},
+{
+  function: "hasFriends()",
+  main_text: "Mary is awake. You help prop them up into a sitting position and sip some water back.<br>'How you feeling?' you ask.<br>'Terrible' they respond.<br>'I have to get home. There's a truck with its keys in out there. Are you coming with me?'. Mary closes her eyes and processes your question.",
+  id: 88,
+  option_1: { text: "Continue", step: MAX },
+},
+{
+  function: "hasFriends()",
+  main_text: "'Are we in the store still?'<br>'Yes' you respond.<br>'In that case, I'm going to stay here and wait for help'<br>'Are you sure?'<br>Mary drinks more water and with eyes closed responds 'Yes, I'll be fine. Go.'",
+  id: 89,
+  option_1: { text: "Go back into the store", step: MAX },
+  option_2: { text: "Run to the truck", step: MAX },
+},
+{
+  function: "hasFriends()",
+  main_text: "You take a few deeps breaths, slowly open the door leading to the car park and carefully scan your surroundings. Between you and the truck someone has dropped a box of wine, the blood red wine runs from the scattered glass. You slip out. the door clicks behind you.",
+  id: 90,
+  option_1: { text: "Run", step: MAX },
+},
+{
+  function: "hasFriends()",
+  main_text: "You test the door back to the store but it only opens one way and from the car park it's locked.<br><br> No going back now.",
+  id: 91,
+  option_1: { text: "IN THE BACKROOMs", step: MAX },
+},
+{
+  function: "hasFriends()",
+  main_text: "",
+  id: 92,
+  option_1: { text: "IN THE BACKROOMs", step: MAX },
+},
+{
+  function: "hasFriends()",
+  main_text: "",
+  id: 93,
+  option_1: { text: "IN THE BACKROOMs", step: MAX },
+},
 ];
 
 tellStory(content, 38);
