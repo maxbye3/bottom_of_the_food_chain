@@ -53,12 +53,7 @@ function woundCheck(){
       medicalCondition += " A relief considering you didn't grab any medical supplies or bandages."
     }
   }
-
-
-  
   $('.woundCheck').html(woundCondition + gotMedicine + medicalCondition);
-  
-
 }
 
 function hasFriends(){
@@ -81,8 +76,19 @@ function getName(){
   }
 }
 
+function weaponConsequence(){
+  // wine bottle
+  // hammer
+  // broken bottle
+  // mop
+  // nothing
+  if(charStatus.indexOf('wine bottle')){
+    stance = 'You grip the bottle from the neck and hold it out. Your heart is pumping out of your chest.'
+  }
+}
+
 function checkWeapon(){
-  function checkWeapon(weapon){
+  function weaponCheck(weapon){
     var weaponType = charStatus.indexOf(weapon);
     if(weaponType > -1){  
       $('.weaponResult').html('You feel the ' + String(weapon) + ' you have already is a better weapon.');
@@ -90,8 +96,13 @@ function checkWeapon(){
       $('.weaponResult').html('At a stretch, you think, this could be used as a weapon.');
     }
   }
-  checkWeapon('hammer');
-  checkWeapon('wine bottle');
+  weaponCheck('hammer');
+  weaponCheck('wine bottle');
+}
+
+function loseWeapons(){
+  hasFriends();
+
 }
 
 function goneWrong(){
@@ -172,9 +183,20 @@ function tellStory(arr, id){
         jQuery('.option' + i).attr('onclick', 'tellStory(disclaimer, ' + arr[id]["option_" + i].step + ')');
       }
 
-      if(charStatus && arr[id]["option_" + i].conditional){
+      // show conditional is only shown if in charStatus 
+      if(charStatus && arr[id]["option_" + i].hide){
+        jQuery('.option' + i).hide()        
         for (var j = 0; j < charStatus.length; j++) {
-          if(charStatus[j] === arr[id]["option_" + i].conditional){ 
+          if(charStatus[j] === arr[id]["option_" + i].hide){ 
+            jQuery('.option' + i).show()
+          }
+        }
+      }
+
+      // hide conditional is only shown if in charStatus 
+      if(charStatus && arr[id]["option_" + i].hide){
+        for (var j = 0; j < charStatus.length; j++) {
+          if(charStatus[j] === arr[id]["option_" + i].hide){ 
             jQuery('.option' + i).hide()
           }
         }
