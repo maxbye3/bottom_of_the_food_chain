@@ -1,4 +1,4 @@
-console.log('firebase test!');
+console.log('firebase test 1!');
 var database = firebase.database();
 
 function writeUserData(userId, name, email, imageUrl) {
