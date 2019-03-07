@@ -40,7 +40,28 @@
     messagingSenderId: "1089933506419"
   };
   firebase.initializeApp(config);
-  </script>
+
+// write works
+//   function writeUserData(userId, name, email, imageUrl) {
+//   firebase.database().ref('users/' + userId).set({
+//     username: name,
+//     email: email,
+//     profile_picture : imageUrl
+//   });
+// }
+// writeUserData('userId', 'name', 'email', 'imageUrl');
+
+// read works
+ firebase.database().ref('/users/').once('value').then(function(snapshot) {
+  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  console.log(snapshot.val());
+  console.log(snapshot.val().userId.username); // returns name
+});
+
+
+
+</script>
+
 <script src="js/savingData.js"></script>
 
 </html>

@@ -135,7 +135,7 @@ var content = [{
 },
 {
   id: 20,
-  main_text: "With your foot planted firmly to the floor you drive towards the entrance. You can see shoppers nervously at the door. The car lifts off over a speed bump and as you land you yank the wheel to the right. You screech to a halt a few feet away from the door and the car slumps back onto four wheels as it grinds to a halt. Without a second of hesitation you unbuckle, clamber over the passenger seat and out of the car. The automatic doors are forced open by a woman and what appears to be a security guard as you throw yourself inside the store.",
+  main_text: "With your foot planted firmly to the floor, your car hurtles towards the door. You can see shoppers nervously hover behind the storefront. The car lifts off over a speed bump and as you land you yank the wheel to the right. You screech to a halt a few feet away from the store entrance and the car slumps back onto four wheels. Without a second of hesitation you unbuckle, clamber over the passenger seat and out of the car. The automatic doors are forced open by a woman and what appears to be a security guard. You dive inside the store.",
   option_1: { text: "Continue", step: 21 },
 },
 {
@@ -155,7 +155,7 @@ var content = [{
   option_1: { text: "Continue", step: 24 },
 },
 {
-  main_text: "'HELP!! WAIT!!!'<br><br> A few meters away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in blood. It's sprinting after him, but you reckon there's enough distance between them for the injured man to make it into the store.",
+  main_text: "'HELP!! WAIT!!!'<br><br> A few meters away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in specks of blood. It's sprinting after him, but you reckon there's enough distance between them for the injured man to make it into the store.",
   id: 24,
   option_1: { text: "Hold the metal shutter open", step: 29, hide: 'dog_down' }, // friend is attacked
   option_2: { text: "Hold the metal shutter open", step: 27, hide: 'dog_up' }, // friend is not attacked
@@ -180,12 +180,12 @@ var content = [{
 },
 {
   function: "$('.gender').text(localStorage.getItem('gender'));",
-  main_text: "You help drag the injured <span class='gender'></span> under the metal shutters. It is quickly slammed shut as the dog pounces on it in an attempt to finish the job. The <span class='gender'></span> has a large cut all the way down their upper-arm and they hold it in an odd posture in a sitting position. 'Is anyone a doctor?!' you cry out.",
+  main_text: "You help drag the injured <span class='gender'></span> under the metal shutters. The shutters slam shut. The dog collides with the metal grate causing another large bang, followed by desperate barking. The <span class='gender'></span> has a large cut all the way down their upper-arm and they hold it in an odd posture in a sitting position. 'Is anyone a doctor?!' you cry out.",
   id: 28,
   option_1: { text: "Continue", step: 35 },
 },
 {
-  main_text: "With only a few yards away the Dalmatian pounces seemingly out of nowhere. It drags the man down by his arm with a vicious bite. The man is screaming helplessly, trying to avoid the snarling jaws above him.",
+  main_text: "With only a few yards away the Dalmatian pounces seemingly out of nowhere. With a vicious bite around the man's arm it drags him to the floor. The man is screaming helplessly, frantically fending off the snarling jaws above him.",
   id: 29,
   option_1: { text: "Help", step: 31 },
   option_2: { text: "Close the shutter", step: 30 },
@@ -196,25 +196,25 @@ var content = [{
   option_1: { text: "Continue", step: 26 },
 },
 {
-  main_text: "Before you have a chance to react the woman shopper who held one of the doors open for you ducks under the shutter and sprints toward the attacking dog. You follow slightly more hesistantly.",
+  main_text: "Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter and sprints toward the attacking dog. You follow slightly more hesitantly.",
   id: 31,
   option_1: { text: "Continue", step: 32 },
 },
 {
-  main_text: "The Labrador jumps over the other attack and pounces on the woman. She hits the floor with a terrible and peircing scream.",
+  main_text: "The Labrador pounces over the Dalmatian attack and lands on the woman. She is caught completely off guard and hits the floor with a terrible scream.",
   id: 32,
   option_1: { text: "Help woman", step: 34},
   option_2: { text: "Help man", step: 33 },
 },
 {
   function: "localStorage.setItem('gender', 'man');",
-  main_text: "With all your strength you kick the dog off the man and help him to their feet. You can see that they are in a bad way. With their arm over your shoulder you escort them quickly back to the store doing everything in your power to ignore the horrible sound of the other attack as you pass it.",
+  main_text: "With all your strength you kick the dog off the man and help him to their feet. You can see that they are in a bad way, the Dalmatian has taken a nasty bite into their upper arm.. With their good arm over your shoulder, you escort them quickly back to the store. You do everything in your power to ignore the horrible sound of the Retriever attack as you pass it.",
   id: 33,
   option_1: { text: "Continue", step: 28 },
 },
 {
   function: "localStorage.setItem('gender', 'woman');",
-  main_text: "With all your strength you kick the dog off the woman and help her to their feet. You can see that they are in a bad way. With their arm over your shoulder you escort them quickly back to the store doing everything in your power to ignore the horrible sound of the other attack behind you.",
+  main_text: "With all your strength you kick the dog off the woman and help her to their feet. You can see that they are in a bad way, the Retriever has taken a nasty bite into their upper arm. With their good arm over your shoulder, you escort them quickly back to the store. You do everything in your power to ignore the horrible sound of the Dalmatian attack behind you.",
   id: 34,
   option_1: { text: "Continue", step: 28 },
 },
@@ -226,12 +226,12 @@ var content = [{
 },
 {
   char_addition1: 'aisle_round1',
-  main_text: "'It may be rough' he continues 'but we've got more than enough food and supplies to last until help arri...'. The security guards speech is cut short by the sound of an explosion down the bottom of the store.",
+  main_text: "'It may be rough' he continues 'but we've got more than enough food and supplies to last until help arri...'. The security guards speech is cut short by the sound of an explosion towards the end of the store.",
   id: 36,
   option_1: { text: "Continue", step: 37 },
 },
 {
-  main_text: "Another, closer and this time you catch a fluorescent light crash to the floor. Two more explosions from your left and right. 'It's the birds!' one of the shoppers cries. Immediately, the ceiling panel above explodes and a dead seagull flops to the floor. Two more seagulls fly in from the exposed hole and dive into adjacent shoppers.",
+  main_text: "Another explosion. Closer and this time you catch a fluorescent light crash to the floor. Two more explosions from your left and right. 'It's the birds!' one of the shoppers cries. The ceiling panel above explodes and a dead seagull flops to the floor. Two more seagulls fly in from the exposed hole and dive into adjacent shoppers.",
   id: 37,
   option_1: { text: "Continue", step: 38 },
 },
