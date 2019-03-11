@@ -247,42 +247,42 @@ var content = [{
 {
   char_addition1: 'wine bottle',
   char_addition2: 'no_friend',
-  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main drinks aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with water and alcohol. You switch out vodka brands for the most premium, if the world is going to hell you might as well be picky. You spot a very large bottle of white wine. Holding it by the neck, at a stretch you think it can be used as a weapon.",
+  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main drinks aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with water and alcohol. You switch out vodka brand you picked up for the most premium, if the world is going to hell you might as well be picky. You spot a very large bottle of white wine. Holding it by the neck, at a stretch you think it can be used as a weapon.",
   id: 39,
   option_1: { text: "Continue", step: 41 },
 },
 {
   char_addition1: 'bread',
   char_addition2: 'no_friend',
-  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with dry food. In the bakery section, you find an extremely large and stale baguette. At a stretch, it could be used as a weapon. The thought doesn't fill you with confidence.",
+  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as the birds continue to crash through the ceiling. Thankfully, the aisle provides more cover than the store entrance. You find a discarded plastic shopping bag and fill it with dry food. In the bakery section, you find an extremely stale and long baguette. At a stretch, it could be used as a weapon. The thought doesn't fill you with confidence.",
   id: 40,
   option_1: { text: "Continue", step: 41 },
 },
 {
-  main_text: "At the end of the aisle, a stranger is being viciously attacked by a crow. His clothes are ripped and his arms are covered in scratches. It furiously scratches at him with its razor-like claws and knife-like beak. 'Please!' the man cries out 'Help me!'.",
+  main_text: "At the end of the aisle, a stranger is being viciously attacked by a crow. His ripped clothes expose his scratch covered arms. The crow furiously attacks with its razor-like claws and a knife-like beak. 'Please!' the man cries out 'Help me!'.",
   id: 41,
   option_1: { text: "Help the stranger", step: 43, hide: 'wine bottle'  }, // you attack with bread
   option_2: { text: "Help the stranger", step: 65, hide: 'bread'  }, // you attack with wine
   option_3: { text: "Don't help the stranger", step: 42 },
 },
 {
-  main_text: "You stand and watch the bloody spectacle. Eventually, he grabs hold of one of the crow's feet and slams it dead against a shelf. 'You could have bloody helped!!' he cries out and throws the mess of feathers at your feet. He glares at you as he limps his way down the aisle towards the entrance. 'It's worse down there' you chuckle to yourself.",
+  main_text: "You stand and watch the bloody spectacle. Eventually, he grabs hold of one of the crow's feet and slams it repeatably against a shelf. 'You could have bloody helped!!' he cries out and throws the pulpy mess of black feathers and blood at your feet. He glares at you and limps his way down the aisle towards the entrance. 'It's worse down there' you chuckle to yourself.",
   id: 42,
   option_1: { text: "Continue", step: 64 },
 },
 {
-  main_text: "You rush over, wait for an opening and swing the baguette as hard as you can. It's a perfect hit! The baguette explodes and the crow hits the floor while squawking. It quickly recovers, but the man it was attacking catches its foot under his. You finish the job, viciously stamping on its fragile head and you feel it give way under foot. You stamp again for both good measure and to try to vent the frustrations of the day.",
+  main_text: "You rush over, wait for an opening and swing the baguette as hard as you can. It's a perfect hit! The baguette explodes and the crow hits the floor while squawking wildly. It quickly recovers, but the man you have saved stamps on its wing. You finish the job, viciously stamping on its fragile head and feeling it give way under your foot. You stamp again for both good measure and to try to vent the frustrations of the day.",
   id: 43,
   option_1: { text: "Continue", step: 44 },
 },
 {
-  main_text: "'Thanks', the man slaps your shoulder. 'It just attacked me while I was shopping'. 'Any idea what's going on?' you ask. 'I have no idea! That bird came out of nowhere. All these birds.. What has this store done? Or is this government? Global warming? Brexit?!' You respond with a shrug. 'I got to get out of here and find my kids' Before you can say anything else the man turns away and limps quickly away towards the store entrance.",
+  main_text: "'Thanks', the man slaps your shoulder. 'It just attacked me while I was shopping'. 'Any idea what's going on?' you ask. 'I have no idea! That bird came out of nowhere. All these birds.. What has this store done? Or is this government? Global warming? Brexit?!' You respond with a shrug. 'I got to get out of here and find my kids!' Before you can say anything, the man turns away and limps quickly away towards the store entrance.",
   id: 44,
   option_1: { text: "Continue", step: 64 },
 },
 {
   char_addition1: 'no_friend',
-  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as birds continue to crash through the ceiling. Thankfully, the aisle provides a bit of cover. Going down the aisle, you find a discarded plastic shopping bag and fill it with useful medical supplies. Bottles suddenly explode out of the shelf as a pigeon dives out from an adjacent aisle. Its wing is broken so there's nothing it can do except squawk and roll around wildly.",
+  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as birds continue to crash through the ceiling. Thankfully, the aisle provides a bit of cover. Going down the aisle, you find a discarded plastic shopping bag and fill it with medical supplies. Bottles suddenly explode out of the shelf as a pigeon dives out from an adjacent aisle. Its wing is broken so there's nothing it can do except squawk and roll around wildly.",
   id: 45,
   option_1: { text: "Kill the pigeon", step: 46 },
   option_2: { text: "Ignore it", step: 47 },
@@ -293,7 +293,7 @@ var content = [{
   option_1: { text: "Continue", step: 48 },
 },
 {
-  main_text: "The store front is chaos. Shoppers are desperate to re-open the metal shutter to escape the merciless bird attacks but you can hear the security guard yell back at them. You sidestep carefully around the crow. Where the aisles break, you can see a man being attacked by a seagull but he's too far away to help.",
+  main_text: "The store front is chaos. Shoppers are desperate to re-open the metal shutter to escape the merciless bird attacks but you can hear the security guard yell back at them. You sidestep carefully around the pigeon. Where the aisles break, you can see a man being attacked by a seagull but he's too far away to help.",
   id: 47,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
@@ -308,12 +308,12 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?' you ask while inspecting the wound. '<span class='name'></span>' they whisper weakly. 'Okay <span class='name'></span>, just hang on in there, okay'.",
+  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?' you ask while inspecting the wound. '<span class='name'></span>' <span class='pronoun'></span> whispers weakly. 'Okay <span class='name'></span>, just hang on in there, okay'.",
   id: 49,
   option_1: { text: "Continue", step: 50 },
 },
 {
-  main_text: "Blood is everywhere. The wound looks bad it appears to be a bite along the forearm. You hope that you can recall some first aid training from that incredibly boring work seminar. ",
+  main_text: "Blood is everywhere. The wound looks bad, it appears to be a bite along the forearm. You hope that you can recall some first aid training from that incredibly boring work seminar. ",
   id: 50,
   option_1: { text: "Call emergency services", step: 51 },
   option_2: { text: "Find painkillers", step: 52 },
@@ -327,13 +327,13 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You frantically look and find ibuprofen. You place the pills in their mouth and offer a bottle of couch medicine to wash it down. However, they have passed out probably from blood loss. You feel like you could have done a better job here.",
+  main_text: "You frantically look and find ibuprofen. You place the pills in <span class='pronoun'></span> mouth and offer a bottle of couch medicine to wash it down. However, <span class='name'></span> seems to have passed out probably from blood loss. You feel like you could have done a better job here.",
   id: 52,
   option_1: { text: "Take <span class='name'></span>", step: 63 },
   option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
-  main_text: "You look around the surrounding shelf for anything to help with the bleeding and find a long roll of gauze and some antiseptic tissues. You apply both to the wound but the blood seeps through.",
+  main_text: "You look around the surrounding shelf for anything to help with the bleeding and find a long roll of gauze and some antiseptic tissues. You apply both to the wound but the blood quickly seeps through.",
   id: 53,
   option_1: { text: "Raise the arm", step: 54 },
   option_2: { text: "Keep adding cloth and gauze to the wound", step: 56 },
@@ -341,7 +341,7 @@ var content = [{
 },
 {
   char_addition1: 'arm',
-  main_text: "You raise the arm above their heart. You're fairly confident that's slowed down the bleeding somewhat.",
+  main_text: "You raise <span class='gender'></span>'s arm above <span class='pronoun'></span> heart. You're fairly confident that's slowed down the bleeding somewhat.",
   id: 54,
   option_2: { text: "Keep adding cloth and gauze to the wound", step: 56 },
   option_3: { text: "Remove bloody cloth and replace with new material", step: 55 },
@@ -362,14 +362,14 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You move <span class='name'></span> slowly to your shoulder. Standing up carefully, <span class='name'></span> lets out a short groan.  Before you take your first step, <span class='name'></span> falls away from you. It takes all your strength to stop them from crashing back into the shelving units. Before you make another go of it, you realise <span class='name'></span> is out cold.",
+  main_text: "You move <span class='name'></span> slowly to your shoulder. Standing up carefully, they let out a short groan and before you take your first step, <span class='name'></span> falls away from you. It takes all your strength to stop <span class='pronoun'></span> from crashing back into the shelving units. Before you make another go of it, you realise <span class='name'></span> has passed out.",
   id: 57,
   option_1: { text: "Take <span class='name'></span> with you", step: 63 },
   option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
   char_addition1: 'no_friend',
-  main_text: "You feel bad leaving but surely the emergency services will be here soon. You try to re-assure <span class='name'></span> but your not sure your words are getting through.  You rest your hand on their good shoulder and then creep towards the end of the aisle. Finding a discarded plastic shopping bag, you fill it with painkillers and bandages. At the far side of the store, a man is being viciously attacked by a crow but like <span class='name'></span> you cannot help them without putting yourself in danger. Three more aisles lie a head of you.",
+  main_text: "You feel bad leaving but surely the emergency services will be here soon. You try to re-assure <span class='name'></span> but your not sure your words are getting through. You rest your hand on <span class='pronoun'></span> good shoulder and then creep towards the end of the aisle. Finding a discarded plastic shopping bag, you fill it with painkillers and bandages. At the far side of the store, a man is being viciously attacked by a crow but like <span class='name'></span> you cannot help them without putting yourself in danger.<br> Three more aisles lie a head of you.",
   id: 58,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
@@ -384,14 +384,14 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You wrap the belt below the wound. It does absolutely nothing, if anything it increases the bleeding. By the time you've got the belt off their wrist <span class='name'></span> seems to have passed out from the loss of blood.",
+  main_text: "You wrap the belt below the wound. It does absolutely nothing, if anything it increases the bleeding. By the time you've got the belt off their wrist, <span class='name'></span> seems to have passed out from the loss of blood.",
   id: 60,
   option_1: { text: "Take <span class='name'></span> with you", step: 63 },
   option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
   function: "getName()",
-  main_text: "You take off your belt and move the belt buckle on the highest notch. It's still pretty loose, so you jam a thermometer between the buckle and twist making the belt tighter. The birds are getting closer, time is running out. You wrap the remaining gauze over <span class='name'></span>'s wound and you find a discarded plastic shopping bag and fill it with painkillers and bandages.",
+  main_text: "You take off your belt and move the belt buckle on the highest notch. It's still pretty loose, so you unbox and jam a thermometer between the buckle and twist making the belt tighter. The birds are getting closer, time is running out. You wrap the remaining gauze over <span class='name'></span>'s wound nice and tight.",
   id: 61,
   option_1: { text: "Continue", step: 62 },
 },
@@ -399,7 +399,7 @@ var content = [{
   char_addition1: 'friend_conscious',
   char_addition2: 'medical_supplies',
   function: "getName()",
-  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> curses softly. Still conscious, that's good. You carry them gently towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow. Even if you wanted to put <span class='name'></span> down, he's too far to help. You have three more aisles in front of you.",
+  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> curses softly. Still conscious, that's good. You carry them gently towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help. You have three more aisles in front of you.",
   id: 62,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
@@ -408,14 +408,14 @@ var content = [{
 {
   function: "getName()",
   char_addition2: 'medical_supplies',
-  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> is limp and the full weight of their body falls on you. That's not good. You drag <span class='name'></span> as gently as you can with their good shoulder towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help.",
+  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> is limp and the full weight of their body falls on you. That's not good. You drag <span class='name'></span> as gently as you can with their good shoulder towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help. You have three more aisles in front of you.",
   id: 63,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
-  main_text: "You can see and hear the carnage and chaos of the storefront the man is now limping towards. Drawing your thoughts back to your own set of circumstances, you decide to head towards the back of the store. There are three more aisles to choose from.",
+  main_text: "You can hear the carnage and chaos of the storefront and feel for the man limping towards it. You decide to head the other way. The back of the store lies behind three more aisles.",
   id: 64,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
@@ -424,26 +424,26 @@ var content = [{
 {
   char_addition1: 'smashed wine bottle',
   char_reduction: 'wine bottle',
-  main_text: "You rush over, wait for an opening and swing the the wine bottle as hard as you can. It's a perfect hit! The crow hits the floor squawking and before it recovers, you bring the bottle down hard on it. The bottle smashes and explodes into little bits of glass and the crow is killed immediately.",
+  main_text: "You rush over, wait for an opening and swing the the wine bottle as hard as you can. It's a perfect hit! The crow hits the floor squawking and before it recovers, you bring the bottle down hard. The bottle explodes into little bits of glass and the crow underneath is killed immediately.",
   id: 65,
   option_1: { text: "Continue", step: 44 },
 },
 {
   char_addition1: 'hammer',
-  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle. The tall shelves again provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over you that you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
+  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle<span class='friend'>, dragging <span class='name'></span> behind you</span>. The tall shelves provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over: you you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
   id: 66,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2'  }, // first aisle round
   option_1: { text: "Continue", step: 85, hide: 'aisle_round1' }, // second aisle round
 },
 {
-  main_text: "You're not quite sure why you've entered the pet aisle all things considered. Thankfully, they only stock fish and mice behind glass. You peer into one glass case, a mouse sprints into the glass and instead of shying away, it keeps ramming the glass over and over again. Your transfixed, little flecks of blood rain on its white fur. A splash of water wakes you from the trance, two tropical fish have leapt out of their tanks and flapping wildly at your feet. Mouths gaping, there beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
+  main_text: "You're not quite sure why you've entered the pet aisle, all things considered. Thankfully, besides food and cleaning products, the only animals the store stocks are fish and mice. You <span class='friend'>hold <span class='name'></span> steady and</span> peer into a thick glass box. a mouse sprints into the glass and instead of shying away, it keeps ramming its little head over and over again. Morbid curiosity holds you transfixed, little flecks of blood rain down on its white fur. A splash of water. Two tropical fish have leapt out of their tanks and flapping madly at your feet. Mouths gaping, there beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
   id: 67,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
   option_1: { text: "Continue", step: 85, hide: 'aisle_round1' }, // second aisle round
 },
 {
   function: "hasFriends()",
-  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You crouch past where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
+  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
   option_1: { text: "Continue", step: 85, hide: 'aisle_round1' }, // second aisle round
@@ -457,7 +457,7 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "As you approach, something large sprints and crashes through the bottom of the glass door. <span class='friend'>Out of shock you drop <span class='name'></span> off your shoulder.</span> Splinters of glass shower slide across the shop floor. It takes a second to recover from the shock to realise The Dalmatian has sprinted through the glass door. It now lies savagely snarling on its side, sharp needles of glass grow from its back. Kicking the glass with its paws, struggling for breathe.",
+  main_text: "As you approach, something large sprints and crashes through the bottom of the glass door. <span class='friend'>Out of shock you drop <span class='name'></span> off your shoulder.</span> Icicles of glass slide across the shop floor. It takes a second to recover from the shock to recognize The Dalmatian as the culprit. It now lies savagely snarling on its side, sharp needles of glass extend from its back like porcupine needles. It struggles for its lasts breaths, kicking glass gently with its paws.",
   id: 70,
   option_1: { text: "Continue", step: 71 },
 },
@@ -471,41 +471,41 @@ var content = [{
   char_addition1: 'bird_injury2',
   char_addition2: 'no_friend',
   function: "hasFriends()",
-  main_text: "A bird dive-bombs and hits you square in the face. The impact is so incredible, it spins you round. You can feel blood trickle from a newly formed cut under your eye. <span class='friend'>A terrible scream brings you to your senses. Bloody rats are all over <span class='name'></span>. Pure terror takes hold and you run in the opposite direction. The backroom door is unlocked (luckily) and you slam it behind you. You can still hear <span class='name'></span>'s screams.</span><span class='solo'>A rat climbing up your shoe and then leg, brings you to your senses. Crying out and twisting you manage to throw it off and hightail it to the other side of the shop. The door to the supply room is luckily unlocked. The feeling of the rat's claws are still on your lower leg.</span>",
+  main_text: "A bird dive-bombs and hits you square in the face. The impact is so incredible, it spins you round. You can feel blood trickle from a newly formed cut under your eye. <span class='friend'>A terrible scream brings you to your senses. Rats are all over <span class='name'></span>, climbing and biting at their existing wounds. Pure terror takes hold and you run frantically in the other direction. The backroom door is unlocked (luckily) and you slam it behind you. You can still hear <span class='name'></span>'s horrible yells.</span><span class='solo'>A rat climbs onto your foot. Crying out, you twist, throw it off and hightail it to the other side of the shop. The door to the supply room is luckily unlocked. You still have the sensation of the little rat claws on you.</span>",
   id: 72,
   option_1: { text: "Continue", step: 75 },
 },
 {
   function: "hasFriends()",
-  main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. The door is very fortunately unlocked. <span class='friend'>'You quickly lower <span class='name'></span> inside and with</span><span class='solo'>With</span> the rats only a few feet behind, slam the door shut.",
+  main_text: "You <span class='friend'> pick <span class='name'></span> up and </span>hightail it to the backroom. The door is (fortunately) unlocked. <span class='friend'>You quickly lower <span class='name'></span> inside and with</span><span class='solo'>With</span> the rats only a few feet behind, you slam the door shut.",
   id: 73,
   option_1: { text: "Continue", step: 75 },
 },
 {
   function: "hasFriends()",
-  main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. There's a large crashing sound behind you. Something has smashed through the glass door behind. You have no idea what but you sure hope it doesn't catch up. The door is very fortunately unlocked. <span class='friend'>'You quickly lower <span class='name'></span> inside and look</span><span class='solo'>You look</span> at the carnage at the other side of the store: the Dalmatian from before seems to have died throwing itself through the glass door and rats are running over its corpse towards you.<br><br> You quickly close the door.",
+  main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. There's a large crashing sound behind you. Something has smashed through the glass door leading outside. You have no idea what but you sure hope it doesn't catch up. The door to the storeroom is fortunately unlocked. <span class='friend'>'You lower <span class='name'></span> inside and look</span><span class='solo'>You look</span> at the carnage at the other side of the store: the Dalmatian from before seems to have died throwing itself through the glass door and rats are running over its corpse towards you.<br><br> You quickly slam the door shut.",
   id: 74,
   option_1: { text: "Continues", step: 75 },
 },
 {
   function: "hasFriends()",
-  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and re-dress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>' but your assertion grants no response. </span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
+  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and re-dress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>' but they provide no response. </span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
   id: 75,
   option_1: { text: "Continue", step: 76 },
 },
 {
-  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door leads outside. You peer round, it's the car park again. This must be some sort of alternate entrance for staff and deliveries. 100 or so meters ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your escape.",
+  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door also leads outside. You peer round, it's the car park again. You look up, following dark black plumes of smoke that pollute the night sky accompanied by the sound of sirens and disorder. This door must be some sort of alternate store entrance for staff and deliveries. 100 or so meters ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your means of escape.",
   id: 76,
   option_1: { text: "Continue", step: 77 },
 },
 {
-  main_text: "The question of the keys are answered when you spot the driver lying prone. Above him the golden labrador above him pulls meaty strings from his neck. This forces your gag reflex into overdrive and you close the door quickly and silently.",
+  main_text: " are answered when you spot a dark silhouette of a body below the door. Above, the golden labrador pulls meaty strings from the corpse's neck. This forces your gag reflex into overdrive and you close the door quickly and silently. That must be the truck driver, you think between shallow breathes.<br>They could still have the truck's key on them.",
   id: 77,
   option_1: { text: "Continue", step: 78 },
 },
 {
   function: "hasFriends()",
-  main_text: "Returning to the door leading to the store, you take a seat against the wall <span class='friend'>by <span class='name'></span></span>. You take out your phone and try to call the police then Leslie but the line is dead.",
+  main_text: "Returning to the door leading to the store, you take a seat against a wall <span class='friend'>by <span class='name'></span></span>. You take out your phone and knowing it will fail try to call the police, then Leslie but predictably both times the line is dead.",
   id: 78,
   option_1: { text: "Continue", step: 79 },
 },
@@ -515,23 +515,18 @@ var content = [{
   option_1: { text: "Wake up", step: 81 },
 },
 {
-  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' No response.</span>",
+  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' you cry out. No response.</span>",
   id: 80,
   option_1: { text: "Continue", step: 81 },
 },
 {
-  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' No response.</span>",
-  id: 81,
-  option_1: { text: "Continue", step: 81 },
-},
-{
   main_text: "<span class='woundCheck'></span>",
-  id: 82,
+  id: 81,
   option_1: { text: "Stand up", step: 82 },
 },
 {
-  main_text: "Through the window, you can see into the store. There's still birds zipping about but it looks relatively less busy. You feel like you could make it into one of the final three aisles. You move to the other door and open it as slowly as possible. The truck and truck driver are still there but the dog is gone.",
-  id: 83,
+  main_text: "Through a window on the door, you can see back into the store. There's still birds zipping about but it looks relatively less busy. You feel like you could make it into one of the final three aisles if you needed more supplies. You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
+  id: 82,
   option_1: { text: "Run to the truck", step: MAX },
   option_2: { text: "Go back to the store", step: MAX },
 },
@@ -539,39 +534,39 @@ var content = [{
   char_addition1: 'aisle_round2',
   char_reduction: 'aisle_round1',
   main_text: "You steal your nerves and re-enter the store. You feel a large number of eyes turn and bear down on you. 'Better make this quick' you think.", // going back into store
-  id: 84,
+  id: 83,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop and food aisle", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
   function: "hasFriends()",
-  main_text: "The race back to the backroom is a tense one. You close the door to the backroom behind you and look back through the door's window back into the store. All the bird's eyes are fixed and trained on the door. On you. <span class='friend'>Mary stirs and clutching their injured shoulder rolls onto their back.</span>",
-  id: 85,
+  main_text: "The race back to the backroom is a tense one. You close the door to the backroom behind you and look back through the door's window back. All the bird's eyes are fixed and trained on you. <span class='friend'><span class='name'></span> stirs and clutching their injured arm, curse like a pirate.</span>",
+  id: 84,
   option_1: { text: "Go back into the store", step: MAX },
   option_2: { text: "Run to the truck", step: MAX },
-  option_2: { text: "Check on Mary", step: MAX },
+  option_2: { text: "Check on <span class='name'></span>", step: MAX },
 },
 {
-  main_text: "As soon as you hit the store something hits in the chest, the surprise makes you fall back. On all fours, you watch a seagull scream around the small room before it dives in at you for another attack.",
-  id: 86,
+  main_text: "As soon as you hit the store something hits in the chest, the surprise makes you fall back. On all fours, you watch a seagull scream around the small storeroom room before it dives in at you for another attack.",
+  id: 85,
   option_1: { text: "IN THE BACKROOMs", step: MAX },
 },
 {
   function: "loseWeapons();",
-  id: 87,
-  main_text: "This time you manage to swat it away <span class='friend'>but it changes direction and begins attacking Mary. They let out cry out a long and horrible moan. You swat at the bird but </span><span class='solo'>but it doesn't take look before it mounts another attack, worse</span> you've left the door open and more birds stream into the small room. You stumble out into the car park and slam the door behind you. In the chaos, you've forgotten all your bag of items. <span class='friend'>From the backroom, you hear Mary's wailing turn to screaming.</span>",
+  id: 86,
+  main_text: "This time you manage to swat it away <span class='friend'>but it changes direction and begins attacking <span class='name'></span>. They let out cry out a long and horrible moan. You swat at the bird but </span><span class='solo'>but it doesn't take look before it mounts another attack, worse</span> you've left the door open and more birds stream into the small room. You stumble out into the car park and slam the door behind you. In the chaos, you've forgotten all your bag of items. <span class='friend'>From the backroom, you hear <span class='name'></span>'s wailing turn to screaming.</span>",
   option_1: { text: "IN THE BACKROOMs", step: MAX },
 },
 {
   function: "hasFriends()",
-  main_text: "Mary is awake. You help prop them up into a sitting position and sip some water back.<br>'How you feeling?' you ask.<br>'Terrible' they respond.<br>'I have to get home. There's a truck with its keys in out there. Are you coming with me?'. Mary closes her eyes and processes your question.",
+  main_text: "<span class='name'></span> is awake. You help prop them up into a sitting position and sip some water back.<br>'How you feeling?' you ask.<br>'Terrible' they respond.<br>'I have to get home. There's a truck with its keys in out there. Are you coming with me?'. <span class='name'></span> closes her eyes and processes your question.",
   id: 88,
   option_1: { text: "Continue", step: MAX },
 },
 {
-  // checking mary
-  main_text: "'Are we in the store still?'<br>'A backroom but yeah' you respond.<br>'In that case, I'm going to stay here and wait for help'<br>'Are you sure?' You are somewhat disappointed by their decision. <br>Mary drinks more water and with eyes closed concludes 'Yes, I'll be fine. Go.'",
+  // checking <span class='name'></span>
+  main_text: "'Are we in the store still?'<br>'A backroom but yeah' you respond.<br>'In that case, I'm going to stay here and wait for help'<br>'Are you sure?' You are somewhat disappointed by their decision. <br><span class='name'></span> drinks more water and with eyes closed concludes 'Yes, I'll be fine. Go.'",
   id: 89,
   option_1: { text: "Go back into the store", step: 86 },
   option_2: { text: "Run to the truck", step: 90 },
@@ -726,44 +721,44 @@ var content = [{
 {
   // friend: save
   function: "hasFriends()",
-  main_text: "Mary seems to be cuddling the Retriever.<br>No. Mary has her arms around the dogs neck and head in a vice-like grip. Using all their strength to immobilize the beast. The struggle to restrain the dog and overcome her injuries is taking an enormous physical toll, 'I can't hold on forever' Mary groans.",
+  main_text: "<span class='name'></span> seems to be cuddling the Retriever.<br>No. <span class='name'></span> has her arms around the dogs neck and head in a vice-like grip. Using all their strength to immobilize the beast. The struggle to restrain the dog and overcome her injuries is taking an enormous physical toll, 'I can't hold on forever' <span class='name'></span> groans.",
   id: 101,
-  option_1: { text: "Help Mary", step: MAX },
-  option_1: { text: "Leave Mary", step: MAX },
+  option_1: { text: "Help <span class='name'></span>", step: MAX },
+  option_1: { text: "Leave <span class='name'></span>", step: MAX },
 },
 {
   // friend: kill dog
-  main_text: "From the discarded pile you pickup a wine bottle. With a quick flick of the wrist you break the bottle below the neck on the smooth tarmac. The liquid runs over your hands making them warm and sticky. You approach Mary and plunge the jagged glass like a dagger into the soft golden fur. The Retriever howls and twists violently. You pull the bottle, an arc of blood across the lot. Stabbing again at the dog's throat the movements are less intense. By the third stab, the dog has gone limp. Mary releases her hold and it slumps to the floor. It is done." ,
+  main_text: "From the discarded pile you pickup a wine bottle. With a quick flick of the wrist you break the bottle below the neck on the smooth tarmac. The liquid runs over your hands making them warm and sticky. You approach <span class='name'></span> and plunge the jagged glass like a dagger into the soft golden fur. The Retriever howls and twists violently. You pull the bottle, an arc of blood across the lot. Stabbing again at the dog's throat the movements are less intense. By the third stab, the dog has gone limp. <span class='name'></span> releases her hold and it slumps to the floor. It is done." ,
   id: 101,
   option_1: { text: "Continue", step: MAX },
 },
 {
   // friend: kill dog final 1
-  main_text: "For a moment, you both sit panting and staring at the corpse. 'Thank you' you say finally coming to your senses. 'I owed you one' Mary responds between deep breaths. 'Besides, I thought about your offer. I think are chances are better sticking together'. 'Clearly' you manage to crack a small smile.<br>'Now, let's get out of here'.",
+  main_text: "For a moment, you both sit panting and staring at the corpse. 'Thank you' you say finally coming to your senses. 'I owed you one' <span class='name'></span> responds between deep breaths. 'Besides, I thought about your offer. I think are chances are better sticking together'. 'Clearly' you manage to crack a small smile.<br>'Now, let's get out of here'.",
   id: 101,
   option_1: { text: "Continue", step: MAX },
 },
 {
   // friend: kill dog final 1
-  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. Mary finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works' she mutters approaching the truck. Without a word, you walk around the truck and ease yourself in the passenger's seat. Mary turns the key, a wave of relief as the truck rumbles to life." ,
+  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works' she mutters approaching the truck. Without a word, you walk around the truck and ease yourself in the passenger's seat. <span class='name'></span> turns the key, a wave of relief as the truck rumbles to life." ,
   id: 101,
   option_1: { text: "Continue", step: MAX },
 },
 {
   // friend: kill dog final 1
-  main_text: "'So, where are we going?' Mary asks pulling the truck out of the lot. For the first time you notice the surrounding chaos. Buildings on fire, cars destroyed or overturned and corpses littering the streets. The world has gone to hell. You look down at the blood on your hands and respond 'home'." ,
+  main_text: "'So, where are we going?' <span class='name'></span> asks pulling the truck out of the lot. For the first time you notice the surrounding chaos. Buildings on fire, cars destroyed or overturned and corpses littering the streets. The world has gone to hell. You look down at the blood on your hands and respond 'home'." ,
   id: 102,
   option_1: { text: "Continue", step: MAX },
 },
 {
-  // friend: leave mary
-  main_text: "You turn away and walk towards the body of the truck driver.<br>'No please! I've come to help you!!'.</br>You pat down the truck driver's corpse. A pang of guilt, maybe you should help Mary before you leave. But, by the time you've fished the keys from the driver's shirt pocket, the dog has escaped Mary's grip and her incessant pleas have turned to screams. For your own safety, you board the truck and shut the door." ,
+  // friend: leave <span class='name'></span>
+  main_text: "You turn away and walk towards the body of the truck driver.<br>'No please! I've come to help you!!'.</br>You pat down the truck driver's corpse. A pang of guilt, maybe you should help <span class='name'></span> before you leave. But, by the time you've fished the keys from the driver's shirt pocket, the dog has escaped <span class='name'></span>'s grip and her incessant pleas have turned to screams. For your own safety, you board the truck and shut the door." ,
   id: 101,
   option_1: { text: "Continue", step: MAX },
 },
 {
-  // friend: leave mary in truck
-  main_text: "The engine rumbles to life and drowns out Mary's horrible screams. A sense of betrayal feels heavy on your shoulders. Regardless, you are safe and you are going home." ,
+  // friend: leave <span class='name'></span> in truck
+  main_text: "The engine rumbles to life and drowns out <span class='name'></span>'s horrible screams. A sense of betrayal feels heavy on your shoulders. Regardless, you are safe and you are going home." ,
   id: 102,
   option_1: { text: "End", step: MAX },
 },
