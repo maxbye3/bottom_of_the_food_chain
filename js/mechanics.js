@@ -82,9 +82,16 @@ function weaponConsequence(){
   // broken bottle
   // mop
   // nothing
-  if(charStatus.indexOf('wine bottle')){
-    stance = 'You grip the bottle from the neck and hold it out. Your heart is pumping out of your chest.'
+  if(charStatus.indexOf('fists')){
+    var stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.'
   }
+  if(charStatus.indexOf('broken bottle')){
+    stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.'
+  }
+  else{
+    stance = 'You grip the ' + weapon + ' by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  $('.weaponStance').html(stance);
 }
 
 function checkWeapon(){
