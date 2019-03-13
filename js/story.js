@@ -590,7 +590,7 @@ var content = [{
 },
 {
   char_addition1: 'death',
-  main_text: "You sprint towards the truck but you can hear over the mad gasping the dog approaching closer and closer. A red hot vice grabs your back leg and you trip over yourself. Before you have a chance to recover, the Retriever is over you and sinks its teeth into your neck. Your screams become spluttered. Your vision dulls, your wild movements get weaker and eventually stop.",
+  main_text: "You sprint towards the truck but you can hear over the mad gasping the dog approaching closer and closer. A red hot vice grabs your back leg and you trip over yourself. The <span class='weaponEquipped'></span> skids out of reach across the pavement. Before you have a chance to recover, the Retriever is over you and sinks its teeth into your neck. Your screams become spluttered. Your vision dulls, your wild movements get weaker and eventually stop.",
   id: 92,
   option_1: { text: "Try again", step: 91 },
 },
@@ -629,35 +629,35 @@ var content = [{
 },
 {
   // broken bottle defend
-  main_text: "The Retriever hits you like a wrecking ball. Sometimes the best offense is a good defence. As you fall back with the dog on top, you angle the broken wine bottle up and under the its jaw. As you hit the tarmac, you hear a high and soft whimper. You look down, the broken bottle has impaled itself into the dog's chin. The dog is flapping wildly. Blood flows out of the bottle like wine. You reach up and your hand finds a beer bottle. You hold the neck of the bottle and smash it on the hard concrete, you then shove the remains into the Retriever's eye. It immediately flops down dead.",
+  main_text: "The Retriever hits you like a wrecking ball. Sometimes the best offense is a good defence. As you fall back with the dog on top, you angle the broken wine bottle up and under the its jaw. As you hit the tarmac, you hear a high and soft whimper. You look down, the broken bottle has impaled itself under the dog's jaw. The dog is flapping wildly. Blood flows out of the bottle like wine. You reach up and your hand finds a beer bottle. You hold the neck of the bottle and smash it on the hard concrete, you then shove the remains into the Retriever's soft golden fur. It immediately flops down dead.",
   id: 97,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 121 },
 },
 {
   // fail state dog
   main_text: "The pain is incredible. Like a hot-iron poker held against your neck. You scream and the throw your arm with the broken bottle against the dog. The dog makes a horrible howling noise as the glass penetrates it's cheek. You stab again and again into the soft fur, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
   id: 98,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 112 },
 },
 {
   // hammer attack
   main_text: "One foot in front of the other, as if you were playing tennis. As the dog leaps, you throw the hammer across yourself in a forehand motion. On it's way across, the hammer collides perfectly uppercutting the dog and sending it to the floor. For a second, the Retriever lies there looking serene and innocent like a Labrador exhausted after a long walk. But then it recovers and with its bottom jaw hanging limp it bears its horrible fangs as it readies for another attack.",
   id: 99,
-  option_1: { text: "Kill dog", step: MAX },
-  option_1: { text: "Don't kill dog", step: MAX },
+  option_1: { text: "Kill dog", step: 100 },
+  option_1: { text: "Don't kill dog", step: 101 },
 },
 {
   // hammer attack part 2
-  main_text: "The Retriever leaps up but you quickly respond by bringing the hammer down on its nose. The dog falls forward and you strike it again for good measure. Panting hard, you let the hammer slip threw your fingers, it's done.",
+  main_text: "The Retriever leaps up but you quickly respond by bringing the hammer down on its nose. The dog falls forward and you strike it again for good measure. Panting hard, you let the hammer slip through your fingers.",
   id: 100,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 113 },
 },
 {
   // hammer defend
   main_text: "The dog leaps. The impact is like the force of a wrecking ball.  As you fall you thrust the handle of the hammer between it's jaws, protecting you from it's ferocious fangs.",
   id: 101,
-  option_1: { text: "Throw the dog off", step: MAX },
-  option_1: { text: "Look for anther weapon", step: MAX },
+  option_1: { text: "Throw the dog off", step: 102 },
+  option_1: { text: "Look for another weapon", step: 103 },
 },
 {
   // hammer: throw off
@@ -669,136 +669,141 @@ var content = [{
   // hammer: look for anther weapon
   main_text: "Concentrating hard on the hammer handle between the Retriever's teeth you frantically search with your other hand for another weapon.<br>Nothing.</br>You glance up and see a broken glass bottle. You grab the bottle by the neck but your diverted attention has left you venerable. The Retriever noses the handle out of its attack path and sinks its enormously sharp teeth into your shoulder.",
   id: 103,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 98 },
 },
 {
   // mop: attack
-  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps, you jab the mop into it's jaw. The dog barely reacts. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, this action throws you off balance and you fall  back.",
+  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps, you jab the mop into it's jaw. The dog barely reacts. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, this action throws you off balance and you fall back.",
   id: 104,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 110 },
 },
 {
   // mop: defend part one
-  main_text: "The dog leaps. The impact is like the force of a wrecking ball.  As you fall you thrust the handle of the mop between it's jaws, protecting you from it's ferocious fangs.",
+  main_text: "The dog leaps. The impact is like the force of a wrecking ball. As you fall you thrust the handle of the mop between it's jaws, protecting you from it's ferocious fangs.",
   id: 105,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Throw the dog off", step: 106 },
+  option_1: { text: "Look for another weapon", step: 103 },
 },
 {
   // mop: defend throw off
   main_text: "With all your strength you throw the dog off. It lands on it's back, rolls, growls and attacks. You're back on your feet too and swing the mop as hard as you can down on the Retriever's head. It does nothing, the Retriever again pulls you down and sinks its enormously sharp teeth into your shoulder.",
   id: 106,
-  option_1: { text: "Continue", step: MAX },
-},
-{
-  // mop: bottle death
-  main_text: "With all your strength you throw the dog off. It lands on it's back, rolls, growls and attacks. You're back on your feet too and swing the mop as hard as you can down on the Retriever's head. It does nothing, the Retriever again pulls you down and sinks its enormously sharp teeth into your shoulder.",
-  id: 106,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 112 },
 },
 {
   // mop: defend bottle search
   main_text: "Concentrating hard on the mop handle between the Retriever's teeth you frantically search with your other hand for another weapon. You grab a broken glass bottle and swing it downwards. The dog makes a horrible howling noise as the glass penetrates it's soft golden fur. You stab again and again, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
   id: 107,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 114 },
 },
 {
   // hands: attack
   main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps, you arc your foot catching it square in the jaw. The dog doesn't go down though. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, this action throws you off balance and you fall back.",
   id: 108,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 110 },
 },
 {
   // hands: defend
   main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps you ball up and fold your arms over your face and chest. The impact hits you like a wrecking ball. It knocks the wind out of you and throws you backward.",
   id: 109,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 110 },
 },
 {
   // hands: result (not good)
-  main_text: "Before you have a chance to recover, the dog is on top. It's vicious fangs edging towards your face. You do everything you can to resist but the dog ducks and dives. Finally, it finds an open spot and sinks its enormously sharp teeth into your shoulder.",
+  main_text: "Before you have a chance to recover, the dog is on top. You desperately kick at the vicious fangs edging towards your face, doing everything in your power to ward off the attack. Your prone position has left you venerable and the dog ducks and dives, exploits an opening and sinks its enormous teeth into your shoulder.",
   id: 110,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 111 },
 },
 {
   // hands: kill dog
   main_text: "The pain is incredible. Like a hot-iron poker held against your neck. You scream and the throw your arms around frantically. One hand passes something sharp, a broken bottle. You feel for the bottle neck and throw the sharp end into the jaw clamped around your shoulder. The dog makes a horrible howling noise as the glass penetrates the soft fur. You stab again and again, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
-  
   id: 111,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 112 },
 },
 {
-  // hurt conclusion
-  main_text: "",
+  // hurt conclusion  part one
   main_text: "You lie there panting hard. Your hand wet grasping at the searing pain in your shoulder. The dead dog draped across you like a warm blanket. Eventually, you push it off, it slumps to the floor and you rise slowly. You are totally exhausted. You crawl over and pat down the truck driver's corpse. A wave of relief washes over as you pull the keys from his shirt's top pocket.",
   id: 112,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 113 },
 },
 {
-  // hurt conclusion
+  // hurt conclusion part two
   main_text: "You limp to the truck door. The pain is incredible but with the un-bitten arm ease yourself into the drivers seat. You slam the door shut, lie back in the seat and close your eyes. 'I need to get home'. The reminder jolts you awake. You repeat the mantra out loud as you insert the key. The truck rumbles to life. Crossing your arms so your injured shoulder is relaxed you find first gear and slowly you pull out of the lot, in the direction of home.",
   id: 113,
-  option_1: { text: "The End", step: MAX },
+  option_1: { text: "The End", step: 125 },
 },
 {
-  // hurt conclusion
-  main_text: "You lie there panting hard. The dead dog draped across you like a warm blanket, its body is heavy. Eventually, you push it off, it slumps to the floor and you rise slowly. Every action is agony. You crawl over and pat down the truck driver's corpse. A wave of relief washes over as you pull the keys from his shirt's top pocket.",
-  id: 113,
-  option_1: { text: "The End", step: MAX },
+  // NOT  hurt conclusion part one
+  main_text: "You lie there panting hard. The dead dog draped across you like a warm blanket, its body is heavy. Eventually, you push it off, it slumps to the floor and you rise slowly. Every action is exhausting. You crawl over to the truck driver and pat down the corpse. A wave of relief washes over as you pull the keys from his shirt's top pocket.",
+  id: 114,
+  option_1: { text: "Continue", step: 115 },
+},
+{
+  // NOT  hurt conclusion part two
+  main_text: "You  ease yourself into the drivers seat and insert the key. The truck rumbles to life. You find first gear and as you pull out of the lot you notice the surrounding chaos. Buildings on fire, cars destroyed and corpses littering the streets. The world has gone to hell. You pull out of the lot and head in the direction of home. ",
+  id: 115,
+  option_1: { text: "The End", step: 125 },
 },
 {
   // Friend is alive: attack
-  main_text: "You swing the MAX WEAPON hard but to your horror the Retriever has read your movements and ducks left, narrowly missing the impact. The momentum of the swing has momentarily thrown you off balance and the dog takes advantage.",
-  id: 114,
-  option_1: { text: "Continue", step: 101 },
+  main_text: "You swing the <span class='weaponEquipped'></span>  hard but to your horror the Retriever has read your movements and ducks left, narrowly missing the impact. The momentum of the swing has momentarily thrown you off balance and the dog takes advantage.",
+  id: 116,
+  option_1: { text: "Continue", step: 117 },
 },
 {
   // friend: defend
-  main_text: "The dog throws itself at you, the impact feels like a wrecking ball and forces you backwards off your feet. Using the MAX WEAPON you desperately try and defend yourself from the snapping jaws inching its way towards your face. Suddenly the dog is thrown off you backwards. Panting hard, it takes a second to process what your seeing..",
-  id: 115,
-  option_1: { text: "Continue", step: MAX },
+  main_text: "The dog throws itself at you, the impact feels like a wrecking ball and forces you backwards off your feet. Using the <span class='weaponEquipped'></span> you desperately try and defend yourself from the snapping jaws inching its way towards your face. Suddenly the dog is thrown off you backwards. It takes a second to recover from the shock and process what you're seeing..",
+  id: 117,
+  option_1: { text: "Continue", step: 118 },
 },
 {
   // friend: save
   function: "hasFriends()",
-  main_text: "<span class='name'></span> seems to be cuddling the Retriever.<br>No. <span class='name'></span> has her arms around the dogs neck and head in a vice-like grip. Using all their strength to immobilize the beast. The struggle to restrain the dog and overcome her injuries is taking an enormous physical toll, 'I can't hold on forever' <span class='name'></span> cries out.",
-  id: 116,
-  option_1: { text: "Help <span class='name'></span>", step: MAX },
-  option_1: { text: "Leave <span class='name'></span>", step: MAX },
+  main_text: "<span class='name'></span> seems to be cuddling the Retriever.<br>No. <span class='name'></span> has her arms around the dogs neck and head in a vice-like grip. Using all their strength to immobilize the beast. 'I can't hold on forever' <span class='name'></span> cries out.",
+  id: 118,
+  option_1: { text: "Help <span class='name'></span>", step: 119 },
+  option_1: { text: "Leave <span class='name'></span>", step: 123 },
 },
 {
   // friend: kill dog
-  main_text: "From the discarded pile you pickup a wine bottle. With a quick flick of the wrist you break the bottle below the neck on the smooth tarmac. The warm liquid runs over your hands making them sticky. You approach <span class='name'></span> and plunge the jagged glass like a dagger into the soft golden fur before them. The Retriever howls and twists violently. You pull the bottle, an arc of blood across the lot. Stabbing again at the Retriever's throat, its erratic movements are less intense. By the third stab, the dog has gone limp. <span class='name'></span> carefully releases her hold and it slumps to the floor." ,
-  id: 117,
-  option_1: { text: "Continue", step: MAX },
-},
-{
-  // friend: kill dog final 1
-  main_text: "For a moment, you both sit panting and staring at the corpse. 'Thank you' you say finally manage to muster. 'I owed you one' <span class='name'></span> responds between deep gulps of breath. 'Besides, I thought about your offer. I think our chances are better sticking together'. 'Clearly. Now, let's get out of here'.",
-  id: 118,
-  option_1: { text: "Continue", step: MAX },
-},
-{
-  // friend: kill dog final 1
-  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works' she mutters approaching the truck. Without a word, you walk around the truck and ease yourself into the passenger's seat. <span class='name'></span> turns the key, a wave of relief as the truck rumbles to life." ,
+  main_text: "From the discarded pile you pickup a wine bottle. With a quick flick of the wrist you break the bottle below the neck on the smooth tarmac. The warm liquid runs over your hands making them sticky. You approach <span class='name'></span> and plunge the jagged glass like a dagger into the soft golden fur before them. The Retriever howls and twists violently. You pull the bottle, an arc of blood across the lot. Stabbing again, the Retriever's erratic movements become less intense. By the third stab, the dog has gone limp. <span class='name'></span> carefully releases her hold and it slumps to the floor." ,
   id: 119,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 120 },
 },
 {
   // friend: kill dog final 1
-  main_text: "'So, where are we going?' <span class='name'></span> asks pulling the truck out of the lot. For the first time you notice the surrounding chaos. Buildings on fire, cars destroyed or overturned and corpses littering the streets. The world has gone to hell. You look down at the blood on your hands and respond 'home'." ,
+  main_text: "For a moment, you both sit panting and staring at the corpse. 'Thank you' you say finally manage to muster. 'I owed you one' <span class='name'></span> responds between deep gulps of breath. 'Besides, I thought about your offer. I think our chances are better sticking together'. 'Clearly. Now, let's get out of here.'",
   id: 120,
-  option_1: { text: "Continue", step: MAX },
+  option_1: { text: "Continue", step: 121 },
+},
+{
+  // friend: kill dog final 1
+  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works' <span class='pronoun'></span> mutters approaching the truck. Without a word, you walk around the truck and ease yourself into the passenger's seat. <span class='name'></span> turns the key, a wave of relief as the truck rumbles to life." ,
+  id: 121,
+  option_1: { text: "Continue", step: 122 },
+},
+{
+  // friend: kill dog final 
+  main_text: "'So, where are we going?' <span class='name'></span> asks pulling the truck out of the lot. For the first time you notice the surrounding chaos. Buildings on fire, cars destroyed and corpses littering the streets. The world has gone to hell. You look down at the blood on your hands and respond 'home'." ,
+  id: 122,
+  option_1: { text: "Continue", step: 125 },
 },
 {
   // friend: leave <span class='name'></span>
   main_text: "You turn away and walk towards the body of the truck driver.<br>'No please! I've come to help you!!'.</br>You pat down the truck driver's corpse. A pang of guilt, maybe you should help <span class='name'></span> before you leave. But, by the time you've fished the keys from the driver's shirt pocket, the dog has escaped <span class='name'></span>'s grip and her incessant pleas have turned to screams. For your own safety, you board the truck and shut the door." ,
-  id: 121,
-  option_1: { text: "Continue", step: MAX },
+  id: 123,
+  option_1: { text: "Continue", step: 124 },
 },
 {
   // friend: leave <span class='name'></span> in truck
   main_text: "The engine rumbles to life and drowns out <span class='name'></span>'s horrible screams. A sense of betrayal feels heavy on your shoulders. Regardless, you are safe and you are going home." ,
-  id: 122,
+  id: 124,
+  option_1: { text: "End", step: 125 },
+},
+{
+  // friend: leave <span class='name'></span> in truck
+  main_text: "Final report" ,
+  id: 125,
   option_1: { text: "End", step: MAX },
 },
 ];
