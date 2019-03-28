@@ -271,6 +271,7 @@ var content = [{
   option_1: { text: "Continue", step: 64 },
 },
 {
+  char_reduction: 'bread',
   main_text: "You rush over, wait for an opening and swing the baguette as hard as you can. It's a perfect hit! The baguette explodes and the crow hits the floor while squawking wildly. It quickly recovers, but the man you have saved stamps on its wing. You finish the job, viciously stamping on its fragile head and feeling it give way under your foot. You stamp again for both good measure and to try to vent the frustrations of the day.",
   id: 43,
   option_1: { text: "Continue", step: 44 },
@@ -282,7 +283,7 @@ var content = [{
 },
 {
   char_addition1: 'no_friend',
-  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the main food aisle as birds continue to crash through the ceiling. Thankfully, the aisle provides a bit of cover. Going down the aisle, you find a discarded plastic shopping bag and fill it with medical supplies. Bottles suddenly explode out of the shelf as a pigeon dives out from an adjacent aisle. Its wing is broken so there's nothing it can do except squawk and roll around wildly.",
+  main_text: "You're no doctor and you've done more than enough for the stranger. Without remorse, you hurry down the pharmaceutical aisle as birds continue to crash through the ceiling. Thankfully, the aisle provides a bit of cover. Going down the aisle, you find a discarded plastic shopping bag and fill it with medical supplies. Bottles suddenly explode out of the shelf as a pigeon dives out from an adjacent aisle. Its wing is broken so there's nothing it can do except squawk and roll around wildly.",
   id: 45,
   option_1: { text: "Kill the pigeon", step: 46 },
   option_2: { text: "Ignore it", step: 47 },
@@ -296,19 +297,19 @@ var content = [{
   main_text: "The store front is chaos. Shoppers are desperate to re-open the metal shutter to escape the merciless bird attacks but you can hear the security guard yell back at them. You sidestep carefully around the pigeon. Where the aisles break, you can see a man being attacked by a seagull but he's too far away to help.",
   id: 47,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
-  main_text: "The storefront is chaos. Shoppers are desperate to re-open the metal shutter to escape the merciless bird attacks but you can hear the security guard yell back at them. Where the aisles break, you can see a man being attacked by a crow but he's too far away to help.",
+  main_text: "The storefront is chaos. Shoppers are desperate to re-open the metal shutter to escape the merciless bird attacks but you can hear the security guard yell back at them. Where the aisles stop, you can see a man being attacked by a crow but he's too far away to help.",
   id: 48,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
   function: "getName()",
-  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?' you ask while inspecting the wound. '<span class='name'></span>' <span class='pronoun'></span> whispers weakly. 'Okay <span class='name'></span>, just hang on in there, okay'.",
+  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?' you ask while inspecting the wound. '<span class='name'></span>' <span class='shehe'></span> whispers weakly. 'Okay <span class='name'></span>... Just hang on in there, okay'.",
   id: 49,
   option_1: { text: "Continue", step: 50 },
 },
@@ -341,7 +342,7 @@ var content = [{
 },
 {
   char_addition1: 'arm',
-  main_text: "You raise <span class='gender'></span>'s arm above <span class='pronoun'></span> heart. You're fairly confident that's slowed down the bleeding somewhat.",
+  main_text: "You raise <span class='name'></span>'s arm above <span class='pronoun'></span> heart. You're fairly confident that's slowed down the bleeding somewhat.",
   id: 54,
   option_2: { text: "Keep adding cloth and gauze to the wound", step: 56 },
   option_3: { text: "Remove bloody cloth and replace with new material", step: 55 },
@@ -355,7 +356,7 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You add material on top of the old. Confident this was talked about in that dull first aid lecture. After 3 minutes of external pressure on the wound, you conclude that <span class='name'></span> is still bleeding out heavily. You're running out of gauze. The birds are getting closer.",
+  main_text: "You add material on top of the old. Confident this was talked about in that dull first aid lecture. After 3 minutes of external pressure on the wound, you conclude that <span class='shehe'></span> is still bleeding out heavily. You're running out of gauze. The birds are getting closer.",
   id: 56,
   option_1: { text: "Move <span class='name'></span>", step: 57 },
   option_2: { text: "Apply tourniquet", step: 59 },
@@ -372,7 +373,7 @@ var content = [{
   main_text: "You feel bad leaving but surely the emergency services will be here soon. You try to re-assure <span class='name'></span> but your not sure your words are getting through. You rest your hand on <span class='pronoun'></span> good shoulder and then creep towards the end of the aisle. Finding a discarded plastic shopping bag, you fill it with painkillers and bandages. At the far side of the store, a man is being viciously attacked by a crow but like <span class='name'></span> you cannot help them without putting yourself in danger.<br> Three more aisles lie a head of you.",
   id: 58,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
@@ -384,14 +385,14 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You wrap the belt below the wound. It does absolutely nothing, if anything it increases the bleeding. By the time you've got the belt off their wrist, <span class='name'></span> seems to have passed out from the loss of blood.",
+  main_text: "You wrap the belt below the wound. It does absolutely nothing, if anything it increases the bleeding. By the time you've got the belt off <span class='pronoun'></span> wrist, <span class='name'></span> seems to have passed out from the loss of blood.",
   id: 60,
   option_1: { text: "Take <span class='name'></span> with you", step: 63 },
   option_2: { text: "Leave <span class='name'></span>", step: 58 },
 },
 {
   function: "getName()",
-  main_text: "You take off your belt and move the belt buckle on the highest notch. It's still pretty loose, so you unbox and jam a thermometer between the buckle and twist making the belt tighter. The birds are getting closer, time is running out. You wrap the remaining gauze over <span class='name'></span>'s wound nice and tight.",
+  main_text: "You take off your belt and move the belt buckle on the highest notch. It's still pretty loose, so you unbox and jam a thermometer between the buckle, twisting it to make the belt tighter. The birds are getting closer, time is running out. You wrap the remaining gauze over <span class='name'></span>'s wound nice and tight.",
   id: 61,
   option_1: { text: "Continue", step: 62 },
 },
@@ -402,52 +403,54 @@ var content = [{
   main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> curses softly. Still conscious, that's good. You carry them gently towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help. You have three more aisles in front of you.",
   id: 62,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
   function: "getName()",
   char_addition2: 'medical_supplies',
-  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> is limp and the full weight of their body falls on you. That's not good. You drag <span class='name'></span> as gently as you can with their good shoulder towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help. You have three more aisles in front of you.",
+  main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> is limp and the full weight of their body falls on you. That's not good. You drag <span class='name'></span> as gently as you can by their good shoulder towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help. You have three more aisles in front of you.",
   id: 63,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
   main_text: "You can hear the carnage and chaos of the storefront and feel for the man limping towards it. You decide to head the other way. The back of the store lies behind three more aisles.",
   id: 64,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
   option_3: { text: "Choose another food aisle", step: 68 },
 },
 {
-  char_addition1: 'smashed wine bottle',
+  char_addition1: 'broken bottle',
   char_reduction: 'wine bottle',
   main_text: "You rush over, wait for an opening and swing the the wine bottle as hard as you can. It's a perfect hit! The crow hits the floor squawking and before it recovers, you bring the bottle down hard. The bottle explodes into little bits of glass and the crow underneath is killed immediately.",
   id: 65,
   option_1: { text: "Continue", step: 44 },
 },
 {
+  function: "hasFriends()",
   char_addition1: 'hammer',
-  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle<span class='friend'>, dragging <span class='name'></span> behind you</span>. The tall shelves provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over: you you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
+  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle. <span class='friend'> Dragging <span class='name'></span> behind you, T</span><span class='solo'>t</span>he tall shelves provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over: you you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
   id: 66,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2'  }, // first aisle round
-  option_1: { text: "Continue", step: 85, hide: 'aisle_round1' }, // second aisle round
-},
-{
-  main_text: "You're not quite sure why you've entered the pet aisle, all things considered. Thankfully, besides food and cleaning products, the only animals the store stocks are fish and mice. You <span class='friend'>hold <span class='name'></span> steady and</span> peer into a thick glass box. a mouse sprints into the glass and instead of shying away, it keeps ramming its little head over and over again. Morbid curiosity holds you transfixed, little flecks of blood rain down on its white fur. A splash of water. Two tropical fish have leapt out of their tanks and flapping madly at your feet. Mouths gaping, there beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
-  id: 67,
-  option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
-  option_1: { text: "Continue", step: 85, hide: 'aisle_round1' }, // second aisle round
+  option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
 },
 {
   function: "hasFriends()",
+  main_text: "You're not quite sure why you've entered the pet aisle, all things considered. Thankfully, besides food and cleaning products, the only animals the store stocks are fish and mice. You <span class='friend'>hold <span class='name'></span> steady and</span> peer into a thick glass box. A mouse sprints into the glass and instead of shying away, it keeps ramming its little head over and over again. Morbid curiosity holds you transfixed, little flecks of blood rain down on its white fur. A splash of water. Two tropical fish have leapt out of their tanks and flapping madly at your feet. Mouths gaping, there beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
+  id: 67,
+  option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
+  option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
+},
+{
+  function: "checkWeapon()",
   char_addition1: 'mop',
   main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
-  option_1: { text: "Continue", step: 85, hide: 'aisle_round1' }, // second aisle round
+  option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
 },
 {
   function: "hasFriends()",
@@ -478,7 +481,7 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "You <span class='friend'> pick <span class='name'></span> up and </span>hightail it to the backroom. The door is (fortunately) unlocked. <span class='friend'>You quickly lower <span class='name'></span> inside and with</span><span class='solo'>With</span> the rats only a few feet behind, you slam the door shut.",
+  main_text: "You <span class='friend'> pick <span class='name'></span> up and </span>hightail it to the backroom. The door is (fortunately) unlocked. <span class='friend'>You quickly lower <span class='name'></span> inside and with</span><span class='solo'>With</span> the rats only a few feet behind, slam the door shut.",
   id: 73,
   option_1: { text: "Continue", step: 75 },
 },
@@ -490,23 +493,23 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and re-dress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>' but they provide no response. </span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
+  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and redress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>' but <span class='pronoun'></span> provides no response.</span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
   id: 75,
   option_1: { text: "Continue", step: 76 },
 },
 {
-  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door also leads outside. You peer round, it's the car park again. You look up, following dark black plumes of smoke that pollute the night sky accompanied by the sound of sirens and disorder. This door must be some sort of alternate store entrance for staff and deliveries. 100 or so meters ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your means of escape.",
+  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door also leads outside. You peer round, it's the car park again. You look up following dark black plumes of smoke that pollute the night sky accompanied by the sound of sirens and chaos. This door must be some sort of alternate store entrance for staff and deliveries. One hundred or so meters ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your means of escape.",
   id: 76,
   option_1: { text: "Continue", step: 77 },
 },
 {
-  main_text: "The question of the truck's keys is answered when you spot a dark silhouette of a body below the driver's door. Above, the golden labrador pulls meaty strings from the corpse's neck. This forces your gag reflex into overdrive and you close the door quickly and silently.",
+  main_text: "The question of the truck's keys is answered when you spot a dark silhouette of a body below the driver's door. Above, the golden labrador pulls meaty strings from the corpse's neck. This forces your gag reflex into overdrive and you close the door quickly.",
   id: 77,
   option_1: { text: "Continue", step: 78 },
 },
 {
   function: "hasFriends()",
-  main_text: "Returning to the door leading to the store, you take a seat against a wall <span class='friend'>by <span class='name'></span></span>. You take out your phone and knowing it will fail try to call the police, then Leslie but predictably both calls are disconnected.",
+  main_text: "Returning to the door leading to the store, you take a seat against the cold wall<span class='friend'> by <span class='name'></span></span>. You take out your phone and knowing it will fail try to call the police, then Leslie but predictably both are disconnected.",
   id: 78,
   option_1: { text: "Continue", step: 79 },
 },
@@ -521,32 +524,34 @@ var content = [{
   option_1: { text: "Continue", step: 81 },
 },
 {
+  function: "woundCheck()",
   main_text: "<span class='woundCheck'></span>",
   id: 81,
   option_1: { text: "Stand up", step: 82 },
 },
 {
-  main_text: "Through a window on the door, you can see back into the store. There's still birds zipping about but it looks relatively less busy. You feel like you could make it into one of the final three aisles if you needed more supplies. You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
+  main_text: "Through a window on the door, you can see back into the store. There's still birds zipping about but it looks relatively less busy. You feel like you could make it into one of the final three aisles if you needed more supplies.<br><br>You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
   id: 82,
-  option_1: { text: "Run to the truck", step: 89 },
-  option_2: { text: "Go back into the store", step: 83 },
+  option_1: { text: "Go back into the store", step: 83 },
+  option_2: { text: "Run to the truck", step: 89 },
 },
 {
   char_addition1: 'aisle_round2',
   char_reduction: 'aisle_round1',
-  main_text: "You steal your nerves and re-enter the store. You feel a large number of eyes turn and bear down on you. 'Better make this quick' you think.", // going back into store
+  main_text: "You steal your nerves and re-enter the store. You feel a large number of eyes turn and bear down on you. Better make this quick.", // going back into store
   id: 83,
   option_1: { text: "Choose the hardware aisle", step: 66 },
-  option_2: { text: "Choose the pet shop and food aisle", step: 67 },
-  option_3: { text: "Choose another food aisle", step: 68 },
+  option_2: { text: "Choose the pet shop aisle ", step: 67 },
+  option_3: { text: "Choose the food aisle", step: 68 },
 },
 {
+  char_reduction: 'aisle_round2',
   function: "hasFriends()",
-  main_text: "The race back to the backroom is a tense one. You close the door to the backroom behind you and look back through the door's window back. All the bird's eyes are fixed on you. <span class='friend'><span class='name'></span> stirs. While clutching their injured arm, they curse like a pirate.</span>",
+  main_text: "The race back to the backroom is a tense one. You close the door to the backroom behind you and look back through the door's window back into the store. All the bird's eyes are fixed on you.<span class='friend'>From the corner of the storeroom, <span class='name'></span> stirs. Clutching <span class='pronoun'></span> injured arm, <span class='shehe'></span> sits up and curses like a pirate.</span>",
   id: 84,
   option_1: { text: "Go back into the store", step: 85 },
   option_2: { text: "Run to the truck", step: 89 },
-  option_2: { text: "Check on <span class='name'></span>", step: 87 },
+  option_3: { text: "Check on <span class='name'></span>", step: 87, hide: 'no_friend' },
 },
 {
   main_text: "As soon as you enter the store something hits hard you in the chest. Not sure if the surprise or the impact but you fall back into the storeroom. Now on all fours, you watch a seagull scream around the small storeroom room before it dives at you for another attack.",
@@ -556,7 +561,7 @@ var content = [{
 {
   function: "loseWeapons();",
   id: 86,
-  main_text: "This time you manage to swat it away <span class='friend'>but it changes direction and begins attacking <span class='name'></span>. They let out cry out a long and horrible moan. You swat at the bird but </span><span class='solo'>but it doesn't take look before it mounts another attack, worse</span> you've left the door open and more birds stream into the small room. You stumble out into the car park and slam the door behind you. In the chaos, you've forgotten your bag of items. <span class='friend'>From the backroom, you hear <span class='name'></span>'s wailing turn to screaming.</span>",
+  main_text: "This time you manage to swat it away <span class='friend'>but it changes direction and begins attacking <span class='name'></span>. <span class='shehe'></span> cries out a long and horrible moan. You swat at the bird but </span><span class='solo'>but it doesn't take look before it mounts another attack, worse</span> you've left the door open and more birds stream into the small room. You stumble out into the car park and slam the door behind you. In the chaos, you've forgotten your bag of items. <span class='friend'>From the backroom, you hear <span class='name'></span>'s wails turn to screams.</span>",
   option_1: { text: "Continue", step: 90 },
 },
 {
@@ -566,14 +571,13 @@ var content = [{
   option_1: { text: "Continue", step: 88 },
 },
 {
-  // checking <span class='name'></span>
   main_text: "'Are we in the store still?'<br>'A backroom but yeah' you respond.<br>'In that case, I'm going to stay here and wait for help'<br>'Are you sure?' You are somewhat disappointed by their decision. <br><span class='name'></span> drinks more water and with eyes still closed concludes 'Yes, I'll be fine. Go.'",
   id: 88,
   option_1: { text: "Go back into the store", step: 85 },
   option_2: { text: "Run to the truck", step: 89 },
 },
 {
-  main_text: "You take a few deeps breaths, slowly open the door leading to the car park and carefully scan your surroundings. Between you and the truck someone has dropped a box of wine, the blood red wine runs from the scattered glass. You slip out. the door clicks behind you.",
+  main_text: "You take a few deeps breaths, slowly open the door leading to the car park and carefully scan your surroundings. Between you and the truck someone has dropped a box of wine, the blood red wine runs from the scattered glass. You slip out. The door clicks behind you.",
   id: 89,
   option_1: { text: "Continue", step: 90 },
 },
@@ -596,28 +600,32 @@ var content = [{
 },
 {
   function: "weaponConsequence()",
-  main_text: "You get to the bag of broken bottles and spin around. The Retriever is sprinting. A hysterical madness is in its eyes. The vicious teeth bearing closer in on your position. <span class='weaponStance'></span>.",
+  main_text: "You get to the bag of broken bottles and spin around. The Retriever is sprinting. A hysterical madness is in its eyes. The vicious teeth bearing closer in on your position. <span class='weaponStance'></span>",
   id: 93,
-  option_1: { text: "Attack with wine bottle", step: 94, show: 'wine_bottle' },
-  option_1: { text: "Defend yourself with the wine bottle", step: 95, show: 'wine_bottle' },
-  option_1: { text: "Attack with broken bottle", step: 96, show: 'wine_bottle' },
-  option_1: { text: "Defend yourself with the broken bottle", step: 97, show: 'wine_bottle' },
-  option_1: { text: "Attack with the hammer", step: 94, show: 'hammer' },
-  option_1: { text: "Defend yourself with the hammer", step: 95, show: 'hammer' },
-  option_1: { text: "Attack with the mop", step: 94, show: 'mop' },
-  option_1: { text: "Defend yourself with the mop", step: 95, show: 'mop' },
-  option_1: { text: "Attack barehanded", step: 94 },
-  option_1: { text: "Defend Attack barehanded", step: 95 },
+  option_1: { text: "Attack with wine bottle", step: 94, show: 'wine bottle' },
+  option_2: { text: "Defend yourself with the wine bottle", step: 95, show: 'wine bottle' },
+  option_3: { text: "Attack with broken bottle", step: 96, show: 'broken bottle' },
+  option_4: { text: "Defend yourself with the broken bottle", step: 97, show: 'broken bottle' },
+  option_5: { text: "Attack with the hammer", step: 99, show: 'hammer' },
+  option_6: { text: "Defend yourself with the hammer", step: 101, show: 'hammer' },
+  option_7: { text: "Attack with the mop", step: 104, show: 'mop' },
+  option_8: { text: "Defend yourself with the mop", step: 105, show: 'mop' },
+  option_9: { text: "Attack with the bread", step: 126, show: 'bread' },
+  option_10: { text: "Defend yourself with the bread", step: 127, show: 'bread' },
+  option_11: { text: "Attack barehanded", step: 108, hide: 'friend_conscious' },
+  option_12: { text: "Defend barehanded", step: 109, hide: 'friend_conscious' },
+  option_12: { text: "Attack with <span class='weaponEquipped'></span>", step: 116, show: 'friend_conscious' },
+  option_12: { text: "Defend with <span class='weaponEquipped'></span>", step: 117, show: 'friend_conscious' },
 },
 {
   // wine bottle attack
-  main_text: "One foot in front of the other, as if you were playing tennis. As the dog leaps, you throw the bottle across yourself like a forehand. On it's way across, the bottle smashes into a million pieces perfectly uppercutting the dog and sending it to the floor. You are left  holding just the neck of the bottle, everything is covered in wine and glass. Before you have time to think, the dog recovers to it's feet. With it's jaw hanging limp, it bears it's ferocious fangs and leaps again.",
+  main_text: "One foot in front of the other, as if you were playing tennis. As the dog leaps, you throw the bottle across yourself like a forehand. On it's way across, the bottle smashes into a million pieces perfectly uppercutting the Retriever and sending it to the floor. You are left  holding just the neck of the bottle, everything is covered in wine and glass. Before you have time to think, the dog recovers to it's feet. With it's jaw hanging limp, it bears it's ferocious fangs and leaps again.",
   id: 94,
   option_1: { text: "Continue", step: 97  }, // broken bottle defend
 },
 {
   // wine bottle defend
-  main_text: "You prepare yourself for impact and as the dog connects, you thrust the neck of the bottle between it's teeth. For a few precious seconds, it keeps its ferocious fangs at bay. But then the Retriever bites through the glass and without hesitation, sinks its sharp teeth into your shoulder.",
+  main_text: "You prepare yourself for impact and as the dog connects, you thrust the bottle between it's teeth. For a few precious seconds, it keeps its ferocious fangs at bay. But then the Retriever bites through the glass and without hesitation, sinks its sharp teeth into your shoulder.",
   id: 95,
   option_1: { text: "Continue", step: 98 },
 },
@@ -629,41 +637,42 @@ var content = [{
 },
 {
   // broken bottle defend
-  main_text: "The Retriever hits you like a wrecking ball. Sometimes the best offense is a good defence. As you fall back with the dog on top, you angle the broken wine bottle up and under the its jaw. As you hit the tarmac, you hear a high and soft whimper. You look down, the broken bottle has impaled itself under the dog's jaw. The dog is flapping wildly. Blood flows out of the bottle like wine. You reach up and your hand finds a beer bottle. You hold the neck of the bottle and smash it on the hard concrete, you then shove the remains into the Retriever's soft golden fur. It immediately flops down dead.",
+  main_text: "The Retriever hits you like a wrecking ball. Sometimes the best offense is a good defence. As you fall back with the dog on top, you angle the broken wine bottle up and under the its jaw. As you hit the tarmac, you hear a high and soft whimper. You look down, the broken bottle has impaled itself under the dog's jaw. The dog is flapping wildly. Blood flows out of the bottle like wine. You reach up and your hand finds a beer bottle. You hold the neck of the bottle and smash it on the hard concrete. You then shove the remains into the Retriever's soft golden fur.",
   id: 97,
-  option_1: { text: "Continue", step: 121 },
+  option_1: { text: "Continue", step: 114 },
 },
 {
   // fail state dog
-  main_text: "The pain is incredible. Like a hot-iron poker held against your neck. You scream and the throw your arm with the broken bottle against the dog. The dog makes a horrible howling noise as the glass penetrates it's cheek. You stab again and again into the soft fur, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
+  main_text: "The pain is incredible. Like being branded by hot-iron poker. You scream and the throw your arm with the broken bottle against the dog. The dog makes a horrible howling noise as the glass penetrates it's cheek. You stab again and again into the soft fur, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
   id: 98,
   option_1: { text: "Continue", step: 112 },
 },
 {
   // hammer attack
-  main_text: "One foot in front of the other, as if you were playing tennis. As the dog leaps, you throw the hammer across yourself in a forehand motion. On it's way across, the hammer collides perfectly uppercutting the dog and sending it to the floor. For a second, the Retriever lies there looking serene and innocent like a Labrador exhausted after a long walk. But then it recovers and with its bottom jaw hanging limp it bears its horrible fangs as it readies for another attack.",
+  main_text: "One foot in front of the other, as if you were playing tennis. As the dog leaps, you throw the hammer across yourself in a forehand motion. On it's way across, the hammer collides perfectly uppercutting the dog and sending it to the floor. For a second, the Retriever lies there looking serene and innocent like a Labrador sleeping after a long walk. But then it recovers and with its bottom jaw hanging limp it bears its horrible fangs as it readies for another attack.",
   id: 99,
-  option_1: { text: "Kill dog", step: 100 },
-  option_1: { text: "Don't kill dog", step: 101 },
+  option_1: { text: "Strike the dog again", step: 100 },
+  option_2: { text: "Don't strike the dog", step: 101 },
 },
 {
   // hammer attack part 2
-  main_text: "The Retriever leaps up but you quickly respond by bringing the hammer down on its nose. The dog falls forward and you strike it again for good measure. Panting hard, you let the hammer slip through your fingers.",
+  main_text: "The Retriever leaps up but you quickly respond by bringing the hammer down on its nose. The dog falls forward and you strike it again for good measure. Exhausted, you let the hammer slip through your fingers.",
   id: 100,
-  option_1: { text: "Continue", step: 113 },
+  option_1: { text: "Continue", step: 128 },
 },
 {
   // hammer defend
-  main_text: "The dog leaps. The impact is like the force of a wrecking ball.  As you fall you thrust the handle of the hammer between it's jaws, protecting you from it's ferocious fangs.",
+  main_text: "The impact is like the force of a wrecking ball.  As you fall, you thrust the handle of the hammer between the dog's jaws. It protects you for a few precious seconds from the snapping ferocious fangs above.",
   id: 101,
   option_1: { text: "Throw the dog off", step: 102 },
-  option_1: { text: "Look for another weapon", step: 103 },
+  option_2: { text: "Look for another weapon", step: 103 },
 },
 {
   // hammer: throw off
-  main_text: "With all your strength you throw the dog off. It lands on it's back, rolls, growls and attacks. Fortunately, you're back on your feet too and swing hammer in a forehand motion perfectly uppercutting the Retriever and sending it reeling backwards.",
+  main_text: "With all your strength you throw the dog off. It lands on it's back, rolls, growls and attacks again. Fortunately, you're back on your feet too and swing hammer in a forehand motion perfectly uppercutting the Retriever and sending it reeling backwards.",
   id: 102,
-  option_1: { text: "Continue", step: 97 },
+  option_1: { text: "Strike the dog again", step: 100 },
+  option_2: { text: "Don't strike the dog", step: 101 },
 },
 {
   // hammer: look for anther weapon
@@ -673,38 +682,39 @@ var content = [{
 },
 {
   // mop: attack
-  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps, you jab the mop into it's jaw. The dog barely reacts. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, this action throws you off balance and you fall back.",
+  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as the Retriever leaps, you jab the mop into it's jaw. The dog barely reacts. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, you are thrown off balance and fall back.",
   id: 104,
   option_1: { text: "Continue", step: 110 },
 },
 {
   // mop: defend part one
-  main_text: "The dog leaps. The impact is like the force of a wrecking ball. As you fall you thrust the handle of the mop between it's jaws, protecting you from it's ferocious fangs.",
+  main_text: "The impact is like the force of a wrecking ball. As you fall, you thrust the handle of the mop between the dog's jaws. It protects you for a few precious seconds from the snapping ferocious fangs above.",
   id: 105,
   option_1: { text: "Throw the dog off", step: 106 },
-  option_1: { text: "Look for another weapon", step: 103 },
+  option_2: { text: "Look for another weapon", step: 107 },
 },
 {
   // mop: defend throw off
-  main_text: "With all your strength you throw the dog off. It lands on it's back, rolls, growls and attacks. You're back on your feet too and swing the mop as hard as you can down on the Retriever's head. It does nothing, the Retriever again pulls you down and sinks its enormously sharp teeth into your shoulder.",
+  main_text: "With all your strength you throw the dog off. It lands on it's back, rolls, growls and attacks again. You're back on your feet too and swing the mop as hard as you can down on the Retriever's head. It does nothing. The Retriever sinks its enormously sharp teeth into your shoulder, dragging you down in the process.",
   id: 106,
-  option_1: { text: "Continue", step: 112 },
+  option_1: { text: "Continue", step: 111 },
+
 },
 {
   // mop: defend bottle search
-  main_text: "Concentrating hard on the mop handle between the Retriever's teeth you frantically search with your other hand for another weapon. You grab a broken glass bottle and swing it downwards. The dog makes a horrible howling noise as the glass penetrates it's soft golden fur. You stab again and again, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
+  main_text: "Concentrating hard on the mop handle between the Retriever's teeth you frantically search with your other hand for another weapon. You grab a broken glass bottle and swing it downwards. The dog makes a horrible howling noise as the glass penetrates its soft golden fur. You stab again and again, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
   id: 107,
   option_1: { text: "Continue", step: 114 },
 },
 {
   // hands: attack
-  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps, you arc your foot catching it square in the jaw. The dog doesn't go down though. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, this action throws you off balance and you fall back.",
+  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as the Retriever leaps, you arc your foot catching it square in the jaw. The dog doesn't go down though. Instead, it grabs your trouser leg by it's teeth and jerks its head back. With only one foot planted on the floor, this action throws you off balance and you fall back.",
   id: 108,
   option_1: { text: "Continue", step: 110 },
 },
 {
   // hands: defend
-  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as The Retriever leaps you ball up and fold your arms over your face and chest. The impact hits you like a wrecking ball. It knocks the wind out of you and throws you backward.",
+  main_text: "One foot in front of the other, you mentally prepare yourself for the attack and as the Retriever leaps you ball up and fold your arms over your face and chest. The impact hits you like a wrecking ball. It knocks the wind out of you and throws you backward.",
   id: 109,
   option_1: { text: "Continue", step: 110 },
 },
@@ -716,13 +726,13 @@ var content = [{
 },
 {
   // hands: kill dog
-  main_text: "The pain is incredible. Like a hot-iron poker held against your neck. You scream and the throw your arms around frantically. One hand passes something sharp, a broken bottle. You feel for the bottle neck and throw the sharp end into the jaw clamped around your shoulder. The dog makes a horrible howling noise as the glass penetrates the soft fur. You stab again and again, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
+  main_text: "The pain is incredible. Like a hot-iron poker held against your neck. You scream and the throw your arms around frantically. One hand passes something sharp, a broken bottle. You feel for the bottle neck and throw the sharp end into the jaw clamped around your shoulder. The dog makes a horrible howling noise as the glass penetrates its soft fur. You stab again and again, covering yourself in it's blood. Eventually, you lodge the bottle so hard you have not enough strength to remove it. Blood trickles out of the impaled bottle like wine.",
   id: 111,
   option_1: { text: "Continue", step: 112 },
 },
 {
   // hurt conclusion  part one
-  main_text: "You lie there panting hard. Your hand wet grasping at the searing pain in your shoulder. The dead dog draped across you like a warm blanket. Eventually, you push it off, it slumps to the floor and you rise slowly. You are totally exhausted. You crawl over and pat down the truck driver's corpse. A wave of relief washes over as you pull the keys from his shirt's top pocket.",
+  main_text: "You lie there panting hard. Your hand wet grasping at the searing pain in your shoulder. The dead dog draped across you like a warm blanket. Eventually, you push it off and it slumps to the floor and you rise slowly. You are totally exhausted. You crawl over and pat down the truck driver's corpse. A wave of relief washes over as you pull the keys from his shirt's top pocket.",
   id: 112,
   option_1: { text: "Continue", step: 113 },
 },
@@ -734,19 +744,19 @@ var content = [{
 },
 {
   // NOT  hurt conclusion part one
-  main_text: "You lie there panting hard. The dead dog draped across you like a warm blanket, its body is heavy. Eventually, you push it off, it slumps to the floor and you rise slowly. Every action is exhausting. You crawl over to the truck driver and pat down the corpse. A wave of relief washes over as you pull the keys from his shirt's top pocket.",
+  main_text: "You lie there panting hard. The dead dog draped across you like a warm blanket, its body is heavy. Eventually, you push it off, it slumps to the floor and you rise slowly. Every action is exhausting.",
   id: 114,
-  option_1: { text: "Continue", step: 115 },
+  option_1: { text: "Continue", step: 128 },
 },
 {
   // NOT  hurt conclusion part two
-  main_text: "You  ease yourself into the drivers seat and insert the key. The truck rumbles to life. You find first gear and as you pull out of the lot you notice the surrounding chaos. Buildings on fire, cars destroyed and corpses littering the streets. The world has gone to hell. You pull out of the lot and head in the direction of home. ",
+  main_text: "You  ease yourself into the drivers seat and insert the key. The truck rumbles to life. You find first gear and as you navigate your way to the car park's exit, you notice the surrounding chaos. Buildings on fire, cars destroyed and corpses littering the streets. The world has gone to hell. You pull out of the lot and head in the direction of home. ",
   id: 115,
   option_1: { text: "The End", step: 125 },
 },
 {
   // Friend is alive: attack
-  main_text: "You swing the <span class='weaponEquipped'></span>  hard but to your horror the Retriever has read your movements and ducks left, narrowly missing the impact. The momentum of the swing has momentarily thrown you off balance and the dog takes advantage.",
+  main_text: "You swing <span class='weaponEquipped'></span> as hard as you physically can but to your horror the Retriever has read your movements and ducks left, narrowly missing impact. The momentum of the swing has thrown you off balance and the dog takes advantage.",
   id: 116,
   option_1: { text: "Continue", step: 117 },
 },
@@ -762,7 +772,7 @@ var content = [{
   main_text: "<span class='name'></span> seems to be cuddling the Retriever.<br>No. <span class='name'></span> has her arms around the dogs neck and head in a vice-like grip. Using all their strength to immobilize the beast. 'I can't hold on forever' <span class='name'></span> cries out.",
   id: 118,
   option_1: { text: "Help <span class='name'></span>", step: 119 },
-  option_1: { text: "Leave <span class='name'></span>", step: 123 },
+  option_2: { text: "Leave <span class='name'></span>", step: 123 },
 },
 {
   // friend: kill dog
@@ -806,7 +816,26 @@ var content = [{
   id: 125,
   option_1: { text: "End", step: MAX },
 },
+{
+  // Bread attack
+  main_text: "One foot in front of the other, as if you were playing tennis. As the dog leaps, you throw the baguette across yourself like a forehand. On it's way across, the bread smashes into a million pieces. Unfortunately, it doesn't deter the dog's attack at all. Its ferocious attack continues and the dog sinks its sharp teeth into your shoulder." ,
+  id: 126,
+  option_1: { text: "Continue", step: 98 },
+},
+{
+  // Bread defend
+  main_text: "You prepare yourself for impact and as the dog connects, you thrust the bread between it's teeth. For a few precious seconds, it ferociously chews at the stale baguette. But then the Retriever makes easy work of it and without hesitation, sinks its sharp teeth into your shoulder." ,
+  id: 127,
+  option_1: { text: "Continue", step: 98 },
+},
+{
+  // Find body unharmed
+  main_text: "You limp over to the truck driver. The stiff corpse is nauseating to the touch but the feeling is replaced with relief as you pull out keys from the shirt's top pocket.",
+  id: 128,
+  option_1: { text: "Continue", step: 115 },
+}
 ];
 
-tellStory(content, 38);
 localStorage.setItem('gender', 'woman');
+charStatus = ['aisle_round1', 'broken bottle', 'bird_injury2', 'friend_conscious'];
+tellStory(content, 78);

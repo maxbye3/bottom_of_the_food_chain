@@ -17,49 +17,54 @@ function woundCheck(){
   var medicalCondition = ""; 
   var gotMedicine = "";
   
-  // injured but you didn't grab medical supplies
-  if(medicalSupplies === -1){
-    gotMedicine = " You really wish you had grabbed some bandages or other medical supplies in the store earlier. You try and swallow your fear but you cannot keep the terror from creeping in."
-  } else{
-    gotMedicine = 'To keep the terror from creeping in, you rummage through the bag of medical supplies you collected earlier and layout the supplies in front of you.';
-  }   
+
   
   
   // bird wound only  
   if(birdWound !== -1){
     woundCondition += 'You roll up your sleeves they are sticky with blood from scratches on your forearms.'
-    medicalCondition += " You apply ointment and wrap bandages around each of your wrists to your elbows."
+    medicalCondition += " You apply ointment and wrap bandages around each set of cuts."
   }  
 
   // bird wound 
   if(shopWound !== -1){
     woundCondition += 'You have a pounding headache. While totalling your car, you hit your head on the steering wheel pretty hard.'
-    medicalCondition += " You dab at the cut above the eye with alcohol, the spirit burns like the sun but you persevere. Using your phone's camera, you apply a plaster over the cut. ";
+    medicalCondition += " You dab at the cut above the eye with alcohol, the spirit burns like the sun but you persevere. Using your phone's camera, you also apply a plaster over the cut. ";
   }
 
   // bird wound 2 
   if(birdWound2 !== -1){
     woundCondition += "Looking at your phone's camera, the recent cut under your eye is still bleeding.";
-    medicalCondition += " You clean the blood with cotton wool and hold it there for a short period of time and then you cover it with a plaster. "    
+    medicalCondition += " You clean the blood with cotton wool, hold it there till the bleeding has stopped and then you cover the cut with a plaster. "    
   }
+
+  // injured - medical supply stock
+  if(medicalSupplies === -1){
+    gotMedicine = " You really wish you had grabbed some bandages or other medical supplies in the store earlier. You try and swallow your fear but you cannot keep the terror from creeping."
+    medicalCondition = "";
+  } else{
+    gotMedicine = ' To keep the terror from creeping in, you rummage through the bag of medical supplies you collected earlier and layout the supplies in front of you.';
+  }   
+
 
   // uninjured
   if(shopWound === -1 && birdWound === -1 && birdWound2 === -1){
-    woundCondition += "You roll up your sleeves. Unbelievable, despite the chaos not a scratch";
+    woundCondition += "You roll up your sleeves. Unbelievable, despite the chaos, there's not a scratch on you.";
     // check for medical supplies
     if(medicalSupplies !== -1){
-      medicalCondition += " You still have plenty, all things considered, you're doing pretty well."
+      gotMedicine = " You still have plenty, all things considered, you're doing pretty well."
     } else{
-      medicalCondition += " A relief considering you didn't grab any medical supplies or bandages."
+      gotMedicine = " A relief considering you didn't grab any medical supplies or bandages from the store."
     }
   }
+
+
   $('.woundCheck').html(woundCondition + gotMedicine + medicalCondition);
 }
 
 function hasFriends(){
   getName();
-  var hasFriends = charStatus.indexOf('no_friend');
-  if(hasFriends > -1){
+  if(charStatus.indexOf('no_friend') > -1 || charStatus.indexOf('aisle_round2') > -1){
     $('.friend').hide();
   }
   else{
@@ -71,8 +76,12 @@ function getName(){
   $('.gender').text(localStorage.getItem('gender'));
   if(localStorage.getItem('gender') === 'man'){
     $('.name').html('John');
+    $('.pronoun').html('his');
+    $('.shehe').html('he');
   } else {
     $('.name').html('Mary');
+    $('.pronoun').html('her');
+    $('.shehe').html('she');
   }
 }
 
@@ -80,36 +89,83 @@ function weaponConsequence(){
   // wine bottle
   // hammer
   // broken bottle
+  // bread
   // mop
   // nothing
-  if(charStatus.indexOf('fists')){
-    var stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.'
+  // friend_conscious
+  if(charStatus.indexOf('hammer') > -1 ){
+    weaponEquipped = 'the hammer';
+    var stance = 'You grip the hammer by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
   }
-  if(charStatus.indexOf('broken bottle')){
+  else if(charStatus.indexOf('wine bottle') > -1 ){
+    weaponEquipped = 'the wine bottle';
+    stance = 'You grip the wine bottle by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  else if(charStatus.indexOf('mop') > -1 ){
+    weaponEquipped = 'the mop';
+    stance = 'You grip the mop by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  else if(charStatus.indexOf('broken bottle') > -1){
+    weaponEquipped = 'the sharp end of the bottle';
     stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.'
   }
-  else{
-    stance = 'You grip the ' + weapon + ' by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  else if(charStatus.indexOf('bread') > -1 ){
+    weaponEquipped = 'the stale baguette';
+    stance = 'You grip the bread by the stiff stale crust and hold it out like a bat. Your heart is pumping out of your chest.'
   }
+  else {
+    weaponEquipped = 'your fists';
+    stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.'
+  }
+  
+  // friend still alive
+  if(charStatus.indexOf('friend_conscious') > -1 ){
+    for (var i = 1; i <= 12; i++) { 
+      var setI = i;
+      setTimeout(function (){
+        jQuery('.option' + setI).hide();
+      }, 10);
+    }
+    jQuery('.option13').show();
+    jQuery('.option14').show();
+  }
+  $('.weaponEquipped').html(weaponEquipped);
   $('.weaponStance').html(stance);
 }
 
 function checkWeapon(){
+  hasFriends();
   function weaponCheck(weapon){
     var weaponType = charStatus.indexOf(weapon);
     if(weaponType > -1){  
-      $('.weaponResult').html('You feel the ' + String(weapon) + ' you have already is a better weapon.');
+      $('.weaponResult').html('You feel the ' + String(weapon) + ' you have already is a better weapon but you take the mop anyway.');
+      return true;
     } else{
       $('.weaponResult').html('At a stretch, you think, this could be used as a weapon.');
+      return false
     }
   }
-  weaponCheck('hammer');
-  weaponCheck('wine bottle');
+  if(!weaponCheck('hammer')){
+    weaponCheck('wine bottle');
+  }
 }
 
 function loseWeapons(){
+  function loseWeapon(weapon){
+    for (var i=charStatus.length-1; i>=0; i--) {
+        if (charStatus[i] === weapon) {
+            charStatus.splice(i, 1);
+            // break;       //<-- Uncomment  if only the first term has to be removed
+        }
+    }
+  }
   hasFriends();
-
+  loseWeapon('wine bottle');
+  loseWeapon('hammer');
+  loseWeapon('broken bottle');
+  loseWeapon('mop');
+  loseWeapon('bread');
+  
 }
 
 function goneWrong(){
@@ -144,7 +200,7 @@ function checkGender(){
 
 
 function tellStory(arr, id){
-
+  console.log(id);
   // store in local storage
   localStorage.setItem('saveData', id);
   // populate main story
@@ -173,7 +229,22 @@ function tellStory(arr, id){
   }
 
   // populate options
-  for (var i = 1; i <= 4; i++) { 
+  var intI = []; 
+  var intJ = [];
+  
+  setTimeout(function (){
+    for (var m = 0; m < intI.length; m++) {
+      jQuery('.option' + intI[m]).show()
+    }
+  });
+  setTimeout(function (){
+    for (var n = 0; n < intJ.length; n++) {
+      jQuery('.option' + intJ[n]).hide()
+    }
+  });
+
+
+  for (var i = 1; i <= 14; i++) { 
     if(arr[id]["option_" + i]){
       jQuery('.option' + i).show();
 
@@ -191,11 +262,11 @@ function tellStory(arr, id){
       }
 
       // show conditional is only shown if in charStatus 
-      if(charStatus && arr[id]["option_" + i].hide){
+      if(charStatus && arr[id]["option_" + i].show){
         jQuery('.option' + i).hide()        
         for (var j = 0; j < charStatus.length; j++) {
-          if(charStatus[j] === arr[id]["option_" + i].hide){ 
-            jQuery('.option' + i).show()
+          if(charStatus[j] === arr[id]["option_" + i].show){             
+            intI.push(i); 
           }
         }
       }
@@ -204,9 +275,9 @@ function tellStory(arr, id){
       if(charStatus && arr[id]["option_" + i].hide){
         for (var j = 0; j < charStatus.length; j++) {
           if(charStatus[j] === arr[id]["option_" + i].hide){ 
-            jQuery('.option' + i).hide()
+            intJ.push(i); 
           }
-        }
+        }       
       }
     }
     else{
