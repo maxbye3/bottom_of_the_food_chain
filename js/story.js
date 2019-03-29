@@ -412,6 +412,7 @@ var content = [{
 },
 {
   function: "getName()",
+  char_addition1: 'cpr failed',
   char_addition2: 'medical_supplies',
   main_text: "Finding a discarded plastic shopping bag you fill it with painkillers and bandages. Next, you move <span class='name'></span> onto your shoulder. <span class='name'></span> is limp and the full weight of their body falls on you. That's not good. You drag <span class='name'></span> as gently as you can by their good shoulder towards the end of the aisle. On the far side of the store, a man is being viciously attacked by a crow but you have your hands full and he's too far to help. You have three more aisles in front of you.",
   id: 63,
@@ -807,6 +808,7 @@ var content = [{
 },
 {
   // friend: kill dog final 
+  char_addition1: 'companion remain',
   main_text: "'So, where are we going?' <span class='name'></span> asks pulling the truck out of the lot. For the first time, you notice the surrounding chaos. Buildings on fire, cars destroyed and corpses littering the streets. The world has gone to hell. You look down at the blood on your hands and respond 'home'." ,
   id: 122,
   option_1: { text: "See your results", step: 125 },
@@ -818,7 +820,8 @@ var content = [{
   option_1: { text: "Continue", step: 124 },
 },
 {
-  // friend: leave <span class='name'></span> in truck
+  // friend: leave <span class='name'></span> in truck  
+  char_addition1: 'companion left',
   main_text: "The engine rumbles to life and drowns out <span class='name'></span>'s horrible screams. A sense of betrayal feels heavy on your shoulders. Regardless, you are safe and you are going home." ,
   id: 124,
   option_1: { text: "See your results", step: 125 },
@@ -862,7 +865,40 @@ var content = [{
   function: "checkCompanion()",
   main_text: "<span class='checkCompanion'></span>",
   id: 130,
-  option_1: { text: "Continue", step: 115 },
+  option_1: { text: "Continue", step: 131 },
+},
+{
+  // GUILT DISCLAIMER
+  function: "checkGuilt()",
+  main_text: "<span class='checkGuilt'></span>",
+  id: 131,
+  option_1: { text: "Sure. Wny not.", step: 132 },
+  option_1: { text: "No. Skip advert", step: 133 },
+},
+{
+  // KINDNESS ADVERT
+  main_text: "Wow. I did not think that would work.<br>Well, here's the link it will open up in a new window: <a href='thekindnessapp.com' target='_blank'>click here</a>.",
+  id: 132,
+  option_1: { text: "Go Back", step: 133 },
+},
+{
+  // YOUR IDEAS
+  main_text: "A big part of this whole exercise for me is to hear your ideas, feedback and any stories you want to collaborate on. <br>If you want to write below I will read it and get back to you.<br> Or, if you want to think about it - you can get to this page at anytime by typing in the <a href='' target='_blank'>konami code.</a><br><input></input>",
+  id: 133,
+  option_1: { text: "Submit", step: 134 },
+  option_1: { text: "I'm good", step: 135 },
+},
+{
+  // YOUR IDEAS
+  main_text: "Thanks! If you left an email, I'll respond when I can.",
+  id: 134,
+  option_1: { text: "Understood", step: 135 },
+},
+{
+  // YOUR IDEAS
+  main_text: "That's it! No more content... Thanks again for playing!",
+  id: 135,
+  option_1: { text: "Start again", step: 1 },
 }
 ];
 
