@@ -72,6 +72,72 @@ function hasFriends(){
   }
 }
 
+var didntDie = false;
+function deathResults(){
+  // death can be three
+  var deathTxt = '';
+  if(charStatus.indexOf('bird death') > -1 ){
+    deathTxt += "I'm sorry you died pretty early in it. Kudos for putting your life on the line to help other people and being a tasty treat for deranged birds.</br>";
+  }
+  if(charStatus.indexOf('Dalmatian death') > -1 ){
+    deathTxt += "Surely the death by Dalmatian could of been avoided right? You literally ran out of the safety of the car towards danger ¯\_(ツ)_/¯</br>";    
+  }
+  if(charStatus.indexOf('Retriever death') > -1 ){
+    deathTxt += "Death by the Retriever is a tricky one to avoid. I tried to make it obvious that the truck is too far. But hey, you make good dog food.</br>";
+  }
+  
+  if(deathTxt.length === 0) {
+      deathTxt += "And you didn't die!<br>I actually made it pretty tricky too die but there are three different ways to to do.<br>What is hard to avoid is injuries, so let's see how you did...";
+      didntDie = true;
+  }
+  jQuery('.deathResults').html('Congrats on finishing the game! '  + deathTxt)
+}
+
+function injuryResults(){
+  // death can be three
+  var injuryTxt = '';
+  if(charStatus.indexOf('bird_injury') > -1 ){
+    injuryTxt += "Always wind up your windows when deranged birds start attacking.</br>";
+  }
+  if(charStatus.indexOf('shop_injury') > -1 ){
+    injuryTxt += "Regardless of the apocalypse, you should always park. I mean if it weren't for those shutters, you would have been in real hot water.</br>";    
+  }
+  if(charStatus.indexOf('bird_injury2') > -1 ){
+    injuryTxt += "This was a tricky to injury to avoid. At the back of the store, you were exposed and I thought fighting rats should be punished.</br>";
+  }
+  if(charStatus.indexOf('bite wine') > -1 ){
+    injuryTxt += "Ah, unlucky! If you had attacked with the wine bottle you would have walked away injury free.</br>";
+  }
+  if(charStatus.indexOf('bite wine broken') > -1 ){
+    injuryTxt += "Ah, unlucky!  If you had defended with the broken wine bottle you would have walked away injury free.</br>";
+  }
+  if(charStatus.indexOf('bite wine broken') > -1 ){
+    injuryTxt += "Ah, unlucky!  If you had defended with the broken wine bottle you would have walked away injury free.</br>";
+  }
+  if(charStatus.indexOf('bite wine broken') > -1 ){
+    injuryTxt += "Ah, unlucky! If you had attacked with the hammer you would have walked away injury free. Always keep your eyes on the attacking dog.</br>";
+  }
+  if(charStatus.indexOf('bite mop') > -1 ){
+    injuryTxt += "Ah, unlucky! If you had defended with the mop you would have had a better chance of walking away injury free. But honestly, who brings a mop to a fight.</br>";
+  }
+  if(charStatus.indexOf('bite hand') > -1 ){
+    injuryTxt += "Ah, unlucky! You need a weapon to get past this part without injury. Next time!</br>";
+  }
+  if(charStatus.indexOf('bite bread') > -1 ){
+    injuryTxt += "To be honest, you were always going to get injured bringing bread to a dog fight.</br>";
+  }
+  if(injuryTxt.length === 0){
+    injuryTxt = "No injuries! Amazing. I think that's actually pretty tricky to do considering you have to pick up the right equipment and then use it in the right way.";
+    if(didntDie){
+      injuryTxt += '<br>Congrats! No injuries and no death!<br>You are a true survivor of the animal apocalypse!';
+    } else {
+      injuryTxt += "<br>If it weren't for all that death, I would have called you the true survivor of the  animal apocalypse.";
+    }
+
+  }
+  jQuery('.injuryResults').html("Let's see how you did for injuries! " + injuryTxt)
+}
+
 function getName(){
   $('.gender').text(localStorage.getItem('gender'));
   if(localStorage.getItem('gender') === 'man'){
@@ -85,6 +151,38 @@ function getName(){
   }
 }
 
+function weaponType(){
+  var weaponObj = {};
+  if(charStatus.indexOf('hammer') > -1 ){
+    weaponObj.weaponEquipped = 'the hammer';
+    weaponObj.stance = 'You grip the hammer by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  else if(charStatus.indexOf('wine bottle') > -1 ){
+    weaponObj.weaponEquipped = 'the wine bottle';
+    weaponObj.stance = 'You grip the wine bottle by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  else if(charStatus.indexOf('mop') > -1 ){
+    weaponObj.weaponEquipped = 'the mop';
+    weaponObj.stance = 'You grip the mop by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  else if(charStatus.indexOf('broken bottle') > -1){
+    weaponObj.weaponEquipped = 'the sharp end of the bottle';
+    weaponObj.stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.'
+  }
+  else if(charStatus.indexOf('bread') > -1 ){
+    weaponObj.weaponEquipped = 'the stale baguette';
+    weaponObj.stance = 'You grip the bread by the stiff stale crust and hold it out like a bat. Your heart is pumping out of your chest.'
+  }
+  else {
+    weaponObj.weaponEquipped = 'your fists';
+    weaponObj.stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.'
+  }
+  setTimeout(function (){
+    $('.weaponEquipped').html(weaponObj.weaponEquipped );
+    $('.weaponStance').html(weaponObj.stance);
+}, 15);
+}
+
 function weaponConsequence(){
   // wine bottle
   // hammer
@@ -93,44 +191,19 @@ function weaponConsequence(){
   // mop
   // nothing
   // friend_conscious
-  if(charStatus.indexOf('hammer') > -1 ){
-    weaponEquipped = 'the hammer';
-    var stance = 'You grip the hammer by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
-  }
-  else if(charStatus.indexOf('wine bottle') > -1 ){
-    weaponEquipped = 'the wine bottle';
-    stance = 'You grip the wine bottle by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
-  }
-  else if(charStatus.indexOf('mop') > -1 ){
-    weaponEquipped = 'the mop';
-    stance = 'You grip the mop by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
-  }
-  else if(charStatus.indexOf('broken bottle') > -1){
-    weaponEquipped = 'the sharp end of the bottle';
-    stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.'
-  }
-  else if(charStatus.indexOf('bread') > -1 ){
-    weaponEquipped = 'the stale baguette';
-    stance = 'You grip the bread by the stiff stale crust and hold it out like a bat. Your heart is pumping out of your chest.'
-  }
-  else {
-    weaponEquipped = 'your fists';
-    stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.'
-  }
+
+  weaponType();
   
   // friend still alive
-  if(charStatus.indexOf('friend_conscious') > -1 ){
-    for (var i = 1; i <= 12; i++) { 
-      var setI = i;
-      setTimeout(function (){
-        jQuery('.option' + setI).hide();
-      }, 10);
+  setTimeout(function (){
+    if(charStatus.indexOf('friend_conscious') > -1 ){
+      for (var i = 1; i <= 12; i++) { 
+        jQuery('.option' + i).hide();
+      }
+      jQuery('.option13').show();
+      jQuery('.option14').show();
     }
-    jQuery('.option13').show();
-    jQuery('.option14').show();
-  }
-  $('.weaponEquipped').html(weaponEquipped);
-  $('.weaponStance').html(stance);
+  }, 10);
 }
 
 function checkWeapon(){
