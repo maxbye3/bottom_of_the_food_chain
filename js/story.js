@@ -1,7 +1,5 @@
-// temp
-var MAX = 'temp'; 
-// temp
 var disclaimer = [{
+  function: "charStatus = localStorage.getItem('charStatus')",
   main_text: "Warning: this story contains graphic content.",
   option_1: { text: "Continue", step : 1 },
 }];
@@ -14,6 +12,7 @@ var content = [{
   option_2: { text: "Continue", step : localStorage.getItem("saveData") },
 },
 {
+  function: "charStatus = []",
   id: 1, 
   main_text: "You made a mistake learning to drive, now you're Leslie's personal errand boy. Sent to the supermarket to pick up canapés for another of her hideous dinner parties. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
   option_1: { text: "Continue", step : 2 },
@@ -872,21 +871,21 @@ var content = [{
   function: "checkGuilt()",
   main_text: "<span class='checkGuilt'></span>",
   id: 131,
-  option_1: { text: "Sure. Wny not.", step: 132 },
-  option_1: { text: "No. Skip advert", step: 133 },
+  option_1: { text: "Sure. Why not.", step: 132 },
+  option_2: { text: "Not today", step: 133 },
 },
 {
   // KINDNESS ADVERT
-  main_text: "Wow. I did not think that would work.<br>Well, here's the link it will open up in a new window: <a href='thekindnessapp.com' target='_blank'>click here</a>.",
+  main_text: "Wow. I did not think that would work.<br>Well, here's the link it will open up in a new window: <a href='http://thekindnessapp.com/' target='_blank'>click here</a>.",
   id: 132,
   option_1: { text: "Go Back", step: 133 },
 },
 {
   // YOUR IDEAS
-  main_text: "A big part of this whole exercise for me is to hear your ideas, feedback and any stories you want to collaborate on. <br>If you want to write below I will read it and get back to you.<br> Or, if you want to think about it - you can get to this page at anytime by typing in the <a href='' target='_blank'>konami code.</a><br><input></input>",
+  main_text: "A big part of this whole exercise for me is to hear your ideas, feedback and any stories you want to collaborate on. <br>If you want to write below I will read it and get back to you.<br> Or, if you want to think about it - you can get to this page at anytime by typing in the <a href='' target='_blank'>konami code.</a><br><br><textarea style='width: 100%; height: 250px;'></textarea><br>Email optional: <input>",
   id: 133,
   option_1: { text: "Submit", step: 134 },
-  option_1: { text: "I'm good", step: 135 },
+  option_2: { text: "I'm good", step: 135 },
 },
 {
   // YOUR IDEAS
@@ -898,10 +897,10 @@ var content = [{
   // YOUR IDEAS
   main_text: "That's it! No more content... Thanks again for playing!",
   id: 135,
-  option_1: { text: "Start again", step: 1 },
+  option_1: { text: "Start again", step: 0 },
 }
 ];
 
 // charStatus = ['bird death', 'aisle_round1', 'broken bottle', 'bird_injury2', 'friend_conscious'];
-charStatus = ['bird death', 'Retriever death'];
-tellStory(content, 124);
+charStatus = [];
+tellStory(content, 0);

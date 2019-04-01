@@ -53,7 +53,7 @@ function injuryResults(){
     injuryTxt += "To be honest, you were always going to get injured bringing a loaf of bread to a dog fight.</br>";
   }
   if(injuryTxt.length === 0){
-    injuryTxt = "No injuries! Amazing. I think that's actually pretty tricky to do considering you have to pick up the right equipment and then use it in the right way.";
+    injuryTxt = "No injuries! <br>Amazing. I think that's actually pretty tricky to do considering you have to pick up the right equipment and then use it in the right way.";
     if(didntDie){
       injuryTxt += '<br>Congrats! No injuries and no death!<br>You are a true survivor of the animal apocalypse!';
     } else {
@@ -65,22 +65,45 @@ function injuryResults(){
 }
 
 function checkCompanion(){
+  var checkCompanionTxt = '';
   var name = 'Mary';
   if(localStorage.getItem('gender') == 'man'){
     name = 'John';
   }
   if(charStatus.indexOf('companion left') > -1 ){
-    checkCompanion += "So you saved " + name + " and then let him die at the last minute. You must really like dogs.</br>";
+    checkCompanionTxt += "So you saved " + name + " and then let them die at the last minute. You must really like dogs.</br>";
   }
   if(charStatus.indexOf('companion remain') > -1 ){
-    checkCompanion += "You made it out with a friend! The world may have gone to hell but at least you aren't lonely. Good work! </br>";
+    checkCompanionTxt += "Yes! You made it out with " + name + "! The world may have gone to hell but at least you aren't lonely. Good work! </br>";
   }
   if(charStatus.indexOf('cpr failed') > -1 ){
-    checkCompanion += "Nice try on trying to save the stranger. Maybe, brush up on your first-aid next time, " + name + " really helps in the end-game. </br>";
+    checkCompanionTxt += "No.  Nice try on trying to save "+ name +" though. Maybe, brush up on your first-aid next time. " + name + " really helps in the end-game. </br>";
   }
-  if(charStatus.indexOf('cpr failed') > -1 ){
-    checkCompanion += "Nice try on trying to save the stranger. Maybe, brush up on your first-aid next time. </br>";
+  else if(charStatus.indexOf('no_friend') > -1 ){
+    checkCompanionTxt += "No. Looks like you ditched "+ name +" instead of helping. Hey, we do what we need to do to survive. </br>";
+  }
+  var genderStatus = 'As you probably guessed, you can save a man (John) instead of Mary.'
+  if(name == 'John'){
+    genderStatus = 'Did you know, you can also save a woman (Mary) instead of John?'    
   }
 
-  jQuery('.checkCompanion').html('Did you get away with a companion?');
+  jQuery('.checkCompanion').html('Did you get away with a companion? ' + checkCompanionTxt + genderStatus);
+}
+
+function checkGuilt(){
+  var name = 'Mary';
+  var checkGuiltTxt = '';
+
+  if(localStorage.getItem('gender') == 'man'){
+    name = 'John';
+  }
+
+  if(charStatus.indexOf('companion left') > -1 ){
+    checkGuiltTxt = "If, you feel bad leaving poor old " + name + " to die, then why not fill that consciousness up with kindness using The Kindness App (another app I built).";
+  }
+  else{
+    checkGuiltTxt = "If, you feel bad killing that angry dog at the end of this game, then why not fill that consciousness up with kindness using The Kindness App (another app I built).";
+  }
+
+  jQuery('.checkGuilt').html('Thanks again for finishing the game. ' + checkGuiltTxt);
 }

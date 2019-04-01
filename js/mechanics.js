@@ -1,6 +1,3 @@
-var charStatus = [];
-
-
 // push character additions
 function addAddition(arr){
   if(charStatus && arr){
@@ -208,8 +205,11 @@ function checkGender(){
 
 function tellStory(arr, id){
   console.log(id);
+
   // store in local storage
   localStorage.setItem('saveData', id);
+  // save an array
+  localStorage.setItem('charStatus', charStatus);
   // populate main story
   jQuery('.story').html(arr[id].main_text);
 
