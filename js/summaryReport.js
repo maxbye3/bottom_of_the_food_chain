@@ -80,10 +80,10 @@ function checkCompanion(){
     checkCompanionTxt += "No.  Nice try on trying to save "+ name +" though. Maybe, brush up on your first-aid next time. " + name + " really helps in the end-game. </br>";
   }
   else if(charStatus.indexOf('no_friend') > -1 ){
-    checkCompanionTxt += "No. Looks like you ditched "+ name +" instead of helping. Hey, we do what we need to do to survive. </br>";
+    checkCompanionTxt += "No. Looks like you ditched the stranger instead of helping. Hey, we do what we need to do to survive. But it really changes the end game if you do this. </br>";
   }
   var genderStatus = 'As you probably guessed, you can save a man (John) instead of Mary.'
-  if(name == 'John'){
+  if(name == 'John' && charStatus.indexOf('no_friend') == -1){
     genderStatus = 'Did you know, you can also save a woman (Mary) instead of John?'    
   }
 
