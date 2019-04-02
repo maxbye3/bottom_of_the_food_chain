@@ -7,7 +7,7 @@ var disclaimer = [{
 var content = [{
   id: 0, 
   char_addition1: {},
-  main_text: "Bottom of the food chain",
+  main_text: "Bottom of the food chain <br> Bread pie edition",
   option_1: { text: "Start", step : 0, disclaimer: true },
   option_2: { text: "Continue", step : localStorage.getItem("saveData") },
 },
@@ -18,6 +18,7 @@ var content = [{
   option_1: { text: "Continue", step : 2 },
 },
 {
+  char_addition1: 'windowDown',  
   id: 2,
   main_text: "The radio suddenly cuts out.<br> The static noise interrupts your irritated monologue.",
   option_1: { text: "Change the station", step: 3},
@@ -54,7 +55,6 @@ var content = [{
 },
 {
   id: 8,
-  char_addition1: 'windowDown',
   char_reduction: 'reverse',
   main_text: "The street lights flick to life, signifying the end of the day.<br> You notice hundreds of birds perched above them and below every window. They are motionless. They all have their beady eyes trained on you as you pass under them.<br><br> Then, as if on some silent cue, an enormous number of birds drop from the lamppost directly ahead and dive into the car in front. The loud thumping sound is interrupted by a loud cracking of glass.",
   option_1: { text: "Drive past car", step: 12 },

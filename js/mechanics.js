@@ -228,6 +228,7 @@ function tellStory(arr, id){
     }
   
   // remove character reductions
+  
   if(charStatus && arr[id].char_reduction){
     var index = charStatus.indexOf(arr[id].char_reduction);
     if (index > -1) {
