@@ -13,7 +13,7 @@ function deathResults(){
   }
   
   if(deathTxt.length === 0) {
-      deathTxt += "And you didn't die!<br>I actually made it pretty tricky too die but there are three different ways to to do.<br>What is hard to avoid is injuries, so let's see how you did...";
+      deathTxt += "And you didn't die!<br>I actually made it pretty tricky to die but there are three different ways to do so.<br>What is hard to avoid is injuries, so let's see how you did...";
       didntDie = true;
   }
   jQuery('.deathResults').html('Congrats on finishing the game! '  + deathTxt)

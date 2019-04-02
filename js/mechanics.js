@@ -1,3 +1,5 @@
+charStatus = JSON.parse(localStorage.getItem('characterSave')) || [];
+
 // push character additions
 function addAddition(arr){
   if(charStatus && arr){
@@ -49,7 +51,7 @@ function woundCheck(){
     woundCondition += "You roll up your sleeves. Unbelievable, despite the chaos, there's not a scratch on you.";
     // check for medical supplies
     if(medicalSupplies !== -1){
-      gotMedicine = " You still have plenty, all things considered, you're doing pretty well."
+      gotMedicine = " You still have plenty of medical supplies left, you're doing pretty well all things considered."
     } else{
       gotMedicine = " A relief considering you didn't grab any medical supplies or bandages from the store."
     }
@@ -184,7 +186,6 @@ function goneWrong(){
     $('.goneWrong').html('By the time more gauze is applied they have lost consciousness. You feel like you could have done a better job here.'); 
     setTimeout(function (){
       $('.option1').html('Leave ' + name); 
-      $('.option1').attr('onclick', 'tellStory(content, "MAX INSERT LEAVE")');
       $('.option2').show().html('Take ' + name); 
       $('.option1').attr('onclick', 'tellStory(content, 58)');
     }, 0)
@@ -209,7 +210,9 @@ function tellStory(arr, id){
   // store in local storage
   localStorage.setItem('saveData', id);
   // save an array
-  localStorage.setItem('charStatus', charStatus);
+  console.log(charStatus);
+  localStorage.setItem("characterSave", JSON.stringify(charStatus));
+
   // populate main story
   jQuery('.story').html(arr[id].main_text);
 

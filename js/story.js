@@ -1,5 +1,4 @@
 var disclaimer = [{
-  function: "charStatus = localStorage.getItem('charStatus')",
   main_text: "Warning: this story contains graphic content.",
   option_1: { text: "Continue", step : 1 },
 }];
@@ -7,7 +6,7 @@ var disclaimer = [{
 var content = [{
   id: 0, 
   char_addition1: {},
-  main_text: "Bottom of the food chain <br> Bread pie edition",
+  main_text: "Bottom of the food chain <br> Tuesday Edition",
   option_1: { text: "Start", step : 0, disclaimer: true },
   option_2: { text: "Continue", step : localStorage.getItem("saveData") },
 },
@@ -98,7 +97,7 @@ var content = [{
 },
 {
   id: 14,
-  main_text: "Something large smashes into the driver window. Feathers explode over the windscreen and the window is cracked like a spider's web. 'Thank goodness, I wound that up' you exhale in relief. You pull the steering wheel hard and the car screeches into the supermarket's car park.",
+  main_text: "Something large smashes into the driver window. Feathers explode over the windscreen and the window cracks like a spider's web. 'Thank goodness, I wound that up' you exhale in relief. You pull the steering wheel hard and the car screeches into the supermarket's car park.",
   option_1: { text: "Continue", step: 15 },
 },
 {
@@ -154,11 +153,11 @@ var content = [{
   option_1: { text: "Continue", step: 24 },
 },
 {
-  main_text: "'HELP!! WAIT!!!'<br><br> A few meters away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in specks of blood. It's sprinting after him, but you reckon there's enough distance between them for the injured man to make it into the store.",
+  main_text: "'HELP!! WAIT!!!'<br><br> A few meters away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in specks of blood. It's sprinting after him but you reckon there's enough distance between them for the injured man to make it into the store.",
   id: 24,
   option_1: { text: "Hold the metal shutter open", step: 29, hide: 'dog_down' }, // friend is attacked
   option_2: { text: "Hold the metal shutter open", step: 27, hide: 'dog_up' }, // friend is not attacked
-  option_3: { text: "Close the metal shutter open", step: 25 },
+  option_3: { text: "Close the metal shutter", step: 25 },
 },
 {
   char_addition1: 'no_friend',
@@ -167,7 +166,7 @@ var content = [{
   option_1: { text: "Continue", step: 26 },
 },
 {
-  main_text: "A heavy silence falls upon the room. <br> A dozen or so shoppers cast their anxious eyes to the floor.  <br> 'Listen up' the guard steps up cutting the tension.  <br> 'That rabid dog would have got in. There was nothing we could have done.'",
+  main_text: "A heavy silence falls upon across the store. <br> A dozen or so shoppers cast their anxious eyes to the floor.  <br> 'Listen up', the guard steps up cutting the tension.  <br> 'That rabid dog would have got in. There was nothing we could have done.'",
   id: 26,
   option_1: { text: "Continue", step: 36  },
 },
@@ -190,7 +189,8 @@ var content = [{
   option_2: { text: "Close the shutter", step: 30 },
 },
 {
-  main_text: "The metal shutter hits the floor with a dull clunk. You hear manic barking and the man screams a blood-curdling cry as the dog finally rips him apart. Then there is silence.",
+  char_addition1: 'no_friend',
+  main_text: "The metal shutter hits the floor with a dull clunk. You hear manic barking and the man screams a blood-curdling cry as the dog finally rips him apart.",
   id: 30,
   option_1: { text: "Continue", step: 26 },
 },
@@ -219,13 +219,13 @@ var content = [{
 },
 {
   function: "$('.gender').text(localStorage.getItem('gender'));",
-  main_text: "A heavy silence falls upon the room. A dozen or so shoppers cast their anxious eyes to the floor. The <span class='gender'></span> is rocking and moaning softly.<br><br> 'Listen up' the security guard steps up cutting the tension. 'There may be no doctors, but there's plenty of pharmaceuticals in here. We can work together to help them.'",
+  main_text: "A heavy silence falls upon the room. A dozen or so shoppers cast their anxious eyes to the floor. The <span class='gender'></span> is rocking and moaning softly.<br><br> 'Listen up', the security guard steps up cutting the tension. 'There may be no doctors, but there's plenty of pharmaceuticals in here. We can work together to help them.'",
   id: 35,
   option_1: { text: "Continue", step: 36 },
 },
 {
   char_addition1: 'aisle_round1',
-  main_text: "'It may be rough' he continues 'but we've got more than enough food and supplies to last until help arri...'. The security guards speech is cut short by the sound of an explosion towards the end of the store.",
+  main_text: "'It may be rough', he continues, 'but we've got more than enough food and supplies to last until help arri...'. The security guards speech is cut short by the sound of an explosion towards the end of the store.",
   id: 36,
   option_1: { text: "Continue", step: 37 },
 },
@@ -239,9 +239,9 @@ var content = [{
   main_text: "Chaos ensues. You have to move.",
   id: 38,
   option_1: { text: "Drag the wounded <span class='gender'></span> into the pharmacy aisle", step: 49, hide: 'no_friend' },
-  option_2: { text: "<span class='friend'>Ditch the stranger for</span><span class='solo'>Head towards</span> the pharmacy aisle", step: 45 },
-  option_3: { text: "<span class='friend'>Ditch the stranger for</span><span class='solo'>Head towards</span> the food aisle", step: 40 },
-  option_4: { text: "<span class='friend'>Ditch the stranger for</span><span class='solo'>Head towards</span> the drinks aisle", step: 39 },
+  option_2: { text: "<span class='friend'>Ditch the stranger for</span><span class='solo'>Find cover in</span> the pharmacy aisle", step: 45 },
+  option_3: { text: "<span class='friend'>Ditch the stranger for</span><span class='solo'>Find cover in</span> the food aisle", step: 40 },
+  option_4: { text: "<span class='friend'>Ditch the stranger for</span><span class='solo'>Find cover in</span> the drinks aisle", step: 39 },
 },
 {
   char_addition1: 'wine bottle',
@@ -267,7 +267,7 @@ var content = [{
   option_3: { text: "Don't help the stranger", step: 42 },
 },
 {
-  main_text: "You stand and watch the bloody spectacle. Eventually, he grabs hold of one of the crow's feet and slams it repeatably against a shelf. 'You could have bloody helped!!' he cries out and throws the pulpy mess of black feathers and blood at your feet. He glares at you and limps his way down the aisle towards the entrance. 'It's worse down there' you chuckle to yourself.",
+  main_text: "You stand and watch the bloody spectacle. Eventually, he grabs hold of one of the crow's feet and slams it repeatably against a shelf. 'You could have bloody helped!!', he cries out and throws the pulpy mess of black feathers and blood at your feet. He glares at you and limps his way down the aisle towards the entrance. 'It's worse down there', you chuckle to yourself.",
   id: 42,
   option_1: { text: "Continue", step: 64 },
 },
@@ -278,7 +278,7 @@ var content = [{
   option_1: { text: "Continue", step: 44 },
 },
 {
-  main_text: "'Thanks', the man slaps your shoulder. 'It just attacked me while I was shopping'. 'Any idea what's going on?' you ask. 'I have no idea! That bird came out of nowhere. All these birds.. What has this store done? Or is this government? Global warming? Brexit?!' You respond with a shrug. 'I got to get out of here and find my kids!' Before you can say anything, the man turns away and limps quickly away towards the store entrance.",
+  main_text: "'Thanks', the man slaps your shoulder. 'It just attacked me while I was shopping'. 'Any idea what's going on?', you ask. 'I have no idea! That bird came out of nowhere. All these birds.. What has this store done? Or is this government? Global warming? Brexit?!'. You respond with a shrug. 'I got to get out of here and find my kids!'. Before you can say anything, the man turns away and limps quickly away towards the store entrance.",
   id: 44,
   option_1: { text: "Continue", step: 64 },
 },
@@ -312,7 +312,7 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?' you ask while inspecting the wound. '<span class='name'></span>' <span class='shehe'></span> whispers weakly. 'Okay <span class='name'></span>... Just hang on in there, okay'.",
+  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?', you ask while inspecting the wound. '<span class='name'></span>' <span class='shehe'></span> whispers weakly. 'Okay <span class='name'></span>... Just hang on in there, okay'.",
   id: 49,
   option_1: { text: "Continue", step: 50 },
 },
@@ -436,7 +436,7 @@ var content = [{
 {
   function: "hasFriends()",
   char_addition1: 'hammer',
-  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle. <span class='friend'> Dragging <span class='name'></span> behind you, T</span><span class='solo'>t</span>he tall shelves provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over: you you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
+  main_text: "Birds are zipping and crashing into products like stray bullets. Crouching low you swiftly cross over and enter the hardware aisle. <span class='friend'> Dragging <span class='name'></span> behind you, t</span><span class='solo'>T</span>he tall shelves provide a small relief. Scanning the range of tools, you pick out a pretty meaty looking hammer. It's got a long wooden handle which (after a few practice swings) gives it a decent amount of hitting power. A sickening realization passes over: you you might have to use this on something soon. Still, holding it in your hand feels good. It gives you a small boost in confidence.",
   id: 66,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2'  }, // first aisle round
   option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
@@ -493,7 +493,7 @@ var content = [{
   function: "hasFriends()",
   main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. There's a large crashing sound behind you. Something has smashed through the glass door leading outside. You have no idea what but you sure hope it doesn't catch up. The door to the storeroom is fortunately unlocked. <span class='friend'>You lower <span class='name'></span> inside and look</span><span class='solo'>You look</span> at the carnage at the other side of the store: the Dalmatian from before seems to have died throwing itself through the glass door and rats are running over its corpse towards your direction.<br><br> You quickly slam the door shut.",
   id: 74,
-  option_1: { text: "Continues", step: 75 },
+  option_1: { text: "Continue", step: 75 },
 },
 {
   function: "hasFriends()",
@@ -882,7 +882,7 @@ var content = [{
 },
 {
   // YOUR IDEAS
-  main_text: "A big part of this whole exercise for me is to hear your ideas, feedback and any stories you want to collaborate on. <br>If you want to write below I will read it and get back to you.<br> Or, if you want to think about it - you can get to this page at anytime by typing in the <a href='' target='_blank'>konami code.</a><br><br><textarea style='width: 100%; height: 250px;'></textarea><br>Email optional: <input>",
+  main_text: "A big part of this whole exercise for me is to hear your ideas, feedback and any stories you want to collaborate on. <br>If you want to write below I will read it and get back to you.<br> Or, if you want to think about it - you can get to this page at anytime by typing in the konami code.<br>What is the konami code? <a href='https://www.google.com/search?hl=&site=&q=konami+code' target='_blank'>Click here.</a><br><br><textarea style='width: 100%; height: 250px;'></textarea><br>Email optional: <input>",
   id: 133,
   option_1: { text: "Submit", step: 134 },
   option_2: { text: "I'm good", step: 135 },
@@ -902,5 +902,4 @@ var content = [{
 ];
 
 // charStatus = ['bird death', 'aisle_round1', 'broken bottle', 'bird_injury2', 'friend_conscious'];
-charStatus = [];
 tellStory(content, 0);
