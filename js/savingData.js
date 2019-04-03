@@ -10,19 +10,37 @@
   };
   firebase.initializeApp(config);
 
-// write works
-//   function writeUserData(userId, name, email, imageUrl) {
-//   firebase.database().ref('users/' + userId).set({
-//     username: name,
-//     email: email,
-//     profile_picture : imageUrl
-//   });
-// }
-// writeUserData('userId', 'name', 'email', 'imageUrl');
+// summary write
+function iterateDataType(userId, int) {
+  firebase.database().ref('summary/' + userId).set({
+    total: int+=1,
+  });
+}
 
-// read works
- firebase.database().ref('/users/').once('value').then(function(snapshot) {
-  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  console.log(snapshot.val());
-  console.log(snapshot.val().userId.username); // returns name
-});
+// report write
+function readSummaryAndAddToTotal(){
+  firebase.database().ref('/summary/').once('value').then(function(snapshot) {
+    if(snapshot.val()){
+      var currentTotal = snapshot.val().report.total;
+      iterateDataType('report', currentTotal);
+    }
+  });
+}
+
+// user write
+function feedbackWrite(userId, int) {
+  firebase.database().ref('/feedback/').once('value').then(function(snapshot) {
+    if(snapshot.val()){
+      var currentId = snapshot.val().length; // unique Id
+      firebase.database().ref('feedback/' + currentId).set({
+        feedback: 'hello 2',
+        email: 'world 2',
+      });
+    }
+  });
+}
+
+feedbackWrite();
+
+
+readSummaryAndAddToTotal();
