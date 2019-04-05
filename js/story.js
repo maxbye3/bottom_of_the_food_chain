@@ -1,6 +1,10 @@
 var disclaimer = [{
   main_text: "Warning: this story contains graphic content.",
   option_1: { text: "Continue", step : 1 },
+},
+{
+  main_text: "I am horribly dyslexic, if you spot anything - please click the 'Report problem'. <br> It will help me improve the game for others.",
+  option_1: { text: "Continue", step : 1 },
 }];
 
 var content = [{
@@ -183,10 +187,10 @@ var content = [{
   option_1: { text: "Continue", step: 35 },
 },
 {
-  main_text: "With only a few yards away the Dalmatian pounces seemingly out of nowhere. With a vicious bite around the man's arm it drags him to the floor. The man is screaming helplessly, frantically fending off the snarling jaws above him.",
+  main_text: "With only a few yards away the Dalmatian pounces seemingly out of nowhere. With a vicious bite around the man's arm it drags him to the floor. The man is screaming helplessly, frantically fending off the snarling jaws above him.<br> Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter and sprints toward the attacking dog.",
   id: 29,
-  option_1: { text: "Help", step: 31 },
-  option_2: { text: "Close the shutter", step: 30 },
+  option_1: { text: "Assist", step: 31 },
+  option_2: { text: "Close the shutter on both of them", step: 30 },
 },
 {
   char_addition1: 'no_friend',
@@ -195,12 +199,12 @@ var content = [{
   option_1: { text: "Continue", step: 26 },
 },
 {
-  main_text: "Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter and sprints toward the attacking dog. You follow slightly more hesitantly.",
+  main_text: "You follow the woman slightly more hesitantly. Incredibly, she wrestles the Dalmatian off the man by yanking its leash back but the woman's back is turned and she seems unaware of the incoming Retriever.",
   id: 31,
   option_1: { text: "Continue", step: 32 },
 },
 {
-  main_text: "The Labrador pounces over the Dalmatian attack and lands on the woman. She is caught completely off guard and hits the floor with a terrible scream.",
+  main_text: "The Labrador pounces over the Dalmatian and lands on the woman. She is caught completely off guard and hits the floor with a terrible scream. Releasing the leash, the Dalmatian jumps back on the man.",
   id: 32,
   option_1: { text: "Help woman", step: 34},
   option_2: { text: "Help man", step: 33 },

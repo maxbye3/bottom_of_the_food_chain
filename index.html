@@ -8,34 +8,52 @@
   <link rel="stylesheet" href="css/index.css"></link>
 </head>
 <body>
+    <div class='reportProblem' onclick='giveFeedback()'>Report problem</div>
 <table class='container'>
   <tbody>
     <tr>
       <td class="align-middle text-center storyTable">
         <center>
-          <div class='story'></div>
-          <div class='option1' onclick></div>
-          <div class='option2' onclick></div>
-          <div class='option3' onclick></div>
-          <div class='option4' onclick></div>
-          <div class='option5' onclick></div>
-          <div class='option6' onclick></div>
-          <div class='option7' onclick></div>
-          <div class='option8' onclick></div>
-          <div class='option9' onclick></div>
-          <div class='option10' onclick></div>
-          <div class='option11' onclick></div>
-          <div class='option12' onclick></div>
-          <div class='option13' onclick></div>
-          <div class='option14' onclick></div>
+          <div class='giveFeedbackSection'>
+            <p class='feedbackDisclaimerTxt'> I really suck on the spelling & grammar front.
+              <br>If you see a bug or spelling/grammar issue please report it below and I'll get it sorted.
+              <br> Thanks!
+            </p>
+            <div class='feedbackInput'>
+              <textarea style='width: 100%; height: 250px;'></textarea>
+              <br>Email optional: <input>
+            </div>
+            <!-- feedback disclaimer thanks -->
+            <p class='showFeedbackDisclaimer'>Feedback sent! Thanks so much.</p>
+            <div onclick='sumbitFeedback()' class='submitFeedback' onclick='sumbitFeedback()'>Submit</div>
+            <div class='returnStory' onclick='returnStory()'>Return to story</div>
+          </div>
+          <div class='mainStory'>
+            <div class='story'></div>
+            <div class='option1' onclick></div>
+            <div class='option2' onclick></div>
+            <div class='option3' onclick></div>
+            <div class='option4' onclick></div>
+            <div class='option5' onclick></div>
+            <div class='option6' onclick></div>
+            <div class='option7' onclick></div>
+            <div class='option8' onclick></div>
+            <div class='option9' onclick></div>
+            <div class='option10' onclick></div>
+            <div class='option11' onclick></div>
+            <div class='option12' onclick></div>
+            <div class='option13' onclick></div>
+            <div class='option14' onclick></div>
+          </div>
         </center>
     </tr>
   </tbody>
 </table>
-  
+
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/mechanics.js"></script>
+<script src="js/giveFeedback.js"></script>
 <script src="js/story.js"></script>
 <script src="js/summaryReport.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>

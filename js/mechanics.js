@@ -206,6 +206,7 @@ function checkGender(){
 
 function tellStory(arr, id){
   console.log(id);
+  $('.currentSlide').html(id);
 
   // store in local storage
   localStorage.setItem('saveData', id);
