@@ -11,9 +11,15 @@
   firebase.initializeApp(config);
 
 // summary write
-function iterateDataType(userId, what) {
-  firebase.database().ref('summary/' + userId).set({
-    what: int+=1,
+function iterateDataType(int, what) {
+  var dataType = what;
+  var hello = { dataType: int+=1 }
+  var str = JSON.stringify(hello);
+  str = str.replace(/dataType/g, what);
+  var report  = JSON.parse(str);
+
+  firebase.database().ref('summary/').set({
+    report
   });
 }
 
@@ -22,26 +28,28 @@ function readSummaryAndAddToTotal(what){
   var currentTotal;
   firebase.database().ref('/summary/').once('value').then(function(snapshot) {
     if(snapshot.val()){
-      currentTotal = snapshot.val().report.total;
-      iterateDataType('report', currentTotal, what);
+      currentTotal = snapshot.val().report[what];      
+      // currentTotal = snapshot.val()[what];      
+      iterateDataType(currentTotal, what);
     }
   });
   return currentTotal;
 }
 
 // user write
-function feedbackWrite(userId, int) {
+function feedbackWrite(feedbackMsg, emailMsg, where) {
   firebase.database().ref('/feedback/').once('value').then(function(snapshot) {
     if(snapshot.val()){
       var currentId = snapshot.val().length; // unique Id
       firebase.database().ref('feedback/' + currentId).set({
-        feedback: 'hello 2',
-        email: 'world 2',
+        where: where,
+        feedback: feedbackMsg,
+        email: emailMsg || 'no email address provided',
       });
     }
   });
 }
 
-feedbackWrite();
+
 
 

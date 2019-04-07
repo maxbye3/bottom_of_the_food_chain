@@ -1,9 +1,9 @@
 var disclaimer = [{
   main_text: "Warning: this story contains graphic content.",
-  option_1: { text: "Continue", step : 1 },
+  option_1: { text: "Continue", step : 1, disclaimer: true },
 },
 {
-  main_text: "I am horribly dyslexic, if you spot anything - please click the 'Report problem'. <br> It will help me improve the game for others.",
+  main_text: "I am horribly dyslexic, if you spot anything odd: please click the 'Report problem' button.<br> It will help me improve the game for others.",
   option_1: { text: "Continue", step : 1 },
 }];
 
@@ -17,7 +17,7 @@ var content = [{
 {
   function: "charStatus = []",
   id: 1, 
-  main_text: "You made a mistake learning to drive, now you're Leslie's personal errand boy. Sent to the supermarket to pick up canapés for another of her hideous dinner parties. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
+  main_text: "You made a mistake learning to drive as now you're Leslie's personal errand boy. Sent to the supermarket to pick up canapés for another of her hideous dinner parties. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
   option_1: { text: "Continue", step : 2 },
 },
 {
@@ -48,7 +48,7 @@ var content = [{
 },
 {
   id: 6,
-  main_text: "You make a face back. The kid winces and re-cowers behind the seats.<br> You feel a mixture between embarrassment and triumph.<br> You're about a block away from the supermarket and you wonder if the kid is currently telling his father what's happened. 'Should be telling his parent how to drive' you think.",
+  main_text: "You make a face back. The kid winces and re-cowers behind the seats.<br> You feel a mixture between embarrassment and triumph.<br> You're about a block away from the supermarket and you wonder if the kid is currently telling his father what's happened. 'Should be telling his parent how to drive', you think.",
   option_1: { text: "Continue", step: 8 },
 },
 {
@@ -101,7 +101,7 @@ var content = [{
 },
 {
   id: 14,
-  main_text: "Something large smashes into the driver window. Feathers explode over the windscreen and the window cracks like a spider's web. 'Thank goodness, I wound that up' you exhale in relief. You pull the steering wheel hard and the car screeches into the supermarket's car park.",
+  main_text: "Something large smashes into the driver window. Feathers explode over the windscreen and the window cracks like a spider's web. 'Thank goodness, I wound that up', you exhale in relief. You pull the steering wheel hard and the car screeches into the supermarket's car park.",
   option_1: { text: "Continue", step: 15 },
 },
 {
@@ -194,7 +194,7 @@ var content = [{
 },
 {
   char_addition1: 'no_friend',
-  main_text: "The metal shutter hits the floor with a dull clunk. You hear manic barking and the man screams a blood-curdling cry as the dog finally rips him apart.",
+  main_text: "The metal shutter hits the floor with a dull clunk. You hear manic barking and the man screams a blood-curdling cry as the dog rips the both apart.",
   id: 30,
   option_1: { text: "Continue", step: 26 },
 },
@@ -316,7 +316,7 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?', you ask while inspecting the wound. '<span class='name'></span>' <span class='shehe'></span> whispers weakly. 'Okay <span class='name'></span>... Just hang on in there, okay'.",
+  main_text: "As birds continue to crash through the ceiling you carefully pick your way to the stranger and hurry them down the pharmaceutical aisle. Thankfully, the aisle provides more cover than the storefront. You sit the <span class='gender'></span> carefully against the aisle shelves. They are passing in and out of consciousness. 'What's your name?', you ask while inspecting the wound. '<span class='name'></span>', <span class='shehe'></span> whispers weakly. 'Okay <span class='name'></span>... Just hang on in there, okay'.",
   id: 49,
   option_1: { text: "Continue", step: 50 },
 },
@@ -385,7 +385,7 @@ var content = [{
 },
 {
   function: "getName()",
-  main_text: "You remove your belt. 'Okay <span class='name'></span>, we're applying a tourniquet'. Only after you've said the words does the panic of what you're about to do creep in. 'It'll be just like the movies' you say out loud re-assuring no one.",
+  main_text: "You remove your belt. 'Okay <span class='name'></span>, we're applying a tourniquet'. Only after you've said the words does the panic of what you're about to do creep in. 'It'll be just like the movies', you say out loud re-assuring no one.",
   id: 59,
   option_1: { text: "Apply below the wound (towards the hand)", step: 60 },
   option_2: { text: "Apply above the wound (towards the heart)", step: 61 },
@@ -455,7 +455,7 @@ var content = [{
 {
   function: "checkWeapon()",
   char_addition1: 'mop',
-  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. 'Leslie' you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
+  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. 'Leslie', you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
   option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
@@ -501,7 +501,7 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and redress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>' but <span class='shehe'></span> provides no response.</span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
+  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and redress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>', but <span class='shehe'></span> provides no response.</span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
   id: 75,
   option_1: { text: "Continue", step: 76 },
 },
@@ -527,7 +527,7 @@ var content = [{
   option_1: { text: "Wake up", step: 81 },
 },
 {
-  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' you cry out.<br>No response.</span>",
+  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' you speak into the dark room.<br>As expected, no response.</span>",
   id: 80,
   option_1: { text: "Continue", step: 81 },
 },
@@ -574,12 +574,12 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "You help prop <span class='name'></span> into a sitting position and sip on some water.<br>'How you feeling?' you ask.<br>'Terrible' they respond.<br>'I have to get home. There's a truck with its keys in out there. Are you coming with me?'. <span class='name'></span> closes <span class='pronoun'></span> eyes and processes your question.",
+  main_text: "You help prop <span class='name'></span> into a sitting position and sip on some water.<br>'How you feeling?' you ask.<br>'Terrible', they respond.<br>'I have to get home. There's a truck with its keys in out there. Are you coming with me?'. <span class='name'></span> closes <span class='pronoun'></span> eyes and processes your question.",
   id: 87,
   option_1: { text: "Continue", step: 88 },
 },
 {
-  main_text: "'Are we in the store still?'<br>'A backroom but yeah' you respond.<br>'In that case, I'm going to stay here and wait for help'<br>'Are you sure?' You are somewhat disappointed by their decision. <br><span class='name'></span> drinks more water and with eyes still closed concludes 'Yes, I'll be fine. Go.'",
+  main_text: "'Are we in the store still?'<br>'A backroom but yeah', you reply.<br>'In that case, I'm going to stay here and wait for help'<br>'Are you sure?' You are somewhat disappointed by their decision. <br><span class='name'></span> drinks more water and with eyes still closed concludes 'Yes, I'll be fine. Go.'",
   id: 88,
   option_1: { text: "Go back into the store", step: 85 },
   option_2: { text: "Run to the truck", step: 89 },
@@ -799,13 +799,13 @@ var content = [{
 },
 {
   // friend: kill dog final 1
-  main_text: "For a moment, you both sit panting and staring at the corpse. 'Thank you' you finally manage to muster. 'I owed you one' <span class='name'></span> responds between deep gulps of breath. 'Besides, I thought about your offer. I think our chances are better sticking together'. 'Clearly... Now, let's get out of here.'",
+  main_text: "For a moment, you both sit panting and staring at the corpse. 'Thank you', you finally manage to muster. 'I owed you one', <span class='name'></span> responds between deep gulps of breath. 'Besides, I thought about your offer. I think our chances are better sticking together'. 'Clearly... Now, let's get out of here.'",
   id: 120,
   option_1: { text: "Continue", step: 121 },
 },
 {
   // friend: kill dog final 1
-  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works' <span class='shehe'></span> mutters approaching the truck. Without a word, you walk around the truck and ease yourself into the passenger's seat. <span class='name'></span> turns the key, a wave of relief as the truck rumbles to life." ,
+  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works', <span class='shehe'></span> mutters approaching the truck. Without a word, you walk around the truck and ease yourself into the passenger's seat. <span class='name'></span> turns the key, a wave of relief as the truck rumbles to life." ,
   id: 121,
   option_1: { text: "Continue", step: 122 },
 },
@@ -905,5 +905,5 @@ var content = [{
 }
 ];
 
-// charStatus = ['bird death', 'aisle_round1', 'broken bottle', 'bird_injury2', 'friend_conscious'];
-tellStory(content, 0);
+charStatus = ["bird death"];
+tellStory(content, 128);

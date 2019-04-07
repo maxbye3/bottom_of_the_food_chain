@@ -203,9 +203,10 @@ function checkGender(){
   return localStorage.getItem("gender");
 }
 
-
+var storyId;
 function tellStory(arr, id){
   console.log(id);
+  storyId = id;
   $('.currentSlide').html(id);
 
   // store in local storage
