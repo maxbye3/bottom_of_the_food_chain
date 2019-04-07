@@ -80,7 +80,7 @@ function injuryResults(){
       injurySave = readSummaryAndAddToTotal('injury: Uninjured and did not die');
     } else {
       injuryTxt += "<br>If it weren't for all that death, I would have called you a true survivor of the  animal apocalypse.";
-      injurySave = readSummaryAndAddToTotal('injury: injurySave but died');
+      injurySave = readSummaryAndAddToTotal('injury: Not injured but died');
     }
   } else {
     injurySave = readSummaryAndAddToTotal('injury: Injured');

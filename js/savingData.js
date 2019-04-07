@@ -11,26 +11,25 @@
   firebase.initializeApp(config);
 
 // summary write
-function iterateDataType(int, what) {
-  var dataType = what;
-  var hello = { dataType: int+=1 }
-  var str = JSON.stringify(hello);
-  str = str.replace(/dataType/g, what);
-  var report  = JSON.parse(str);
-
+function iterateDataType(what) {
+  max.report[what] = max.report[what] + 1;
   firebase.database().ref('summary/').set({
-    report
+    max
   });
 }
 
 // report write
+var max;
 function readSummaryAndAddToTotal(what){
   var currentTotal;
   firebase.database().ref('/summary/').once('value').then(function(snapshot) {
     if(snapshot.val()){
-      currentTotal = snapshot.val().report[what];      
-      // currentTotal = snapshot.val()[what];      
-      iterateDataType(currentTotal, what);
+      // currentTotal = snapshot.val().max.report[what];      
+      // currentTotal = snapshot.val()[what];
+      if(!max){
+        max = snapshot.val().max;
+      }  
+      iterateDataType(what);
     }
   });
   return currentTotal;
