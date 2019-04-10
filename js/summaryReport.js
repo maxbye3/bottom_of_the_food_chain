@@ -140,4 +140,5 @@ function checkGuilt(){
     checkGuiltTxt = "If, you feel bad killing that angry dog at the end of this game, then why not fill that consciousness up with kindness using The Kindness App (another app I built).";
   }
   jQuery('.checkGuilt').html('Thanks again for finishing the game. ' + checkGuiltTxt);
+  saveSummary();
 }

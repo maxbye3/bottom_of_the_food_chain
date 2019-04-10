@@ -1,5 +1,5 @@
 var disclaimer = [{
-  main_text: "Warning: this story contains graphic content.",
+  main_text: "Warning: this story contains graphic content. <br> Game automatically saves.",
   option_1: { text: "Continue", step : 1, disclaimer: true },
 },
 {
@@ -12,10 +12,10 @@ var content = [{
   char_addition1: {},
   main_text: "Bottom of the food chain <br> Tuesday Edition",
   option_1: { text: "Start", step : 0, disclaimer: true },
-  option_2: { text: "Continue", step : localStorage.getItem("saveData") },
+  option_2: { text: "Continue from save", step : localStorage.getItem("saveData") },
 },
 {
-  function: "charStatus = []",
+  function: "startAgain()",
   id: 1, 
   main_text: "You made a mistake learning to drive as now you're Leslie's personal errand boy. Sent to the supermarket to pick up canapés for another of her hideous dinner parties. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
   option_1: { text: "Continue", step : 2 },
@@ -59,7 +59,7 @@ var content = [{
 {
   id: 8,
   char_reduction: 'reverse',
-  main_text: "The street lights flick to life, signifying the end of the day.<br> You notice hundreds of birds perched above them and below every window. They are motionless. They all have their beady eyes trained on you as you pass under them.<br><br> Then, as if on some silent cue, an enormous number of birds drop from the lamppost directly ahead and dive into the car in front. The loud thumping sound is interrupted by a loud cracking of glass.",
+  main_text: "The street lights flick to life, signifying the end of the day.<br> You notice hundreds of birds perched above every street lamp and below every window. They are motionless. They all have their beady eyes trained on you as you pass under them.<br><br> Then, as if on some silent cue, an enormous number of birds drop from the lamppost directly ahead and dive into the car in front. The loud thumping sound is interrupted by a loud cracking of glass.",
   option_1: { text: "Drive past car", step: 12 },
   option_2: { text: "Roll up window", step: 10 },
   option_3: { text: "Get out and help", step: 9 },
@@ -187,10 +187,9 @@ var content = [{
   option_1: { text: "Continue", step: 35 },
 },
 {
-  main_text: "With only a few yards away the Dalmatian pounces seemingly out of nowhere. With a vicious bite around the man's arm it drags him to the floor. The man is screaming helplessly, frantically fending off the snarling jaws above him.<br> Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter and sprints toward the attacking dog.",
+  main_text: "With only a few yards away the Dalmatian pounces seemingly out of nowhere. With a vicious bite around the man's arm it drags him to the floor. The man is screaming helplessly, frantically fending off the snarling jaws above him.",
   id: 29,
-  option_1: { text: "Assist", step: 31 },
-  option_2: { text: "Close the shutter on both of them", step: 30 },
+  option_1: { text: "Continue", step: 31 },
 },
 {
   char_addition1: 'no_friend',
@@ -199,12 +198,13 @@ var content = [{
   option_1: { text: "Continue", step: 26 },
 },
 {
-  main_text: "You follow the woman slightly more hesitantly. Incredibly, she wrestles the Dalmatian off the man by yanking its leash back but the woman's back is turned and she seems unaware of the incoming Retriever.",
+  main_text: "Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter, runs over to the attack and with incredible strength wrestles the Dalmatian off the man by yanking its leash back. <br> With the Retriever hot on her trails she sprints back towards the store.",
   id: 31,
-  option_1: { text: "Continue", step: 32 },
+  option_1: { text: "Hold the metal shutters open", step: 32 },
+  option_2: { text: "Close the shutter on both of them", step: 30 },
 },
 {
-  main_text: "The Labrador pounces over the Dalmatian and lands on the woman. She is caught completely off guard and hits the floor with a terrible scream. Releasing the leash, the Dalmatian jumps back on the man.",
+  main_text: "The Labrador pounces over the Dalmatian and lands on the woman. She falls forward and hits the floor with a terrible scream. Releasing the leash, the Dalmatian jumps back on the man and continues its attack.",
   id: 32,
   option_1: { text: "Help woman", step: 34},
   option_2: { text: "Help man", step: 33 },
@@ -495,13 +495,13 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "You <span class='friend'> pick <span class='name'></span> and </span>hightail it to the backroom. There's a large crashing sound behind you. Something has smashed through the glass door leading outside. You have no idea what but you sure hope it doesn't catch up. The door to the storeroom is fortunately unlocked. <span class='friend'>You lower <span class='name'></span> inside and look</span><span class='solo'>You look</span> at the carnage at the other side of the store: the Dalmatian from before seems to have died throwing itself through the glass door and rats are running over its corpse towards your direction.<br><br> You quickly slam the door shut.",
+  main_text: "You <span class='friend'> pick up <span class='name'></span> and </span>hightail it to the backroom. There's a large crashing sound behind you. Something has smashed through the glass door leading outside. You have no idea what but you sure hope it doesn't catch up. The door to the storeroom is fortunately unlocked. <span class='friend'>You lower <span class='name'></span> inside and look</span><span class='solo'>You look</span> at the carnage at the other side of the store: the Dalmatian from before seems to have died throwing itself through the glass door and rats are running over its corpse towards your direction.<br><br> You quickly slam the door shut.",
   id: 74,
   option_1: { text: "Continue", step: 75 },
 },
 {
   function: "hasFriends()",
-  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly onto their uninjured side and redress the wound. They look pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>', but <span class='shehe'></span> provides no response.</span> You look around the backroom room: it's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
+  main_text: "<span class='friend'>You lay <span class='name'></span> down slowly and redress the wound. <span class='name'></span> looks pale, breathing softly and covered in a thin sheen of sweat. 'Don't die on me <span class='name'></span>', but <span class='shehe'></span> provides no response.</span> You look around the backroom room. It's small, dark and empty. On the far side of the room is another door, you move over to inspect it.",
   id: 75,
   option_1: { text: "Continue", step: 76 },
 },
@@ -538,7 +538,7 @@ var content = [{
   option_1: { text: "Stand up", step: 82 },
 },
 {
-  main_text: "Through a window on the door, you can see back into the store. There's still birds zipping about but it looks relatively less busy. You feel like you could make it into one of the final three aisles if you needed more supplies.<br><br>You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
+  main_text: "Through a window on the door, you can see back into the store. There's still birds zipping about but it looks relatively calm. You feel like you could make it into one of the final three aisles if you needed more supplies.<br><br>You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
   id: 82,
   option_1: { text: "Go back into the store", step: 83 },
   option_2: { text: "Run to the truck", step: 89 },
@@ -546,7 +546,7 @@ var content = [{
 {
   char_addition1: 'aisle_round2',
   char_reduction: 'aisle_round1',
-  main_text: "You steal your nerves and re-enter the store. You feel a large number of eyes turn and bear down on you. Better make this quick.", // going back into store
+  main_text: "You steel your nerves and re-enter the store. You feel a large number of eyes turn and bear down on you. Better make this quick.", // going back into store
   id: 83,
   option_1: { text: "Choose the hardware aisle", step: 66 },
   option_2: { text: "Choose the pet shop aisle ", step: 67 },
@@ -568,6 +568,7 @@ var content = [{
 },
 {
   function: "loseWeapons();",
+  char_addition1: 'no_friend',
   id: 86,
   main_text: "This time you manage to swat it away <span class='friend'>but it changes direction and begins attacking <span class='name'></span>. <span class='shehe'></span> cries out a long and horrible moan. You swat at the bird but </span><span class='solo'>but it doesn't take look before it mounts another attack, worse</span> you've left the door open and more birds stream into the small room. You stumble out into the car park and slam the door behind you. In the chaos, you've forgotten your bag of items. <span class='friend'>From the backroom, you hear <span class='name'></span>'s wails turn to screams.</span>",
   option_1: { text: "Continue", step: 90 },
@@ -805,7 +806,7 @@ var content = [{
 },
 {
   // friend: kill dog final 1
-  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works', <span class='shehe'></span> mutters approaching the truck. Without a word, you walk around the truck and ease yourself into the passenger's seat. <span class='name'></span> turns the key, a wave of relief as the truck rumbles to life." ,
+  main_text: "You pat down the truck driver's corpse. The hard body is nauseating to touch. <span class='name'></span> finds the truck keys in the driver's shirt pocket. <br><br>'Let's hope it works', <span class='shehe'></span> mutters approaching the truck. Without a word, you walk around the truck and ease yourself into the passenger's seat. <span class='name'></span> turns the key. A wave of relief as the truck rumbles to life." ,
   id: 121,
   option_1: { text: "Continue", step: 122 },
 },
@@ -876,7 +877,7 @@ var content = [{
   main_text: "<span class='checkGuilt'></span>",
   id: 131,
   option_1: { text: "Sure. Why not.", step: 132 },
-  option_2: { text: "Not today", step: 133 },
+  option_2: { text: "Skip advert", step: 133 },
 },
 {
   // KINDNESS ADVERT
@@ -899,11 +900,13 @@ var content = [{
 },
 {
   // YOUR IDEAS
+  function: "startAgain()",
   main_text: "That's it! No more content... Thanks again for playing!",
   id: 135,
   option_1: { text: "Start again", step: 0 },
 }
 ];
 
-charStatus = ["bird death"];
-tellStory(content, 128);
+// charStatus = ["bird death"];
+charStatus = ["windowUp", "dog_down", "shop_injury", "friend_conscious", "medical_supplies", "no_friend", "Retriever death"];
+tellStory(content, 91);

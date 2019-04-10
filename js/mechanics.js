@@ -7,6 +7,13 @@ function addAddition(arr){
   }
 }
 
+
+function startAgain(){
+  // MAX DO THIS
+  localStorage.setItem('characterSave', '[]');
+  charStatus = [];
+}
+
 function woundCheck(){
   var birdWound = charStatus.indexOf('bird_injury');
   var shopWound = charStatus.indexOf('shop_injury');
@@ -85,30 +92,42 @@ function getName(){
 }
 
 function weaponType(){
+  
+  function showWeaponChoice(defend, attack){
+    setTimeout(function (){
+      for (var i = 1; i <= 14; i++) { 
+        jQuery('.option' + i).hide();
+      }
+      jQuery('.option' + attack).show();
+      jQuery('.option' + defend).show();
+    }, 5);
+  }
+
   var weaponObj = {};
   if(charStatus.indexOf('hammer') > -1 ){
     weaponObj.weaponEquipped = 'the hammer';
-    weaponObj.stance = 'You grip the hammer by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+    weaponObj.stance = 'You grip the hammer by the handle and hold it out like a bat. Your heart is pumping out of your chest.';
   }
   else if(charStatus.indexOf('wine bottle') > -1 ){
     weaponObj.weaponEquipped = 'the wine bottle';
-    weaponObj.stance = 'You grip the wine bottle by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+    weaponObj.stance = 'You grip the wine bottle by the handle and hold it out like a bat. Your heart is pumping out of your chest.';
   }
   else if(charStatus.indexOf('mop') > -1 ){
     weaponObj.weaponEquipped = 'the mop';
-    weaponObj.stance = 'You grip the mop by the handle and hold it out like a bat. Your heart is pumping out of your chest.'
+    weaponObj.stance = 'You grip the mop by the handle and hold it out like a bat. Your heart is pumping out of your chest.';
   }
   else if(charStatus.indexOf('broken bottle') > -1){
     weaponObj.weaponEquipped = 'the sharp end of the bottle';
-    weaponObj.stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.'
+    weaponObj.stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.';
   }
   else if(charStatus.indexOf('bread') > -1 ){
     weaponObj.weaponEquipped = 'the stale baguette';
-    weaponObj.stance = 'You grip the bread by the stiff stale crust and hold it out like a bat. Your heart is pumping out of your chest.'
+    weaponObj.stance = 'You grip the bread by the stiff stale crust and hold it out like a bat. Your heart is pumping out of your chest.';
   }
   else {
+    showWeaponChoice(11, 12);
     weaponObj.weaponEquipped = 'your fists';
-    weaponObj.stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.'
+    weaponObj.stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.';
   }
   setTimeout(function (){
     $('.weaponEquipped').html(weaponObj.weaponEquipped );
@@ -126,16 +145,16 @@ function weaponConsequence(){
   // friend_conscious
 
   weaponType();
-  
   // friend still alive
   setTimeout(function (){
-    if(charStatus.indexOf('friend_conscious') > -1 ){
+    console.log('no john')
+    if(charStatus.indexOf('no_friend') === -1 && charStatus.indexOf('friend_conscious') > -1 ){
       for (var i = 1; i <= 12; i++) { 
         jQuery('.option' + i).hide();
       }
       jQuery('.option13').show();
       jQuery('.option14').show();
-    }
+    } else { }
   }, 10);
 }
 
@@ -297,5 +316,12 @@ function tellStory(arr, id){
       jQuery('.option' + i).hide()
     }
   }
+
+  // CHECK SAVE 
+  var save = localStorage.getItem("characterSave");
+  if(!save || save == '[]'){
+    jQuery('.option2').hide();
+  } // check save
+
 }
 

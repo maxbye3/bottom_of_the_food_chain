@@ -1,4 +1,5 @@
 function giveFeedback() {
+  $('.feedbackDisclaimerTxt').html("If you see a bug or spelling/grammar issue please report it below and I'll get it sorted.<br> Thanks!");
   $('.feedbackInput textarea').val('');
   $('.feedbackInput input').val('');
   $('.mainStory, .showFeedbackDisclaimer').hide();

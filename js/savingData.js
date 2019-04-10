@@ -10,9 +10,8 @@
   };
   firebase.initializeApp(config);
 
-// summary write
-function iterateDataType(what) {
-  max.report[what] = max.report[what] + 1;
+// save summary
+function saveSummary() {
   firebase.database().ref('summary/').set({
     max
   });
@@ -29,7 +28,8 @@ function readSummaryAndAddToTotal(what){
       if(!max){
         max = snapshot.val().max;
       }  
-      iterateDataType(what);
+      max.report[what] = (max.report[what] + 1) || 0;
+      currentTotal = max.report[what];
     }
   });
   return currentTotal;
