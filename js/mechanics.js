@@ -91,7 +91,7 @@ function getName(){
   }
 }
 
-function weaponType(){
+function weaponType(attack){
   
   function showWeaponChoice(defend, attack){
     setTimeout(function (){
@@ -104,38 +104,57 @@ function weaponType(){
   }
 
   var weaponObj = {};
+  var stanceArr1;
+  var stanceArr2;
   if(charStatus.indexOf('hammer') > -1 ){
     weaponObj.weaponEquipped = 'the hammer';
     weaponObj.stance = 'You grip the hammer by the handle and hold it out like a bat. Your heart is pumping out of your chest.';
+    stanceArr1 = 5;
+    stanceArr2 = 6;
   }
   else if(charStatus.indexOf('wine bottle') > -1 ){
     weaponObj.weaponEquipped = 'the wine bottle';
     weaponObj.stance = 'You grip the wine bottle by the handle and hold it out like a bat. Your heart is pumping out of your chest.';
+    stanceArr1 = 1;
+    stanceArr2 = 2;
   }
   else if(charStatus.indexOf('mop') > -1 ){
+    stanceArr1 = 7;
+    stanceArr2 = 8;
     weaponObj.weaponEquipped = 'the mop';
     weaponObj.stance = 'You grip the mop by the handle and hold it out like a bat. Your heart is pumping out of your chest.';
   }
   else if(charStatus.indexOf('broken bottle') > -1){
+    stanceArr1 = 3;
+    stanceArr2 = 4;
     weaponObj.weaponEquipped = 'the sharp end of the bottle';
     weaponObj.stance = 'You fish the the short broken bottle from the bag and hold it out like a knife. Your heart is pumping out of your chest.';
   }
   else if(charStatus.indexOf('bread') > -1 ){
+    stanceArr1 = 9;
+    stanceArr2 = 10;
     weaponObj.weaponEquipped = 'the stale baguette';
     weaponObj.stance = 'You grip the bread by the stiff stale crust and hold it out like a bat. Your heart is pumping out of your chest.';
   }
   else {
-    showWeaponChoice(11, 12);
-    weaponObj.weaponEquipped = 'your fists';
+    stanceArr1 = 11;
+    stanceArr2 = 12;
+    weaponObj.weaponEquipped = 'your barehands';
     weaponObj.stance = 'You clench your fists and hold them out like a boxer. Your heart is pumping out of your chest.';
   }
+  // turn this off if not attacking being attacked
+  if(attack){
+    showWeaponChoice(stanceArr1, stanceArr2);
+  }
+
+
   setTimeout(function (){
     $('.weaponEquipped').html(weaponObj.weaponEquipped );
     $('.weaponStance').html(weaponObj.stance);
 }, 15);
 }
 
-function weaponConsequence(){
+function weaponConsequence(attack){
   // wine bottle
   // hammer
   // broken bottle
@@ -144,7 +163,7 @@ function weaponConsequence(){
   // nothing
   // friend_conscious
 
-  weaponType();
+  weaponType(attack);
   // friend still alive
   setTimeout(function (){
     console.log('no john')

@@ -17,7 +17,7 @@ var content = [{
 {
   function: "startAgain()",
   id: 1, 
-  main_text: "You made a mistake learning to drive as now you're Leslie's personal errand boy. Sent to the supermarket to pick up canapés for another of her hideous dinner parties. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
+  main_text: "You made a mistake learning to drive. Instead of enjoying a nice quiet Sunday evening, you have been sent to the supermarket to pick up canapés for another hideous dinner party tomorrow. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
   option_1: { text: "Continue", step : 2 },
 },
 {
@@ -455,7 +455,7 @@ var content = [{
 {
   function: "checkWeapon()",
   char_addition1: 'mop',
-  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. 'Leslie', you sigh. A pang of guilt strikes at your heart. 'God, I hope she's okay'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
+  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. This is what you came to the store to get. A pang of guilt strikes at your heart. 'Looks like that dinner party is being postponed', the police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
   option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
@@ -517,17 +517,17 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "Returning to the door leading to the store, you take a seat against the cold wall<span class='friend'> by <span class='name'></span></span>. You take out your phone and knowing it will fail try to call the police, then Leslie but predictably both are disconnected.",
+  main_text: "Returning to the door leading to the store, you take a seat against the cold wall<span class='friend'> by <span class='name'></span></span>. You take out your phone and knowing it will fail try to call the police, then home but predictably both are disconnected.",
   id: 78,
   option_1: { text: "Continue", step: 79 },
 },
 {
-  main_text: "Fear creeps in. It is exhausting. You lay your head back on the cold stone wall, close your eyes and think of Leslie.",
+  main_text: "Fear creeps in. It is exhausting. You lay your head back on the cold stone wall, close your eyes and think of the nice quiet evening you would have had if you had just stayed at home.",
   id: 79,
   option_1: { text: "Wake up", step: 81 },
 },
 {
-  main_text: "Leslie... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' you speak into the dark room.<br>As expected, no response.</span>",
+  main_text: "Slowly, you open your weary eyes... <br><br><br>You wish you weren't here. <br>That this was all a bad dream. A nightmare. <span class='friend'><br>'<span class='name'></span>...' you speak into the dark room.<br>As expected, no response.</span>",
   id: 80,
   option_1: { text: "Continue", step: 81 },
 },
@@ -602,14 +602,14 @@ var content = [{
   id: 91,
 },
 {
-  function: "weaponType()",
+  function: "weaponType(false)",
   char_addition1: 'Retriever death',
   main_text: "You sprint towards the truck but you can hear over the mad gasping the dog approaching closer and closer. A red hot vice grabs your back leg and you trip over yourself. The <span class='weaponEquipped'></span> skids out of reach across the pavement. Before you have a chance to recover, the Retriever is over you and sinks its teeth into your neck. Your screams become spluttered. Your vision dulls, your wild movements get weaker and eventually stop.",
   id: 92,
   option_1: { text: "Try again", step: 91 },
 },
 {
-  function: "weaponConsequence()",
+  function: "weaponConsequence(true)",
   main_text: "You get to the bag of broken bottles and spin around. The Retriever is sprinting. A hysterical madness is in its eyes. The vicious teeth bearing closer in on your position. <span class='weaponStance'></span>",
   id: 93,
   option_1: { text: "Attack with wine bottle", step: 94, show: 'wine bottle' },
@@ -760,7 +760,7 @@ var content = [{
 },
 {
   // NOT  hurt conclusion part one
-  main_text: "You lie there panting hard. The dead dog draped across you like a warm blanket, its body is heavy. Eventually, you push it off, it slumps to the floor and you rise slowly. Every action is exhausting.",
+  main_text: "You lie there panting hard. The dead dog draped across you like a warm blanket. Its body is heavy. Eventually, you push it off, it slumps to the floor and you rise slowly. Every action is exhausting.",
   id: 114,
   option_1: { text: "Continue", step: 128 },
 },
@@ -772,14 +772,14 @@ var content = [{
 },
 {
   // Friend is alive: attack
-  function: "weaponType()",
+  function: "weaponType(false)",
   main_text: "You swing <span class='weaponEquipped'></span> as hard as you physically can but to your horror the Retriever has read your movements and ducks left, narrowly missing impact. The momentum of the swing has thrown you off balance and the dog takes advantage.",
   id: 116,
   option_1: { text: "Continue", step: 117 },
 },
 {
   // friend: defend
-  function: "weaponType()",
+  function: "weaponType(false)",
   main_text: "The dog throws itself at you, the impact feels like a wrecking ball and forces you backwards off your feet. Using <span class='weaponEquipped'></span> you desperately try and defend yourself from the snapping jaws inching its way towards your face. Suddenly the dog is thrown off you backwards. It takes a second to recover from the shock and process what you're seeing.",
   id: 117,
   option_1: { text: "Continue", step: 118 },
