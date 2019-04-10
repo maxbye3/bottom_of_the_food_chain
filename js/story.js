@@ -21,6 +21,7 @@ var content = [{
   option_1: { text: "Continue", step : 2 },
 },
 {
+  function: "setTimeout(function (){ jQuery('.option2').show() }, 0);",
   char_addition1: 'windowDown',  
   id: 2,
   main_text: "The radio suddenly cuts out.<br> The static noise interrupts your irritated monologue.",
