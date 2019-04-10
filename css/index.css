@@ -1,6 +1,5 @@
 .container {
   background: black;
-  border: red solid 1px; 
   height: 100vh; 
   width: 100vw;
   color: white;
@@ -16,23 +15,22 @@
 
 .storyTable {
   padding: 15%; 
-  border: green solid 1px;
+  padding-top: 7%;
 }
 
-.reportProblem, .returnStory, .submitFeedback, .option1, .option2, .option3, .option4, .option5, .option6, .option7, .option8, .option9, .option10, .option11, .option12, .option13, .option14  {
+.returnStory, .submitFeedback, .option1, .option2, .option3, .option4, .option5, .option6, .option7, .option8, .option9, .option10, .option11, .option12, .option13, .option14  {
   padding: 10px;
   border: white solid 1px;
   margin: 10px 20% 0 20%;
+  cursor: pointer;
 }
 
 .reportProblem {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin: 0px;
-  margin-right: 10px;
-  margin-top: 10px;
+  background: black;
   color: white;
+  border-bottom: white 1px solid;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .option1 {
