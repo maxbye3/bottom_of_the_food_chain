@@ -10,7 +10,7 @@ var disclaimer = [{
 var content = [{
   id: 0, 
   char_addition1: {},
-  main_text: "Bottom of the food chain <br> Tuesday Edition",
+  main_text: "Bottom of the food chain <br> Ocelot Edition",
   option_1: { text: "Start", step : 0, disclaimer: true },
   option_2: { text: "Continue from save", step : localStorage.getItem("saveData") },
 },
