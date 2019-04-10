@@ -32,7 +32,10 @@ var global = {
         }
         if (count == 10){
           // Success!
-          alert('Konami code entered! Do something cool here.');
+          giveFeedback();
+          $('.feedbackDisclaimerTxt').html("Nice work on the Konami code! Welcome to secret page. <br> If you have any stories or want to collaborate please type your idea below.<br> Thanks!");
+
+
           reset();
         }
       } else {

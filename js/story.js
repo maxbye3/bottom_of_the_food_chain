@@ -455,7 +455,7 @@ var content = [{
 {
   function: "checkWeapon()",
   char_addition1: 'mop',
-  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. This is what you came to the store to get. A pang of guilt strikes at your heart. 'Looks like that dinner party is being postponed', the police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
+  main_text: "You head down the second food aisle<span class='friend'>, dragging <span class='name'></span> with you</span>. You stop at where the canapés are kept. This is what you came to the store to get. A pang of guilt strikes at your heart. 'Looks like that dinner party is being postponed'. The police would have arrived by now if this type of attack had only occurred at the store. You fill your plastic bag up with food you think will last. You find a discarded mop. <span class='weaponResult'></span>",
   id: 68,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
   option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
@@ -649,7 +649,7 @@ var content = [{
 },
 {
   // broken bottle defend
-  main_text: "The Retriever hits you like a wrecking ball. Sometimes the best offense is a good defence. As you fall back with the dog on top, you angle the broken wine bottle up and under the its jaw. As you hit the tarmac, you hear a high and soft whimper. You look down, the broken bottle has impaled itself under the dog's jaw. The dog is flapping wildly. Blood flows out of the bottle like wine. You reach up and your hand finds a beer bottle. You hold the neck of the bottle and smash it on the hard concrete. You then shove the remains into the Retriever's soft golden fur.",
+  main_text: "The Retriever hits you like a wrecking ball. Sometimes the best offense is a good defence. As you fall back with the dog on top, you angle the broken wine bottle up and under the its jaw. As you hit the tarmac, you hear a high and soft whimper. You look down, the broken bottle has impaled itself under the dog's jaw. The dog is flapping wildly. Blood flows out of the bottle like wine. You reach up and your hand finds a beer bottle. You hold the neck of the bottle and smash the rest on the hard concrete. You then shove the remains into the Retriever's soft golden fur.",
   id: 97,
   option_1: { text: "Continue", step: 114 },
 },
@@ -794,7 +794,7 @@ var content = [{
 },
 {
   // friend: kill dog
-  main_text: "From the discarded pile you pickup a wine bottle. With a quick flick of the wrist you break the bottle below the neck on the smooth tarmac. The warm liquid runs over your hands making them sticky. You approach <span class='name'></span> and plunge the jagged glass like a dagger into the dog's soft golden fur. The Retriever howls and twists violently. You pull the bottle, an arc of blood falls across the lot. Stabbing again, the Retriever's erratic movements become less intense. By the third stab, the dog has gone limp. <span class='name'></span> carefully releases <span class='pronoun'></span> hold and it slumps to the floor." ,
+  main_text: "From the discarded pile you pickup a wine bottle. You spot a broken bottle from the collection. As you fish it out, warm liquid runs over your hands making them sticky. You approach <span class='name'></span> and plunge the jagged glass like a dagger into the dog's soft golden fur. The Retriever howls and twists violently. You pull the bottle, an arc of blood falls across the lot. Stabbing again, the Retriever's erratic movements become less intense. By the third stab, the dog has gone limp. <span class='name'></span> carefully releases <span class='pronoun'></span> hold and it slumps to the floor." ,
   id: 119,
   option_1: { text: "Continue", step: 120 },
 },
@@ -907,6 +907,6 @@ var content = [{
 }
 ];
 
-// charStatus = ["bird death"];
-charStatus = ["windowUp", "dog_down", "shop_injury", "friend_conscious", "medical_supplies", "no_friend", "Retriever death"];
-tellStory(content, 91);
+charStatus = [];
+// charStatus = ["windowUp", "dog_down", "shop_injury", "friend_conscious", "medical_supplies", "no_friend", "Retriever death"];
+tellStory(content, 0);

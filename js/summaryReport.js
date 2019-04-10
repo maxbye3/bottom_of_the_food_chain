@@ -114,7 +114,7 @@ function checkCompanion(){
     companionSave = readSummaryAndAddToTotal('friend: Never helped stranger');
     checkCompanionTxt += "No. Looks like you ditched the stranger instead of helping. Hey, we do what we need to do to survive. But it really changes the end game if you do this. </br>";
   }
-  var genderStatus = 'As you probably guessed, you can save a man (John) instead of Mary.'
+  var genderStatus = 'You can save either a man (John) or a woman (Mary).'
   if(name == 'John' && charStatus.indexOf('no_friend') === -1){
     companionSave = readSummaryAndAddToTotal('friend: Saved John');
     genderStatus = 'Did you know, you can also save a woman (Mary) instead of John?'    
