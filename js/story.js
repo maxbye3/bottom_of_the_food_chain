@@ -10,7 +10,7 @@ var disclaimer = [{
 var content = [{
   id: 0, 
   char_addition1: {},
-  main_text: "Bottom of the food chain <br> Ocelot Edition",
+  main_text: "Bottom of the food chain <br> Alex lunchtime Edition",
   option_1: { text: "Start", step : 0, disclaimer: true },
   option_2: { text: "Continue from save", step : localStorage.getItem("saveData") },
 },
@@ -199,13 +199,13 @@ var content = [{
   option_1: { text: "Continue", step: 26 },
 },
 {
-  main_text: "Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter, runs over to the attack and with incredible strength wrestles the Dalmatian off the man by yanking its leash back. <br> With the Retriever hot on her trails she sprints back towards the store.",
+  main_text: "Before you have a chance to react the same woman who held one of the doors open for you ducks under the shutter and interrupts the attack by yanking the Dalmatian's leash back. <br> With the Retriever hot on her trails she sprints back towards the store.",
   id: 31,
   option_1: { text: "Hold the metal shutters open", step: 32 },
   option_2: { text: "Close the shutter on both of them", step: 30 },
 },
 {
-  main_text: "The Labrador pounces over the Dalmatian and lands on the woman. She falls forward and hits the floor with a terrible scream. Releasing the leash, the Dalmatian jumps back on the man and continues its attack.",
+  main_text: "The Labrador pounces over the Dalmatian and lands on the woman. She falls forward and hits the floor with a terrible scream. Releasing the leash, the Dalmatian continues its attack on the man.",
   id: 32,
   option_1: { text: "Help woman", step: 34},
   option_2: { text: "Help man", step: 33 },
@@ -910,4 +910,4 @@ var content = [{
 
 charStatus = [];
 // charStatus = ["windowUp", "dog_down", "shop_injury", "friend_conscious", "medical_supplies", "no_friend", "Retriever death"];
-tellStory(content, 0);
+tellStory(content, 122);

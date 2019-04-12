@@ -19,7 +19,6 @@ function deathResults(){
     deathTxt += "Death by the Retriever is a tricky one to avoid. I tried to make it obvious that the truck is too far. But hey, you make good dog food.</br>";
   }
   
-  console.log(deathSave);
   if(deathTxt.length === 0) {
     deathSave = readSummaryAndAddToTotal('death: Did not die');
     deathTxt += "And you didn't die!<br>I actually made it pretty tricky to die but there are three different ways to do so.<br>What is hard to avoid is injuries, so let's see how you did...";
@@ -72,7 +71,7 @@ function injuryResults(){
     injuryTxt += "To be honest, you were always going to get injured bringing a loaf of bread to a dog fight.</br>";
     injurySave = readSummaryAndAddToTotal('injury: Dog fight: Bread');
   }
-  console.log(injurySave);
+
   if(injuryTxt.length === 0){
     injuryTxt = "No injuries! <br>Amazing. I think that's actually pretty tricky to do considering you have to pick up the right equipment and then use it in the right way.";
     if(didntDie){

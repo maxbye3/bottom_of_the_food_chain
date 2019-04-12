@@ -12,9 +12,11 @@
 
 // save summary
 function saveSummary() {
-  firebase.database().ref('summary/').set({
-    max
-  });
+  setTimeout(function(){ 
+    firebase.database().ref('summary/').set({
+      max
+    });
+  }, 500); 
 }
 
 // report write
