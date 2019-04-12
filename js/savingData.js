@@ -19,22 +19,46 @@ function saveSummary() {
   }, 500); 
 }
 
+function workOutPercents(){
+  if(currentTotal && userGeneralAction){
+    var ratio = userGeneralAction / currentTotal;
+    var percent = Math.round(ratio * 100);
+    $('.otherPlayers').html(percent+ '%' + generalType);
+  }
+  // if(currentTotal && userSpecificAction){
+  //   var ratio = userSpecificAction / currentTotal;
+  //   var percent = Math.round(ratio * 100);
+  //   $('.otherPlayers').html(percent+ '%' + generalType);
+  // }
+}
+
 // report write
 var max;
+var currentTotal;
+var userSpecificAction;
+var userGeneralAction;
 function readSummaryAndAddToTotal(what){
-  var currentTotal;
   firebase.database().ref('/summary/').once('value').then(function(snapshot) {
     if(snapshot.val()){
-      // currentTotal = snapshot.val().max.report[what];      
-      // currentTotal = snapshot.val()[what];
       if(!max){
         max = snapshot.val().max;
       }  
+
       max.report[what] = (max.report[what] + 1) || 0;
-      currentTotal = max.report[what];
+      if(what === 'total'){
+        currentTotal = max.report['total'];        
+      } else if(general === what){
+        userGeneralAction = max.report[what];      
+      } else if(general === specific){
+        userSpecificAction = max.report[what];
+      }
+      workOutPercents();        
+      
     }
   });
-  return currentTotal;
+
+  
+  setTimeout(function(){ return currentTotal; }, 2000);
 }
 
 // user write

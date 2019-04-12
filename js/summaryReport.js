@@ -1,34 +1,43 @@
 var didntDie = false;
-var total;
+var total = '';
+var specificType = '';
+var specific = '';
+var general = '';
+var generalType = '';
 function deathResults(){
+  
   // return and add to total number of people playing the game
   total = readSummaryAndAddToTotal('total');
   // death can be three
   var deathTxt = '';
-  var deathSave;
   if(charStatus.indexOf('bird death') > -1 ){
-    deathSave = readSummaryAndAddToTotal('death: bird death');
+    specific = 'death: bird death';
+    readSummaryAndAddToTotal('death: bird death');
     deathTxt += "I'm sorry you died pretty early in it. Kudos for putting your life on the line to help other people and being a tasty treat for deranged birds.</br>";
   }
   if(charStatus.indexOf('Dalmatian death') > -1 ){
-    deathSave = readSummaryAndAddToTotal('death: Dalmatian');
+    specific = 'death: Dalmatian';
+    readSummaryAndAddToTotal('death: Dalmatian');
     deathTxt += "Surely the death by Dalmatian could of been avoided right? You literally ran out of the safety of the car towards danger ¯\_(ツ)_/¯</br>";    
   }
   if(charStatus.indexOf('Retriever death') > -1 ){
-    deathSave = readSummaryAndAddToTotal('death: Retriever death');
+    specific = 'death: Retriever death';
+    readSummaryAndAddToTotal('death: Retriever death');
     deathTxt += "Death by the Retriever is a tricky one to avoid. I tried to make it obvious that the truck is too far. But hey, you make good dog food.</br>";
   }
   
   if(deathTxt.length === 0) {
-    deathSave = readSummaryAndAddToTotal('death: Did not die');
+    readSummaryAndAddToTotal('death: Did not die');
+    general = 'death: Did not die';
     deathTxt += "And you didn't die!<br>I actually made it pretty tricky to die but there are three different ways to do so.<br>What is hard to avoid is injuries, so let's see how you did...";
     didntDie = true;
+    generalType = ' of other players survived.';
   } else {
-    deathSave = readSummaryAndAddToTotal('death: Did die');
+    generalType = ' of other players died in some way.';
+    general = 'death: Did die';
+    readSummaryAndAddToTotal('death: Did die');
   }
-  console.log(total);
-  console.log(deathSave);
-  jQuery('.deathResults').html('Congrats on finishing the game! '  + deathTxt)
+  jQuery('.deathResults').html('Congrats on finishing the game! '  + deathTxt + '</br></br><span class="otherPlayers"></span>')
 }
 
 function injuryResults(){
