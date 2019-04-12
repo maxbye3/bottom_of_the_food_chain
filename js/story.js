@@ -910,4 +910,4 @@ var content = [{
 
 charStatus = [];
 // charStatus = ["windowUp", "dog_down", "shop_injury", "friend_conscious", "medical_supplies", "no_friend", "Retriever death"];
-tellStory(content, 122);
+tellStory(content, 0);
