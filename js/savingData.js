@@ -20,16 +20,17 @@ function saveSummary() {
 }
 
 function workOutPercents(){
+  $('.otherPlayers').html('');
   if(currentTotal && userGeneralAction){
     var ratio = userGeneralAction / currentTotal;
     var percent = Math.round(ratio * 100);
     $('.otherPlayers').html(percent+ '%' + generalType);
   }
-  // if(currentTotal && userSpecificAction){
-  //   var ratio = userSpecificAction / currentTotal;
-  //   var percent = Math.round(ratio * 100);
-  //   $('.otherPlayers').html(percent+ '%' + generalType);
-  // }
+  if(currentTotal && userSpecificAction){
+    var ratio = userSpecificAction / currentTotal;
+    var percent = Math.round(ratio * 100);
+    $('.otherPlayers').append('<br>' + percent+ '%' + specificType);
+  }
 }
 
 // report write
@@ -45,11 +46,12 @@ function readSummaryAndAddToTotal(what){
       }  
 
       max.report[what] = (max.report[what] + 1) || 0;
+      console.log(what);
       if(what === 'total'){
         currentTotal = max.report['total'];        
       } else if(general === what){
         userGeneralAction = max.report[what];      
-      } else if(general === specific){
+      } else if(what === specific){
         userSpecificAction = max.report[what];
       }
       workOutPercents();        

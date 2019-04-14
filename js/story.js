@@ -10,7 +10,7 @@ var disclaimer = [{
 var content = [{
   id: 0, 
   char_addition1: {},
-  main_text: "Bottom of the food chain <br> Body Works Edition",
+  main_text: "Bottom of the food chain",
   option_1: { text: "Start", step : 0, disclaimer: true },
   option_2: { text: "Continue from save", step : localStorage.getItem("saveData") },
 },
@@ -909,5 +909,4 @@ var content = [{
 ];
 
 charStatus = [];
-// charStatus = ["windowUp", "dog_down", "shop_injury", "friend_conscious", "medical_supplies", "no_friend", "Retriever death"];
 tellStory(content, 0);
