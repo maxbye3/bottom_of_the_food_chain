@@ -17,7 +17,7 @@ var content = [{
 {
   function: "startAgain()",
   id: 1, 
-  main_text: "You made a mistake learning to drive. Instead of enjoying a nice quiet Sunday evening, you have been sent to the supermarket to pick up canapés for another hideous dinner party tomorrow. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few meters ahead.",
+  main_text: "You made a mistake learning to drive. Instead of enjoying a nice quiet Sunday evening, you have been sent to the supermarket to pick up canapés for another hideous dinner party tomorrow. You suck hard on the cigarette and flick it out of the passenger's window.</br> The supermarket is only a few metres ahead.",
   option_1: { text: "Continue", step : 2 },
 },
 {
@@ -102,7 +102,7 @@ var content = [{
 },
 {
   id: 14,
-  main_text: "Something large smashes into the driver window. Feathers explode over the windscreen and the window cracks like a spider's web. 'Thank goodness, I wound that up', you exhale in relief. You pull the steering wheel hard and the car screeches into the supermarket's car park.",
+  main_text: "Something large smashes into your windscreen. Feathers explode over the windscreen and the window cracks like a spider's web. 'Good thing I wound that up', you exhale in relief. You pull the steering wheel hard and the car screeches into the supermarket's car park.",
   option_1: { text: "Continue", step: 15 },
 },
 {
@@ -158,7 +158,7 @@ var content = [{
   option_1: { text: "Continue", step: 24 },
 },
 {
-  main_text: "'HELP!! WAIT!!!'<br><br> A few meters away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in specks of blood. It's sprinting after him but you reckon there's enough distance between them for the injured man to make it into the store.",
+  main_text: "'HELP!! WAIT!!!'<br><br> A few metres away a man in the car park is staggering hurriedly towards the closing metal shutters. A Labrador Retriever is in the distance, its golden coat covered in specks of blood. It's sprinting after him but you reckon there's enough distance between them for the injured man to make it into the store.",
   id: 24,
   option_1: { text: "Hold the metal shutter open", step: 29, hide: 'dog_down' }, // friend is attacked
   option_2: { text: "Hold the metal shutter open", step: 27, hide: 'dog_up' }, // friend is not attacked
@@ -183,7 +183,7 @@ var content = [{
 },
 {
   function: "$('.gender').text(localStorage.getItem('gender'));",
-  main_text: "You help drag the injured <span class='gender'></span> under the metal shutters. The shutters slam shut. The dog collides with the metal grate causing another large bang, followed by desperate barking. The <span class='gender'></span> has a large cut all the way down their upper-arm and they hold it in an odd posture in a sitting position. 'Is anyone a doctor?!' you cry out.",
+  main_text: "You help drag the injured <span class='gender'></span> under the metal shutters. The shutters slam shut. The dog collides with the metal grate causing another large bang, followed by desperate barking. The <span class='gender'></span> has a large cut all the way down <span class='pronoun'></span> upper-arm and <span class='pronoun'></span> holds it in an odd posture in a sitting position. 'Is anyone a doctor?!' you cry out.",
   id: 28,
   option_1: { text: "Continue", step: 35 },
 },
@@ -448,7 +448,7 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "You're not quite sure why you've entered the pet aisle, all things considered. Thankfully, besides food and cleaning products, the only animals the store stocks are fish and mice. You <span class='friend'>hold <span class='name'></span> steady and</span> peer into a thick glass box. A mouse sprints into the glass and instead of shying away, it keeps ramming its little head over and over again. Morbid curiosity holds you transfixed, little flecks of blood rain down on its white fur. A splash of water. Two tropical fish have leapt out of their tanks and flapping madly at your feet. Mouths gaping, there beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
+  main_text: "You're not quite sure why you've entered the pet aisle, all things considered. Thankfully, besides food and cleaning products, the only animals the store stocks are fish and mice. You <span class='friend'>hold <span class='name'></span> steady and</span> peer into a thick glass box. A mouse sprints into the glass and instead of shying away, it keeps ramming its little head over and over again. Morbid curiosity holds you transfixed, little flecks of blood rain down on its white fur. A splash of water. Two tropical fish have leapt out of their tanks and flapping madly at your feet. Mouths gaping, their beady eyes staring up at you. You take a few cans of dog food. At a real stretch, it could be dinner.",
   id: 67,
   option_1: { text: "Continue", step: 69, hide: 'aisle_round2' }, // first aisle round
   option_2: { text: "Continue", step: 84, hide: 'aisle_round1' }, // second aisle round
@@ -463,7 +463,7 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "<span class='solo'>You're at the back of the store</span><span class='friend'>With <span class='name'></span> over your shoulder you have made it to the back of the store</span>, you feel more exposed here then the aisles. To the right, is a glass door leading outside. To the left is a door to what you can only assume is a backroom or store room.",
+  main_text: "<span class='solo'>You're at the back of the store</span><span class='friend'>With <span class='name'></span> over your shoulder you have made it to the back of the store</span>, you feel more exposed here than the aisles. To the right, is a glass door leading outside. To the left is a door to what you can only assume is a backroom or store room.",
   id: 69,
   option_1: { text: "Go left (store room)", step: 74 },
   option_2: { text: "Go right (glass door)", step: 70 },
@@ -507,7 +507,7 @@ var content = [{
   option_1: { text: "Continue", step: 76 },
 },
 {
-  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door also leads outside. You peer round, it's the car park again. You look up following dark black plumes of smoke that pollute the night sky accompanied by the sound of sirens and chaos. This door must be some sort of alternate store entrance for staff and deliveries. One hundred or so meters ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your means of escape.",
+  main_text: "You push on the release bar of the door and slowly push it open, a chilly gust confirms that this door also leads outside. You peer round, it's the car park again. You look up following dark black plumes of smoke that pollute the night sky accompanied by the sound of sirens and chaos. This door must be some sort of alternate store entrance for staff and deliveries. One hundred or so metres ahead is a large semi-trailer truck, the driver's door is ajar.<br><br> This could be your means of escape.",
   id: 76,
   option_1: { text: "Continue", step: 77 },
 },
@@ -518,7 +518,7 @@ var content = [{
 },
 {
   function: "hasFriends()",
-  main_text: "Returning to the door leading to the store, you take a seat against the cold wall<span class='friend'> by <span class='name'></span></span>. You take out your phone and knowing it will fail try to call the police, then home but predictably both are disconnected.",
+  main_text: "Returning to the door leading to the store, you take a seat against the cold wall<span class='friend'> by <span class='name'></span></span>. You take out your phone and, knowing it will fail, try to call the police. Your attempt to reach someone at home generates the same shrill beep.",
   id: 78,
   option_1: { text: "Continue", step: 79 },
 },
@@ -539,7 +539,7 @@ var content = [{
   option_1: { text: "Stand up", step: 82 },
 },
 {
-  main_text: "Through a window on the door, you can see back into the store. There's still birds zipping about but it looks relatively calm. You feel like you could make it into one of the final three aisles if you needed more supplies.<br><br>You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
+  main_text: "Through a window on the door, you can see back into the store. There are still birds zipping about but it looks relatively calm. You feel like you could make it into one of the final three aisles if you needed more supplies.<br><br>You move to the other door and open it as slowly as possible. The truck and truck driver's body is still there but the dog is gone.",
   id: 82,
   option_1: { text: "Go back into the store", step: 83 },
   option_2: { text: "Run to the truck", step: 89 },
@@ -788,7 +788,7 @@ var content = [{
 {
   // friend: save
   function: "hasFriends()",
-  main_text: "<span class='name'></span> seems to be cuddling the Retriever.<br>No.<br><span class='name'></span> has <span class='pronoun'></span> arms around the dogs neck and head in a vice-like grip. Using all <span class='pronoun'></span> strength to immobilize the beast. 'I can't hold on forever', <span class='shehe'></span> cries out.",
+  main_text: "<span class='name'></span> seems to be cuddling the Retriever.<br>No.<br><span class='name'></span> has <span class='pronoun'></span> arms around the dog's neck and head in a vice-like grip. Using all <span class='pronoun'></span> strength to immobilize the beast. 'I can't hold on forever', <span class='shehe'></span> cries out.",
   id: 118,
   option_1: { text: "Help <span class='name'></span>", step: 119 },
   option_2: { text: "Leave <span class='name'></span>", step: 123 },
